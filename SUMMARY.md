@@ -1,0 +1,25 @@
+# Summary
+
+
+### System
+---
+* [Как забрать/положить файлы через командную строку](sftp.md)
+* [Как создать tar.gz](tar.md)
+* [Как отключить IPv6 в Debian 8 Jessie](disable_ipv6.md)
+* [Как использовать netstat](netstat-example.md)
+
+### OpenVPN
+---
+* [Как установить клиент OpenVPN на Debian 8 Jessie](client-openvpn-senting.md)
+* [Как сделать сертификат клиентa OpenVPN](create_client_cert_openvpn.md)
+* [Как сделать привязку IP к сертификату клиента OpenVPN](static-vpn-ip.md)
+* [Как управлять OpenVPN демоном](start-stop-status.md)
+
+### Iptables
+---
+* [Как настроить iptables после инсталяции Debian 8 Jessie](setting-iptables-after-install.md)
+* [Как управлять iptables](komandi_iptables.md)
+
+### Xen
+---
+* [Автозапуск виртуальных машин в Xen](autostart_vm_xen.md)

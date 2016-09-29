@@ -1,0 +1,1 @@
+FAQ по командам и настройкам Linux. Операционные системы Debian 8 Jessie, Centos 6 и XEN 7.
