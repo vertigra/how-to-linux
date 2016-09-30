@@ -139,7 +139,7 @@ This filesystem will be automatically checked every 28 mounts or
 Пробуем подключить
 ```bash
 # mkdir /mnt/xvdb
-# mount -t ext3 /dev/xvdb /mnt/xvdb
+# mount -t ext3 /dev/xvdb1 /mnt/xvdb
 ```
 Проверяем
 ```bash
@@ -148,7 +148,7 @@ Filesystem                   Size  Used Avail Use% Mounted on
 /dev/mapper/VolGroup-lv_root 6.5G  922M  5.3G  15% /
 tmpfs                        249M     0  249M   0% /dev/shm
 /dev/xvda1                   477M   71M  382M  16% /boot
-/dev/xvdb                    9.9G  151M  9.2G   2% /mnt/xvdb
+/dev/xvdb1                   9.9G  151M  9.2G   2% /mnt/xvdb
 
 ```
 
