@@ -40,17 +40,15 @@ Starting RPC idmapd:                                       [  OK  ]
 Еще опции монтирования, указывается что работают для fstab, mount и autofs (These options can be used with manual mount commands, /etc/fstab settings, and autofs.) Возможно работают и для /etc/exports.
 
 
-fsid=num — Forces the file handle and file attributes settings on the wire to be num, instead of a number derived from the major and minor number of the block device on the mounted file system. The value 0 has special meaning when used with NFSv4. NFSv4 has a concept of a root of the overall exported file system. The export point exported with fsid=0 is used as this root.
+* fsid=num — Forces the file handle and file attributes settings on the wire to be num, instead of a number derived from the major and minor number of the block device on the mounted file system. The value 0 has special meaning when used with NFSv4. NFSv4 has a concept of a root of the overall exported file system. The export point exported with fsid=0 is used as this root.
 
-    hard or soft — Specifies whether the program using a file via an NFS connection should stop and wait (hard) for the server to come back online, if the host serving the exported file system is unavailable, or if it should report an error (soft).
+ * hard or soft — Specifies whether the program using a file via an NFS connection should stop and wait (hard) for the server to come back online, if the host serving the exported file system is unavailable, or if it should report an error (soft).
+If hard is specified, the user cannot terminate the process waiting for the NFS communication to resume unless the intr option is also specified.
+If soft is specified, the user can set an additional timeo=<value> option, where <value> specifies the number of seconds to pass before the error is reported.
 
-    If hard is specified, the user cannot terminate the process waiting for the NFS communication to resume unless the intr option is also specified.
+*Note*
 
-    If soft is specified, the user can set an additional timeo=<value> option, where <value> specifies the number of seconds to pass before the error is reported.
-
-Note
-
-Using soft mounts is not recommended as they can generate I/O errors in very congested networks or when using a very busy server.
+*Using soft mounts is not recommended as they can generate I/O errors in very congested networks or when using a very busy server.*
 
     intr — Allows NFS requests to be interrupted if the server goes down or cannot be reached.
 
