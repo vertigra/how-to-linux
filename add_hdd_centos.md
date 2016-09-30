@@ -149,6 +149,11 @@ Filesystem                   Size  Used Avail Use% Mounted on
 tmpfs                        249M     0  249M   0% /dev/shm
 /dev/xvda1                   477M   71M  382M  16% /boot
 /dev/xvdb1                   9.9G  151M  9.2G   2% /mnt/xvdb
-
 ```
+Добавляем в fstab 
+
+```bash
+/dev/xvdb1              /mnt/xvdb               ext3    defaults        0 0
+```
+ И после перзагрузки проверяем (`df -h`)
 
