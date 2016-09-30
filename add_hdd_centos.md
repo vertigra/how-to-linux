@@ -143,7 +143,7 @@ This filesystem will be automatically checked every 28 mounts or
 ```
 Проверяем
 ```bash
-[root@proxy mnt]# df -h
+# df -h
 Filesystem                   Size  Used Avail Use% Mounted on
 /dev/mapper/VolGroup-lv_root 6.5G  922M  5.3G  15% /
 tmpfs                        249M     0  249M   0% /dev/shm
