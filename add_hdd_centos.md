@@ -40,7 +40,7 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disk identifier: 0x00000000
 ```
-Подключенный диск появился виден как `/dev/xvdb`. Разбиваем его на разделы
+Подключенный диск появился виден как `/dev/xvdb`.
 ```bash 
 # fdisk /dev/xvdb
 
