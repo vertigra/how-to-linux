@@ -134,6 +134,20 @@ Writing superblocks and filesystem accounting information: done
 
 This filesystem will be automatically checked every 38 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
+```
+Пробуем подключить
+```bash
+# mkdir /mnt/xvdb
+# mount -t ext3 /dev/xvdb /mnt/xvdb
+```
+Проверяем
+```bash
+[root@proxy mnt]# df -h
+Filesystem                   Size  Used Avail Use% Mounted on
+/dev/mapper/VolGroup-lv_root 6.5G  922M  5.3G  15% /
+tmpfs                        249M     0  249M   0% /dev/shm
+/dev/xvda1                   477M   71M  382M  16% /boot
+/dev/xvdb                    9.9G  151M  9.2G   2% /mnt/xvdb
 
 ```
 
