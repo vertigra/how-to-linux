@@ -3,5 +3,6 @@
 
 ```bash
 # yum install nfs-utils nfs-utils-lib
+# service rpcbind start
 
 ```
