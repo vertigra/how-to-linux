@@ -7,6 +7,7 @@
 * [Как создать tar.gz](tar.md)
 * [Как отключить IPv6 в Debian 8 Jessie](disable_ipv6.md)
 * [Как использовать netstat](netstat-example.md)
+* [Как добавить диск в CentOS 6.8](add_hdd_centos.md)
 
 ### OpenVPN
 ---
