@@ -95,10 +95,9 @@ Calling ioctl() to re-read partition table.
 Syncing disks.
 [13:25:45] [root@localhost ~]#
 ```
-Проверяем
-
+Проверяем:
 ```bash
-[root@proxy nesterov]# fdisk -l /dev/xvdb
+# fdisk -l /dev/xvdb
 
 Disk /dev/xvdb: 10.7 GB, 10737418240 bytes
 255 heads, 63 sectors/track, 1305 cylinders
@@ -110,3 +109,31 @@ Disk identifier: 0xd85212d9
     Device Boot      Start         End      Blocks   Id  System
 /dev/xvdb1               1        1305    10482381   83  Linux
 ```
+Форматируем в ext3
+```bash
+# mkfs -t ext3 /dev/xvdb
+mke2fs 1.41.12 (17-May-2010)
+Filesystem label=
+OS type: Linux
+Block size=4096 (log=2)
+Fragment size=4096 (log=2)
+Stride=0 blocks, Stripe width=0 blocks
+655360 inodes, 2621440 blocks
+131072 blocks (5.00%) reserved for the super user
+First data block=0
+Maximum filesystem blocks=2684354560
+80 block groups
+32768 blocks per group, 32768 fragments per group
+8192 inodes per group
+Superblock backups stored on blocks:
+        32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
+Writing inode tables: done
+Creating journal (32768 blocks): done
+Writing superblocks and filesystem accounting information: done
+
+This filesystem will be automatically checked every 38 mounts or
+180 days, whichever comes first.  Use tune2fs -c or -i to override.
+
+```
+
