@@ -111,15 +111,16 @@ Disk identifier: 0xd85212d9
 ```
 Форматируем в ext3
 ```bash
-# mkfs -t ext3 /dev/xvdb
+# mkfs -t ext3 /dev/xvdb1
+
 mke2fs 1.41.12 (17-May-2010)
 Filesystem label=
 OS type: Linux
 Block size=4096 (log=2)
 Fragment size=4096 (log=2)
 Stride=0 blocks, Stripe width=0 blocks
-655360 inodes, 2621440 blocks
-131072 blocks (5.00%) reserved for the super user
+655360 inodes, 2620595 blocks
+131029 blocks (5.00%) reserved for the super user
 First data block=0
 Maximum filesystem blocks=2684354560
 80 block groups
@@ -132,7 +133,7 @@ Writing inode tables: done
 Creating journal (32768 blocks): done
 Writing superblocks and filesystem accounting information: done
 
-This filesystem will be automatically checked every 38 mounts or
+This filesystem will be automatically checked every 28 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
 ```
 Пробуем подключить
