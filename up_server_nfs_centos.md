@@ -37,6 +37,23 @@ anonuid=1000– привязывает анонимного пользовате
 
 anongid=1000– привязывает анонимного пользователя к группе «местного» пользователя.
 
+nfsvers = 2(или nfsvers = 3) - указывает версию протокола. Использется для хостов с несколькими серверами NFS. Если опция не указана, используется самая высокая поддерживаемая ядром. Опция не поддерживает протокол версии NFSv4  
+
+
+
+tcp — Specifies for the NFS mount to use the TCP protocol.
+
+udp — Specifies for the NFS mount to use the UDP protocol.
+
+hard or soft — Specifies whether the program using a file via an NFS connection should stop and wait (hard) for the server to come back online, if the host serving the exported file system is unavailable, or if it should report an error (soft).
+If hard is specified, the user cannot terminate the process waiting for the NFS communication to resume unless the intr option is also specified.
+If soft is specified, the user can set an additional timeo=<value> option, where <value> specifies the number of seconds to pass before the error is reported.
+Note
+Using soft mounts is not recommended as they can generate I/O errors in very congested networks or when using a very busy server.
+
+intr — Allows NFS requests to be interrupted if the server goes down or cannot be reached.
+
+
 
 
 ```
