@@ -65,9 +65,10 @@ If soft is specified, the user can set an additional timeo=<value> option, where
 * tcp — Specifies for the NFS mount to use the TCP protocol.
 * udp — Specifies for the NFS mount to use the UDP protocol.
 
-
-
-
-
+Применяем изменения и проверяем.
+```bash
+# exportfs -a
+# exportfs -v
+/mnt/share       192.168.1.0/24(rw,wdelay,root_squash,no_subtree_check,sec=sys,rw,root_squash,no_all_squash)
 
 ```
