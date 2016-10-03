@@ -120,4 +120,52 @@ test_file                                              89%   74MB 166.3KB/s   00
 test_file                                              92%   77MB 134.9KB/s   00:45 ETA
 test_file                                              99%   83MB 147.7KB/s   09:36
 ```
-
+Put file to Netherlands №2
+```bash
+Uploading test_file to /root/test_file
+test_file                                               0%  128KB  38.4KB/s   36:52 ETA
+test_file                                               0%  544KB  65.3KB/s   21:35 ETA
+test_file                                               1% 1088KB  89.2KB/s   15:41 ETA
+test_file                                               2% 2144KB 131.5KB/s   10:30 ETA
+test_file                                               3% 2784KB 141.5KB/s   09:41 ETA
+test_file                                               4% 3648KB 166.5KB/s   08:09 ETA
+test_file                                               5% 4640KB 178.7KB/s   07:30 ETA
+test_file                                               5% 5056KB 184.5KB/s   07:13 ETA
+test_file                                               7% 6080KB 193.3KB/s   06:48 ETA
+test_file                                               8% 6848KB 193.7KB/s   06:43 ETA
+test_file                                               8% 7264KB 196.3KB/s   06:36 ETA
+test_file                                               9% 7904KB 201.2KB/s   06:23 ETA
+test_file                                              12%   10MB 194.7KB/s   06:22 ETA
+test_file                                              13%   11MB 194.3KB/s   06:18 ETA
+test_file                                              14%   12MB 178.7KB/s   06:46 ETA
+test_file                                              16%   14MB 189.5KB/s   06:13 ETA
+test_file                                              18%   15MB 196.9KB/s   05:53 ETA
+test_file                                              19%   16MB 196.1KB/s   05:50 ETA
+test_file                                              19%   17MB 201.4KB/s   05:38 ETA
+test_file                                              21%   18MB 177.7KB/s   06:16 ETA
+test_file                                              23%   19MB 189.3KB/s   05:44 ETA
+test_file                                              24%   20MB 195.0KB/s   05:29 ETA
+test_file                                              25%   21MB 199.1KB/s   05:19 ETA
+test_file                                              26%   22MB 178.7KB/s   05:49 ETA
+test_file                                              27%   22MB 187.6KB/s   05:30 ETA
+test_file                                              36%   30MB 198.7KB/s   04:31 ETA
+test_file                                              40%   34MB 193.5KB/s   04:20 ETA
+test_file                                              42%   35MB 197.0KB/s   04:08 ETA
+test_file                                              45%   38MB 206.0KB/s   03:45 ETA
+test_file                                              46%   39MB 163.2KB/s   04:39 ETA
+test_file                                              46%   39MB 159.7KB/s   04:44 ETA
+test_file                                              52%   43MB 191.7KB/s   03:32 ETA
+test_file                                              54%   45MB 195.7KB/s   03:17 ETA
+test_file                                              60%   50MB 199.7KB/s   02:48 ETA
+test_file                                              65%   54MB 204.0KB/s   02:25 ETA
+test_file                                              68%   57MB 188.8KB/s   02:21 ETA
+test_file                                              73%   61MB 196.1KB/s   01:56 ETA
+test_file                                              83%   69MB 197.4KB/s   01:12 ETA
+test_file                                              87%   73MB 183.1KB/s   00:58 ETA
+test_file                                              88%   73MB 188.4KB/s   00:53 ETA
+test_file                                              89%   75MB 189.4KB/s   00:46 ETA
+test_file                                              96%   81MB 207.2KB/s   00:12 ETA
+test_file                                              97%   81MB 168.1KB/s   00:13 ETA
+test_file                                              97%   81MB 154.6KB/s   00:12 ETA
+test_file                                              99%   83MB 190.8KB/s   07:26
+```
