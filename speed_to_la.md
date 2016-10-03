@@ -169,3 +169,29 @@ test_file                                              97%   81MB 168.1KB/s   00
 test_file                                              97%   81MB 154.6KB/s   00:12 ETA
 test_file                                              99%   83MB 190.8KB/s   07:26
 ```
+Get file from LA №1
+```bash
+Fetching /home/vertigo/test_file to test_file
+/root/test_file                                 1%  864KB  94.3KB/s   14:53 ETA
+/root/test_file                                 1% 1376KB 125.0KB/s   11:09 ETA
+/root/test_file                                 2% 2304KB 161.1KB/s   08:33 ETA
+/root/test_file                                 4% 3648KB 204.6KB/s   06:37 ETA
+/root/test_file                                 7% 6272KB 241.7KB/s   05:26 ETA
+/root/test_file                                10% 8640KB 254.2KB/s   05:00 ETA
+/root/test_file                                12%   11MB 246.6KB/s   05:01 ETA
+/root/test_file                                16%   13MB 258.1KB/s   04:36 ETA
+/root/test_file                                18%   15MB 261.2KB/s   04:25 ETA
+/root/test_file                                22%   19MB 260.4KB/s   04:12 ETA
+/root/test_file                                25%   22MB 262.4KB/s   04:00 ETA
+/root/test_file                                27%   23MB 264.4KB/s   03:52 ETA
+/root/test_file                                31%   26MB 266.6KB/s   03:39 ETA
+/root/test_file                                46%   38MB 261.6KB/s   02:55 ETA
+/root/test_file                                50%   42MB 260.3KB/s   02:42 ETA
+/root/test_file                                51%   42MB 265.6KB/s   02:36 ETA
+/root/test_file                                59%   50MB 261.2KB/s   02:11 ETA
+/root/test_file                                67%   56MB 269.5KB/s   01:44 ETA
+/root/test_file                                71%   59MB 261.3KB/s   01:33 ETA
+/root/test_file                                79%   66MB 265.1KB/s   01:05 ETA
+/root/test_file                                88%   74MB 257.5KB/s   00:36 ETA
+/root/test_file                                99%   83MB 252.5KB/s   05:37
+``
