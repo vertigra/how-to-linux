@@ -28,3 +28,7 @@
 ### Xen
 ---
 * [Автозапуск виртуальных машин в Xen](autostart_vm_xen.md)
+
+### Measurement speed
+---
+* [Speed comparison](speed_to_la.md)
