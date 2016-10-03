@@ -218,4 +218,10 @@ Fetching /home/vertigo/test_file to test_file
 /root/test_file                                79%   66MB 265.1KB/s   01:05 ETA
 /root/test_file                                88%   74MB 257.5KB/s   00:36 ETA
 /root/test_file                                99%   83MB 252.5KB/s   05:37
-``
+```
+### ISP № 2
+
+Put file to LA № 1 
+```bash
+
+```
