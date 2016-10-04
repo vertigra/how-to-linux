@@ -2,7 +2,7 @@
 
 ### ISP № 1
  
-Put file to LA № 1 
+**Put file to LA № 1**
 ```bash
 Uploading test_file to /root/test_file
 test_file                                               5% 4320KB 123.3KB/s   10:54 ETA
@@ -40,7 +40,7 @@ test_file                                              98%   82MB 117.2KB/s   00
 test_file                                              98%   82MB 112.3KB/s   00:09 ETA
 test_file                                              99%   83MB 142.5KB/s   09:57
 ```
-Put file to Netherlands №1
+**Put file to Netherlands №1**
 ```bash
 Uploading test_file to /root/test_file
 test_file                                               0%  352KB  46.1KB/s   30:36 ETA
@@ -81,7 +81,7 @@ test_file                                              84%   70MB 184.2KB/s   01
 test_file                                              97%   81MB 180.1KB/s   00:11 ETA
 test_file                                              99%   83MB 172.2KB/s   08:14
 ```
-Put file to LA № 2
+**Put file to LA № 2**
 ```bash
 Uploading test_file to /root/test_file
 test_file                                               0%  192KB  35.5KB/s   39:54 ETA
@@ -120,7 +120,7 @@ test_file                                              89%   74MB 166.3KB/s   00
 test_file                                              92%   77MB 134.9KB/s   00:45 ETA
 test_file                                              99%   83MB 147.7KB/s   09:36
 ```
-Put file to Netherlands №2
+**Put file to Netherlands №2**
 ```bash
 Uploading test_file to /root/test_file
 test_file                                               0%  128KB  38.4KB/s   36:52 ETA
@@ -245,7 +245,7 @@ test_file                        95%   80MB 429.0KB/s   00:07 ETA
 test_file                       100%   83MB 345.9KB/s   04:06
 ```
 
-Put file to Netherlands № 1
+**Put file to Netherlands № 1**
 ```bash
 Uploading test_file to /root/test_file
 test_file                         1% 1248KB 301.4KB/s   04:38 ETA
@@ -305,7 +305,17 @@ Fetching /root/test_file to test_file
 ```
 **Get file from Netherlands**
 ```bash
-
+Fetching /root/test_file to test_file
+/root/test_file                   1% 1280KB 170.9KB/s   08:10 ETA
+/root/test_file                   9% 8384KB 462.1KB/s   02:45 ETA
+/root/test_file                  15%   13MB 428.4KB/s   02:48 ETA
+/root/test_file                  27%   23MB 491.3KB/s   02:05 ETA
+/root/test_file                  39%   33MB 386.1KB/s   02:13 ETA
+/root/test_file                  43%   36MB 274.0KB/s   02:55 ETA
+/root/test_file                  79%   66MB 322.2KB/s   00:53 ETA
+/root/test_file                  86%   72MB 286.9KB/s   00:39 ETA
+/root/test_file                  93%   78MB 423.9KB/s   00:13 ETA
+/root/test_file                 100%   83MB 381.5KB/s   03:43
 ```
 
 
