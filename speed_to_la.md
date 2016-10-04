@@ -193,7 +193,7 @@ Fetching /root/test_file to test_file
 /root/test_file                                        91%   76MB 173.5KB/s   00:41 ETA
 /root/test_file                                        99%   83MB 163.3KB/s   08:41
 ```
-**Get file from Netherlands №1**
+**Get file from Netherlands**
 ```bash
 Fetching /root/test_file to test_file
 /root/test_file                                 1%  864KB  94.3KB/s   14:53 ETA
