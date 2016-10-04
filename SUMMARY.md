@@ -31,7 +31,7 @@
 
 ### Errors
 ---
-[debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used](error_dailog.md)
+* [debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used](error_dailog.md)
 
 ### Measurement speed
 ---
