@@ -6,16 +6,19 @@
 # iptables -F && iptables -X
 # ip6tables -F && ip6tables -X
 ```
-### Посмотреть текущую конифигруацию iptables (IPv4 или IPv6)
+---
+### Посмотреть текущий статус iptables (IPv4 или IPv6)
 ```bash
 # iptables -L -nv
 # ip6tables -L -nv
 ```
+---
 ### Применить новые правила (IPv4 или IPv6)
 ```bash
 # iptables-restore < /etc/iptables/rules.v4
 # ip6tables-restore < /etc/iptables/rules.v6
 ```
+---
 ### Выключить iptables (IPv4)
 ```bash
 # iptables-save > $HOME/firewall.txt
@@ -39,4 +42,3 @@
 № ip6tables -P FORWARD ACCEPT
 № ip6tables -P OUTPUT ACCEPT
 ```
-
