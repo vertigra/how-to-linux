@@ -172,26 +172,26 @@ test_file                                              99%   83MB 190.8KB/s   07
 **Get file from LA**
 ```bash
 Fetching /root/test_file to test_file
-/root/test_file                                         1% 1120KB  92.2KB/s   15:10 ETA
-/root/test_file                                         6% 5440KB 166.8KB/s   07:57 ETA
-/root/test_file                                         7% 6752KB 150.8KB/s   08:39 ETA
-/root/test_file                                        15%   13MB 145.2KB/s   08:12 ETA
-/root/test_file                                        21%   18MB 168.7KB/s   06:35 ETA
-/root/test_file                                        31%   26MB 165.5KB/s   05:51 ETA
-/root/test_file                                        33%   28MB 172.1KB/s   05:29 ETA
-/root/test_file                                        43%   36MB 164.8KB/s   04:52 ETA
-/root/test_file                                        51%   43MB 161.9KB/s   04:16 ETA
-/root/test_file                                        53%   45MB 168.7KB/s   03:53 ETA
-/root/test_file                                        54%   46MB 172.8KB/s   03:41 ETA
-/root/test_file                                        56%   47MB 169.4KB/s   03:40 ETA
-/root/test_file                                        61%   51MB 155.7KB/s   03:27 ETA
-/root/test_file                                        65%   54MB 138.6KB/s   03:31 ETA
-/root/test_file                                        67%   56MB 157.0KB/s   02:55 ETA
-/root/test_file                                        71%   59MB 161.9KB/s   02:31 ETA
-/root/test_file                                        85%   71MB 167.0KB/s   01:16 ETA
-/root/test_file                                        88%   74MB 167.5KB/s   00:56 ETA
-/root/test_file                                        91%   76MB 173.5KB/s   00:41 ETA
-/root/test_file                                        99%   83MB 163.3KB/s   08:41
+/root/test_file                                 1% 1120KB  92.2KB/s   15:10 ETA
+/root/test_file                                 6% 5440KB 166.8KB/s   07:57 ETA
+/root/test_file                                 7% 6752KB 150.8KB/s   08:39 ETA
+/root/test_file                                15%   13MB 145.2KB/s   08:12 ETA
+/root/test_file                                21%   18MB 168.7KB/s   06:35 ETA
+/root/test_file                                31%   26MB 165.5KB/s   05:51 ETA
+/root/test_file                                33%   28MB 172.1KB/s   05:29 ETA
+/root/test_file                                43%   36MB 164.8KB/s   04:52 ETA
+/root/test_file                                51%   43MB 161.9KB/s   04:16 ETA
+/root/test_file                                53%   45MB 168.7KB/s   03:53 ETA
+/root/test_file                                54%   46MB 172.8KB/s   03:41 ETA
+/root/test_file                                56%   47MB 169.4KB/s   03:40 ETA
+/root/test_file                                61%   51MB 155.7KB/s   03:27 ETA
+/root/test_file                                65%   54MB 138.6KB/s   03:31 ETA
+/root/test_file                                67%   56MB 157.0KB/s   02:55 ETA
+/root/test_file                                71%   59MB 161.9KB/s   02:31 ETA
+/root/test_file                                85%   71MB 167.0KB/s   01:16 ETA
+/root/test_file                                88%   74MB 167.5KB/s   00:56 ETA
+/root/test_file                                91%   76MB 173.5KB/s   00:41 ETA
+/root/test_file                                99%   83MB 163.3KB/s   08:41
 ```
 **Get file from Netherlands**
 ```bash
