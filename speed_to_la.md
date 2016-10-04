@@ -169,7 +169,7 @@ test_file                                              97%   81MB 168.1KB/s   00
 test_file                                              97%   81MB 154.6KB/s   00:12 ETA
 test_file                                              99%   83MB 190.8KB/s   07:26
 ```
-Get file from LA
+**Get file from LA**
 ```bash
 Fetching /root/test_file to test_file
 /root/test_file                                         1% 1120KB  92.2KB/s   15:10 ETA
@@ -193,7 +193,7 @@ Fetching /root/test_file to test_file
 /root/test_file                                        91%   76MB 173.5KB/s   00:41 ETA
 /root/test_file                                        99%   83MB 163.3KB/s   08:41
 ```
-Get file from Netherlands №1
+**Get file from Netherlands №1**
 ```bash
 Fetching /root/test_file to test_file
 /root/test_file                                 1%  864KB  94.3KB/s   14:53 ETA
@@ -221,27 +221,27 @@ Fetching /root/test_file to test_file
 ```
 ### ISP № 2
 
-Put file to LA № 1 
+**Put file to LA № 1** 
 ```bash
 Uploading test_file to /root/test_file
-test_file                         3% 2624KB 207.1KB/s   06:38
-test_file                         4% 4064KB 224.2KB/s   06:01
-test_file                         6% 5728KB 207.2KB/s   06:22
-test_file                         7% 6624KB 232.3KB/s   05:37
-test_file                         8% 7392KB 261.1KB/s   04:57
-test_file                         9% 8032KB 271.6KB/s   04:43
-test_file                        14%   12MB 415.2KB/s   02:55
-test_file                        26%   22MB 421.0KB/s   02:28
-test_file                        30%   26MB 473.6KB/s   02:04
-test_file                        40%   33MB 301.1KB/s   02:49
-test_file                        41%   35MB 156.5KB/s   05:17
-test_file                        42%   35MB 141.6KB/s   05:46
-test_file                        54%   46MB 408.2KB/s   01:33
-test_file                        60%   50MB 447.7KB/s   01:15
-test_file                        70%   59MB 294.4KB/s   01:24
-test_file                        79%   66MB 475.7KB/s   00:36
-test_file                        87%   73MB 452.4KB/s   00:23
-test_file                        95%   80MB 429.0KB/s   00:07
+test_file                         3% 2624KB 207.1KB/s   06:38 ETA
+test_file                         4% 4064KB 224.2KB/s   06:01 ETA
+test_file                         6% 5728KB 207.2KB/s   06:22 ETA
+test_file                         7% 6624KB 232.3KB/s   05:37 ETA 
+test_file                         8% 7392KB 261.1KB/s   04:57 ETA
+test_file                         9% 8032KB 271.6KB/s   04:43 ETA
+test_file                        14%   12MB 415.2KB/s   02:55 ETA
+test_file                        26%   22MB 421.0KB/s   02:28 ETA
+test_file                        30%   26MB 473.6KB/s   02:04 ETA
+test_file                        40%   33MB 301.1KB/s   02:49 ETA
+test_file                        41%   35MB 156.5KB/s   05:17 ETA
+test_file                        42%   35MB 141.6KB/s   05:46 ETA
+test_file                        54%   46MB 408.2KB/s   01:33 ETA
+test_file                        60%   50MB 447.7KB/s   01:15 ETA
+test_file                        70%   59MB 294.4KB/s   01:24 ETA
+test_file                        79%   66MB 475.7KB/s   00:36 ETA
+test_file                        87%   73MB 452.4KB/s   00:23 ETA
+test_file                        95%   80MB 429.0KB/s   00:07 ETA
 test_file                       100%   83MB 345.9KB/s   04:06
 ```
 
@@ -259,9 +259,49 @@ test_file                        83%   69MB 585.0KB/s   00:24 ETA
 test_file                        93%   77MB 515.7KB/s   00:11 ETA
 test_file                       100%   83MB 625.6KB/s   02:16
 ```
-Put file to LA № 2
+**Put file to LA № 2**
 ```bash
-
+Uploading test_file to /root/test_file
+test_file                        16%   14MB 433.3KB/s   02:44 ETA
+test_file                        19%   16MB 321.3KB/s   03:32 ETA
+test_file                        23%   20MB 353.4KB/s   03:03 ETA
+test_file                        33%   28MB 424.0KB/s   02:14 ETA
+test_file                        42%   35MB 518.1KB/s   01:34 ETA
+test_file                        93%   78MB 336.4KB/s   00:15 ETA
+test_file                       100%   83MB 390.3KB/s   03:38
+```
+**Put file to Netherlands № 2**
+```bash
+Uploading test_file to /home/vertigo/test_file
+test_file                         4% 4128KB 750.9KB/s   01:47 ETA
+test_file                         8% 6944KB 524.3KB/s   02:29 ETA
+test_file                        19%   16MB 765.2KB/s   01:29 ETA
+test_file                        30%   26MB 792.7KB/s   01:14 ETA
+test_file                        41%   34MB 827.0KB/s   01:00 ETA
+test_file                        50%   42MB 751.9KB/s   00:55 ETA
+test_file                        59%   50MB 515.8KB/s   01:06 ETA
+test_file                        69%   58MB 658.1KB/s   00:39 ETA
+test_file                        72%   60MB 485.9KB/s   00:48 ETA
+test_file                        86%   72MB 748.7KB/s   00:14 ETA
+test_file                        93%   78MB 886.3KB/s   00:06 ETA
+test_file                       100%   83MB 697.4KB/s   02:02
+```
+**Get file from LA**
+```bash
+Fetching /root/test_file to test_file
+/root/test_file                   2% 2080KB 124.4KB/s   11:07 ETA
+/root/test_file                   5% 4832KB 249.7KB/s   05:21 ETA
+/root/test_file                   8% 7552KB 251.2KB/s   05:08 ETA
+/root/test_file                  14%   12MB 411.1KB/s   02:57 ETA
+/root/test_file                  29%   25MB 458.9KB/s   02:10 ETA
+/root/test_file                  41%   35MB 423.0KB/s   01:57 ETA
+/root/test_file                  58%   48MB 360.5KB/s   01:38 ETA
+/root/test_file                  63%   53MB 332.0KB/s   01:32 ETA
+/root/test_file                  70%   58MB 405.7KB/s   01:02 ETA
+/root/test_file                  76%   64MB 289.6KB/s   01:09 ETA
+/root/test_file                  83%   70MB 497.3KB/s   00:27 ETA
+/root/test_file                  89%   74MB 503.5KB/s   00:18 ETA
+/root/test_file                 100%   83MB 388.5KB/s   03:39
 ```
 
 
