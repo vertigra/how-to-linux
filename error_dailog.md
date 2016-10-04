@@ -1,4 +1,5 @@
 # debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used
+*OC: Debian 8 Jessie*
 
 
 При ошибке:
