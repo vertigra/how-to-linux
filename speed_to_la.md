@@ -224,23 +224,35 @@ Fetching /home/vertigo/test_file to test_file
 Put file to LA № 1 
 ```bash
 Uploading test_file to /root/test_file
-test_file                                                                                                                                    3% 2624KB 207.1KB/s   06:38 ETA
-test_file                                                                                                                                    4% 4064KB 224.2KB/s   06:01 ETA
-test_file                                                                                                                                    6% 5728KB 207.2KB/s   06:22 ETA
-test_file                                                                                                                                    7% 6624KB 232.3KB/s   05:37 ETA
-test_file                                                                                                                                    8% 7392KB 261.1KB/s   04:57 ETA
-test_file                                                                                                                                    9% 8032KB 271.6KB/s   04:43 ETA
-test_file                                                                                                                                   14%   12MB 415.2KB/s   02:55 ETA
-test_file                                                                                                                                   26%   22MB 421.0KB/s   02:28 ETA
-test_file                                                                                                                                   30%   26MB 473.6KB/s   02:04 ETA
-test_file                                                                                                                                   40%   33MB 301.1KB/s   02:49 ETA
-test_file                                                                                                                                   41%   35MB 156.5KB/s   05:17 ETA
-test_file                                                                                                                                   42%   35MB 141.6KB/s   05:46 ETA
-test_file                                                                                                                                   54%   46MB 408.2KB/s   01:33 ETA
-test_file                                                                                                                                   60%   50MB 447.7KB/s   01:15 ETA
-test_file                                                                                                                                   70%   59MB 294.4KB/s   01:24 ETA
-test_file                                                                                                                                   79%   66MB 475.7KB/s   00:36 ETA
-test_file                                                                                                                                   87%   73MB 452.4KB/s   00:23 ETA
-test_file                                                                                                                                   95%   80MB 429.0KB/s   00:07 ETA
-test_file                                                                                                                                  100%   83MB 345.9KB/s   04:06
+test_file                         3% 2624KB 207.1KB/s   06:38
+test_file                         4% 4064KB 224.2KB/s   06:01
+test_file                         6% 5728KB 207.2KB/s   06:22
+test_file                         7% 6624KB 232.3KB/s   05:37
+test_file                         8% 7392KB 261.1KB/s   04:57
+test_file                         9% 8032KB 271.6KB/s   04:43
+test_file                        14%   12MB 415.2KB/s   02:55
+test_file                        26%   22MB 421.0KB/s   02:28
+test_file                        30%   26MB 473.6KB/s   02:04
+test_file                        40%   33MB 301.1KB/s   02:49
+test_file                        41%   35MB 156.5KB/s   05:17
+test_file                        42%   35MB 141.6KB/s   05:46
+test_file                        54%   46MB 408.2KB/s   01:33
+test_file                        60%   50MB 447.7KB/s   01:15
+test_file                        70%   59MB 294.4KB/s   01:24
+test_file                        79%   66MB 475.7KB/s   00:36
+test_file                        87%   73MB 452.4KB/s   00:23
+test_file                        95%   80MB 429.0KB/s   00:07
+test_file                       100%   83MB 345.9KB/s   04:06
 ```
+Put file to Netherlands № 1
+Uploading test_file to /root/test_file
+test_file                         1% 1248KB 301.4KB/s   04:38 ETA
+test_file                        14%   12MB 561.5KB/s   02:10 ETA
+test_file                        26%   22MB 476.7KB/s   02:10 ETA
+test_file                        38%   32MB 729.7KB/s   01:11 ETA
+test_file                        53%   45MB 745.1KB/s   00:53 ETA
+test_file                        61%   51MB 565.3KB/s   00:58 ETA
+test_file                        72%   60MB 724.9KB/s   00:32 ETA
+test_file                        83%   69MB 585.0KB/s   00:24 ETA
+test_file                        93%   77MB 515.7KB/s   00:11 ETA
+test_file                       100%   83MB 625.6KB/s   02:16
