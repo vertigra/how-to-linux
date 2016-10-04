@@ -195,7 +195,7 @@ Fetching /root/test_file to test_file
 ```
 Get file from Netherlands №1
 ```bash
-Fetching /home/vertigo/test_file to test_file
+Fetching /root/test_file to test_file
 /root/test_file                                 1%  864KB  94.3KB/s   14:53 ETA
 /root/test_file                                 1% 1376KB 125.0KB/s   11:09 ETA
 /root/test_file                                 2% 2304KB 161.1KB/s   08:33 ETA
@@ -244,7 +244,9 @@ test_file                        87%   73MB 452.4KB/s   00:23
 test_file                        95%   80MB 429.0KB/s   00:07
 test_file                       100%   83MB 345.9KB/s   04:06
 ```
+
 Put file to Netherlands № 1
+```bash
 Uploading test_file to /root/test_file
 test_file                         1% 1248KB 301.4KB/s   04:38 ETA
 test_file                        14%   12MB 561.5KB/s   02:10 ETA
@@ -256,3 +258,11 @@ test_file                        72%   60MB 724.9KB/s   00:32 ETA
 test_file                        83%   69MB 585.0KB/s   00:24 ETA
 test_file                        93%   77MB 515.7KB/s   00:11 ETA
 test_file                       100%   83MB 625.6KB/s   02:16
+```
+Put file to LA № 2
+```bash
+
+```
+
+
+
