@@ -72,18 +72,19 @@ Fetching /root/test_file to test_file
 
 **Get file from Netherlands**
 ```bash
-Fetching /home/vertigo/test_file to test_file
-/home/vertigo/test_file                                 3% 2976KB 167.2KB/s   08:11 ETA /home/vertigo/test_file                                 8% 7104KB 231.8KB/s   05:36 ETA
-/home/vertigo/test_file                                40%   33MB 181.5KB/s   04:40 ETA
-/home/vertigo/test_file                                57%   48MB 199.1KB/s   03:01 ETA
-/home/vertigo/test_file                                61%   51MB 131.4KB/s   04:07 ETA
-/home/vertigo/test_file                                71%   59MB 187.5KB/s   02:09 ETA
-/home/vertigo/test_file                                77%   64MB 234.0KB/s   01:23 ETA
-/home/vertigo/test_file                                83%   69MB 194.0KB/s   01:14 ETA
-/home/vertigo/test_file                                92%   77MB 201.8KB/s   00:32 ETA
-/home/vertigo/test_file                                97%   81MB 187.8KB/s   00:13 ETA
-/home/vertigo/test_file                                99%   83MB 197.9KB/s   07:10
+Fetching /root/test_file to test_file
+/root/test_file                                 3% 2976KB 167.2KB/s   08:11 ETA /root/test_file                                 8% 7104KB 231.8KB/s   05:36 ETA
+/root/test_file                                40%   33MB 181.5KB/s   04:40 ETA
+/root/test_file                                57%   48MB 199.1KB/s   03:01 ETA
+/root/test_file                                61%   51MB 131.4KB/s   04:07 ETA
+/root/test_file                                71%   59MB 187.5KB/s   02:09 ETA
+/root/test_file                                77%   64MB 234.0KB/s   01:23 ETA
+/root/test_file                                83%   69MB 194.0KB/s   01:14 ETA
+/root/test_file                                92%   77MB 201.8KB/s   00:32 ETA
+/root/test_file                                97%   81MB 187.8KB/s   00:13 ETA
+/root/test_file                                99%   83MB 197.9KB/s   07:10
 ```
+
 ### ISP 2
 
 **Put file to LA №1**
