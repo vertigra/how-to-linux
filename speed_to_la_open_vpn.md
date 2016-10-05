@@ -257,3 +257,21 @@ Fetching /root/test_file to test_file
 /root/test_file                               94%   12MB 119.6KB/s   00:05 ETA
 /root/test_file                              100%   12MB 106.3KB/s   01:58
 ```
+
+```bash
+Client ISP1 put file to client ISP1
+sftp> put test_file
+Uploading test_file to /root/test_file
+test_file                                               5%  736KB  40.9KB/s   04:48 ETA
+test_file                                              10% 1344KB  42.8KB/s   04:21 ETA
+test_file                                              15% 1888KB  52.1KB/s   03:24 ETA
+test_file                                              17% 2240KB  63.8KB/s   02:41 ETA
+test_file                                              21% 2656KB  67.2KB/s   02:27 ETA
+test_file                                              29% 3680KB  48.0KB/s   03:04 ETA
+test_file                                              36% 4640KB  74.7KB/s   01:45 ETA
+test_file                                              39% 4896KB  84.9KB/s   01:30 ETA
+test_file                                              52% 6624KB 108.5KB/s   00:54 ETA
+test_file                                              70% 8864KB 105.5KB/s   00:34 ETA
+test_file                                             100%   12MB  72.1KB/s   02:54
+
+```
