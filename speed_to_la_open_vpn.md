@@ -83,11 +83,7 @@ Fetching /home/vertigo/test_file to test_file
 /home/vertigo/test_file                                92%   77MB 201.8KB/s   00:32 ETA
 /home/vertigo/test_file                                97%   81MB 187.8KB/s   00:13 ETA
 /home/vertigo/test_file                                99%   83MB 197.9KB/s   07:10
-
-
 ```
-
-
 ### ISP 2
 
 **Put file to LA №1**
