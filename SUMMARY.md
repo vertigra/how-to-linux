@@ -19,6 +19,7 @@
 * [Как сделать сертификат клиентa OpenVPN](create_client_cert_openvpn.md)
 * [Как сделать привязку IP к сертификату клиента OpenVPN](static-vpn-ip.md)
 * [Как управлять OpenVPN демоном](start-stop-status.md)
+* [Как установить Pritunl (Панель управления OpenVPN сервером)](pritunl_install.md)
 
 ### Iptables
 ---
