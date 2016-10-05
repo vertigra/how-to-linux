@@ -101,5 +101,51 @@ test_file                                  47%   39MB 305.0KB/s   02:27 ETA
 test_file                                  82%   68MB 434.3KB/s   00:34 ETA
 test_file                                  99%   83MB 416.3KB/s   00:00 ETA
 test_file                                 100%   83MB 365.1KB/s   03:53
+```
+
+**Put file to Netherlands № 1**
+```bash
+ put test_file
+Uploading test_file to /root/test_file
+test_file                                   10% 8960KB 721.2KB/s   01:45 ETA
+test_file                                   22%   19MB 870.5KB/s   01:15 ETA
+test_file                                   37%   31MB 713.7KB/s   01:14 ETA
+test_file                                   91%   76MB 839.0KB/s   00:08 ETA
+test_file                                  100%   83MB 773.4KB/s   01:50
+```
+
+**Put file to LA №2**
+```bash
+Uploading test_file to /root/test_file
+test_file                                   27%   23MB 396.3KB/s   02:36 ETA
+test_file                                   33%   28MB 384.9KB/s   02:27 ETA
+test_file                                   47%   39MB 248.3KB/s   03:01 ETA
+test_file                                   62%   52MB 344.6KB/s   01:31 ETA
+test_file                                   76%   63MB 462.8KB/s   00:43 ETA
+test_file                                   95%   79MB 559.9KB/s   00:06 ETA
+test_file                                  100%   83MB 365.1KB/s   03:53
+```
+
+**Put file to Netherlands № 2**
+```bash
+sftp> put test_file
+Uploading test_file to /root/test_file
+test_file                                    3% 2912KB 467.0KB/s   02:55 ETA
+test_file                                   95%   79MB 808.7KB/s   00:04 ETA
+test_file                                  100%   83MB 826.0KB/s   01:43
+```
+
+**Get file from Netherlands**
+```bash
+Fetching /root/test_file to test_file
+/root/test_file                      2% 2080KB 201.8KB/s   06:51 ETA
+/root/test_file                      5% 4288KB 253.5KB/s   05:18 ETA
+/root/test_file                      8% 7168KB 231.2KB/s   05:37 ETA
+/root/test_file                     15%   13MB 227.4KB/s   05:17 ETA
+/root/test_file                     49%   41MB 453.1KB/s   01:34 ETA
+/root/test_file                     60%   51MB 273.4KB/s   02:02 ETA
+/root/test_file                     71%   59MB 247.3KB/s   01:38 ETA
+/root/test_file                     80%   67MB 306.5KB/s   00:53 ETA
+/root/test_file                    100%   83MB 291.4KB/s   04:52
 
 ```
