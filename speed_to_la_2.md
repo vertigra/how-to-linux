@@ -2,7 +2,7 @@
 
 ### ISP 1
 
-**Put to LA**
+**Put to LA №1**
 ```bash
 Uploading test_file to /root/test_file
 test_file                                               1%  864KB  65.2KB/s   21:31 ETA
@@ -38,6 +38,11 @@ test_file                                              91%   76MB 168.6KB/s   00
 test_file                                              93%   78MB 125.2KB/s   00:43 ETA
 test_file                                              96%   80MB 147.3KB/s   00:22 ETA
 test_file                                              99%   83MB 140.2KB/s   10:07
+```
+
+**Put to LA №2**
+```bash
+
 ```
 
 **Get from LA**
