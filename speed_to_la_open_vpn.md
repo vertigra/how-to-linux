@@ -222,7 +222,6 @@ Fetching /root/test_file to test_file
 /root/test_file                            100%   12MB  51.0KB/s   04:06
 ```
 
-
 ```bash
 From client ISP1 put file to client ISP2
 Uploading test_file to /root/test_file
@@ -241,5 +240,4 @@ test_file                                   66% 8320KB 105.8KB/s   00:39 ETA
 test_file                                   71% 8992KB 107.2KB/s   00:33 ETA
 test_file                                   83%   10MB  99.5KB/s   00:21 ETA
 test_file                                  100%   12MB  51.0KB/s   04:06
-
 ```
