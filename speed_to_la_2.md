@@ -86,3 +86,18 @@ test_file                                              99%   83MB 102.8KB/s   13
 
 ### ISP 2
 
+```bash
+Uploading test_file to /root/test_file
+test_file                                    3% 3040KB 210.8KB/s   06:29 ETA
+test_file                                    5% 4320KB 250.1KB/s   05:22 ETA
+test_file                                   10% 8576KB 382.3KB/s   03:20 ETA
+test_file                                   16%   14MB 413.4KB/s   02:51 ETA
+test_file                                   29%   25MB 545.6KB/s   01:49 ETA
+test_file                                   37%   32MB 491.8KB/s   01:47 ETA
+test_file                                   51%   43MB 564.5KB/s   01:13 ETA
+test_file                                   58%   49MB 373.4KB/s   01:34 ETA
+test_file                                   60%   50MB 381.6KB/s   01:28 ETA
+test_file                                   72%   60MB 520.6KB/s   00:45 ETA
+test_file                                   90%   75MB 515.5KB/s   00:16 ETA
+test_file                                  100%   83MB 447.8KB/s   03:10
+```
