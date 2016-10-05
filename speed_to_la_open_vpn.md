@@ -219,5 +219,27 @@ Fetching /root/test_file to test_file
 /root/test_file                             70% 8832KB  40.5KB/s   01:31 ETA
 /root/test_file                             71% 9024KB  36.8KB/s   01:35 ETA
 /root/test_file                             82%   10MB  79.3KB/s   00:27 ETA
-/root/test_file                             100%   12MB  51.0KB/s   04:06
+/root/test_file                            100%   12MB  51.0KB/s   04:06
+```
+
+
+```bash
+From client ISP1 put file to client ISP2
+Uploading test_file to /root/test_file
+test_file                                    6%  832KB  86.6KB/s   02:15 ETA
+test_file                                   10% 1280KB  95.7KB/s   01:57 ETA
+test_file                                   12% 1568KB  78.4KB/s   02:19 ETA
+test_file                                   17% 2176KB  67.8KB/s   02:32 ETA
+test_file                                   19% 2496KB  46.0KB/s   03:38 ETA
+test_file                                   24% 3104KB  34.3KB/s   04:35 ETA
+test_file                                   29% 3744KB  37.4KB/s   03:55 ETA
+test_file                                   35% 4416KB  31.5KB/s   04:18 ETA
+test_file                                   40% 5056KB  24.9KB/s   05:00 ETA
+test_file                                   47% 5952KB  37.2KB/s   02:57 ETA
+test_file                                   53% 6656KB  56.7KB/s   01:43 ETA
+test_file                                   66% 8320KB 105.8KB/s   00:39 ETA
+test_file                                   71% 8992KB 107.2KB/s   00:33 ETA
+test_file                                   83%   10MB  99.5KB/s   00:21 ETA
+test_file                                  100%   12MB  51.0KB/s   04:06
+
 ```
