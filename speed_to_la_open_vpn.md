@@ -166,3 +166,20 @@ Fetching /root/test_file to test_file
 /root/test_file                             99%   83MB 175.5KB/s   00:00 ETA
 /root/test_file                            100%   83MB 252.5KB/s   05:37
 ```
+
+### Client -> Client
+
+**Client-Client Netherlands VPN**
+```bash
+From client ISP1 get file to client ISP2
+
+sftp> get test_file
+Fetching /root/test_file to test_file
+/root/test_file                              8% 1120KB  42.5KB/s   04:28 ETA
+/root/test_file                             12% 1536KB  34.7KB/s   05:17 ETA
+/root/test_file                             26% 3264KB  73.2KB/s   02:06 ETA
+/root/test_file                             38% 4768KB  73.3KB/s   01:46 ETA
+/root/test_file                             41% 5248KB  57.8KB/s   02:06 ETA
+/root/test_file                            100%   12MB  61.2KB/s   03:25
+
+```
