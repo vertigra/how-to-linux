@@ -181,5 +181,43 @@ Fetching /root/test_file to test_file
 /root/test_file                             38% 4768KB  73.3KB/s   01:46 ETA
 /root/test_file                             41% 5248KB  57.8KB/s   02:06 ETA
 /root/test_file                            100%   12MB  61.2KB/s   03:25
+```
 
+```bash
+From client ISP1 put file to client ISP2
+Uploading test_file to /root/test_file
+test_file                                    3%  480KB  48.0KB/s   04:11 ETA
+test_file                                    7%  928KB  51.7KB/s   03:44 ETA
+test_file                                   13% 1632KB  54.7KB/s   03:19 ETA
+test_file                                   26% 3296KB  43.4KB/s   03:33 ETA
+test_file                                   35% 4416KB  53.0KB/s   02:33 ETA
+test_file                                   41% 5216KB  53.7KB/s   02:16 ETA
+test_file                                   45% 5728KB  33.4KB/s   03:24 ETA
+test_file                                   59% 7520KB  47.6KB/s   01:45 ETA
+test_file                                   81%   10MB  53.7KB/s   00:44 ETA
+test_file                                  100%   12MB  49.2KB/s   04:15
+```
+
+**Client-Client LA VPN**
+
+```bash
+From client ISP1 get file to client ISP2
+sftp> get test_file
+Fetching /root/test_file to test_file
+/root/test_file                              1%  224KB  30.9KB/s   06:39 ETA
+/root/test_file                              4%  512KB  36.7KB/s   05:27 ETA
+/root/test_file                              8% 1056KB  32.9KB/s   05:48 ETA
+/root/test_file                             14% 1760KB  48.1KB/s   03:44 ETA
+/root/test_file                             17% 2144KB  55.9KB/s   03:06 ETA
+/root/test_file                             22% 2880KB  60.6KB/s   02:39 ETA
+/root/test_file                             29% 3712KB  74.7KB/s   01:58 ETA
+/root/test_file                             43% 5408KB  76.9KB/s   01:32 ETA
+/root/test_file                             45% 5728KB  77.4KB/s   01:28 ETA
+/root/test_file                             50% 6368KB  74.3KB/s   01:23 ETA
+/root/test_file                             58% 7328KB  63.5KB/s   01:22 ETA
+/root/test_file                             66% 8384KB  63.9KB/s   01:05 ETA
+/root/test_file                             70% 8832KB  40.5KB/s   01:31 ETA
+/root/test_file                             71% 9024KB  36.8KB/s   01:35 ETA
+/root/test_file                             82%   10MB  79.3KB/s   00:27 ETA
+/root/test_file                             100%   12MB  51.0KB/s   04:06
 ```
