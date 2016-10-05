@@ -15,6 +15,18 @@ test_file                                              64%   54MB 167.6KB/s   02
 test_file                                              99%   83MB 149.0KB/s   09:31
 ```
 
+**Put file to Netherlands № 1**
+```bash
+Uploading test_file to /home/vertigo/test_file
+test_file                                               3% 3008KB 145.5KB/s   09:24 ETA
+test_file                                               4% 4192KB 129.7KB/s   10:23 ETA
+test_file                                              37%   31MB 154.6KB/s   05:44 ETA
+test_file                                              70%   59MB  87.9KB/s   04:45 ETA
+test_file                                              77%   65MB  96.3KB/s   03:14 ETA
+test_file                                              85%   71MB 114.2KB/s   01:46 ETA
+test_file                                              90%   75MB  84.8KB/s   01:37 ETA test_file                                              99%   83MB 122.6KB/s   11:34
+```
+
 **Put file to LA №2**
 ```bash
 Uploading test_file to /root/test_file
@@ -28,4 +40,40 @@ test_file                                              27%   23MB 125.3KB/s   08
 test_file                                              63%   53MB 112.4KB/s   04:34 ETA
 test_file                                              88%   74MB 170.7KB/s   00:56 ETA
 test_file                                              99%   83MB 125.5KB/s   11:18
+```
+
+**Put file to Netherlands № 2**
+```bash
+
+```
+
+**Get file from LA**
+```bash
+Fetching /root/test_file to test_file
+/root/test_file                                         0%  256KB  47.7KB/s   29:39 ETA
+/root/test_file                                         4% 3424KB 135.8KB/s   10:01 ETA
+/root/test_file                                         8% 7200KB 154.1KB/s   08:25 ETA
+/root/test_file                                        23%   20MB 154.5KB/s   07:00 ETA
+/root/test_file                                        42%   35MB 154.1KB/s   05:16 ETA
+/root/test_file                                        98%   82MB 138.3KB/s   00:06 ETA
+/root/test_file                                        99%   83MB 152.5KB/s   09:18
+```
+
+### ISP 2
+
+**Put file to LA №1**
+```bash
+Uploading test_file to /root/test_file
+test_file                                   5% 4480KB 244.1KB/s   05:30 ETA
+test_file                                   9% 8064KB 280.0KB/s   04:35 ETA
+test_file                                  18%   16MB 417.7KB/s   02:45 ETA
+test_file                                  25%   21MB 317.0KB/s   03:19 ETA
+test_file                                  33%   28MB 269.2KB/s   03:30 ETA
+test_file                                  42%   35MB 463.6KB/s   01:46 ETA
+test_file                                  42%   35MB 426.8KB/s   01:55 ETA
+test_file                                  47%   39MB 305.0KB/s   02:27 ETA
+test_file                                  82%   68MB 434.3KB/s   00:34 ETA
+test_file                                  99%   83MB 416.3KB/s   00:00 ETA
+test_file                                 100%   83MB 365.1KB/s   03:53
+
 ```
