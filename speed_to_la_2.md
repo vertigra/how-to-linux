@@ -64,7 +64,6 @@ test_file                                              83%   69MB 130.6KB/s   01
 test_file                                              86%   72MB 159.8KB/s   01:13 ETA
 test_file                                              91%   76MB 144.6KB/s   00:48 ETA
 test_file                                              99%   83MB 102.8KB/s   13:48
-
 ```
 
 **Get from LA**
@@ -83,5 +82,4 @@ test_file                                              99%   83MB 102.8KB/s   13
 /root/test_file                                        83%   69MB 156.8KB/s   01:31 ETA
 /root/test_file                                        93%   78MB 163.2KB/s   00:31 ETA
 /root/test_file                                        99%   83MB 157.3KB/s   09:01
-
 ```
