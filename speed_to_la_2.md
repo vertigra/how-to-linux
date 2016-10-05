@@ -102,3 +102,8 @@ test_file                                   72%   60MB 520.6KB/s   00:45 ETA
 test_file                                   90%   75MB 515.5KB/s   00:16 ETA
 test_file                                  100%   83MB 447.8KB/s   03:10
 ```
+
+**Put to LA №2**
+```bash
+
+```
