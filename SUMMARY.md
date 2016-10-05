@@ -38,3 +38,4 @@
 ---
 * [Speed comparison](speed_to_la.md)
 * [Speed comparsion 2](speed_to_la_2.md)
+* [Speed comparsion with OpenVPN](speed_to_la_open_vpn.md)
