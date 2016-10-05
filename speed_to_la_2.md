@@ -38,5 +38,23 @@ test_file                                              91%   76MB 168.6KB/s   00
 test_file                                              93%   78MB 125.2KB/s   00:43 ETA
 test_file                                              96%   80MB 147.3KB/s   00:22 ETA
 test_file                                              99%   83MB 140.2KB/s   10:07
+```
+
+**Get from LA**
+```bash
+/root/test_file                                         8% 7008KB 143.0KB/s   09:06 ETA
+/root/test_file                                        13%   12MB 155.9KB/s   07:50 ETA
+/root/test_file                                        15%   13MB 157.9KB/s   07:32 ETA
+/root/test_file                                        21%   18MB 171.6KB/s   06:30 ETA
+/root/test_file                                        30%   25MB 161.1KB/s   06:07 ETA
+/root/test_file                                        34%   29MB 162.1KB/s   05:42 ETA
+/root/test_file                                        38%   32MB 154.7KB/s   05:38 ETA
+/root/test_file                                        41%   35MB 144.9KB/s   05:40 ETA
+/root/test_file                                        45%   38MB 150.2KB/s   05:06 ETA
+/root/test_file                                        47%   40MB 161.7KB/s   04:35 ETA
+/root/test_file                                        52%   43MB 153.0KB/s   04:26 ETA
+/root/test_file                                        83%   69MB 156.8KB/s   01:31 ETA
+/root/test_file                                        93%   78MB 163.2KB/s   00:31 ETA
+/root/test_file                                        99%   83MB 157.3KB/s   09:01
 
 ```
