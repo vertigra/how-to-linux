@@ -201,7 +201,7 @@ test_file                                  100%   12MB  49.2KB/s   04:15
 **Client-Client LA VPN**
 
 ```bash
-From client ISP1 get file from client ISP2
+Client ISP1 get file from client ISP2
 sftp> get test_file
 Fetching /root/test_file to test_file
 /root/test_file                              1%  224KB  30.9KB/s   06:39 ETA
@@ -223,7 +223,7 @@ Fetching /root/test_file to test_file
 ```
 
 ```bash
-From client ISP1 put file to client ISP2
+Client ISP1 put file to client ISP2
 Uploading test_file to /root/test_file
 test_file                                    6%  832KB  86.6KB/s   02:15 ETA
 test_file                                   10% 1280KB  95.7KB/s   01:57 ETA
