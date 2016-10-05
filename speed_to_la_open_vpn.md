@@ -166,5 +166,3 @@ Fetching /root/test_file to test_file
 /root/test_file                             99%   83MB 175.5KB/s   00:00 ETA
 /root/test_file                            100%   83MB 252.5KB/s   05:37
 ```
-
-**Put file 10.10.100.9 -> 10.10.100.5**
