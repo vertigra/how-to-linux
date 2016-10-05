@@ -105,5 +105,14 @@ test_file                                  100%   83MB 447.8KB/s   03:10
 
 **Put to LA №2**
 ```bash
+Uploading test_file to /root/test_file
+test_file                                    7% 6656KB 420.7KB/s   03:06 ETA
+test_file                                   16%   14MB 514.9KB/s   02:17 ETA
+test_file                                   23%   20MB 318.5KB/s   03:24 ETA
+test_file                                   42%   35MB 494.6KB/s   01:38 ETA
+test_file                                   65%   54MB 400.6KB/s   01:13 ETA
+test_file                                   76%   63MB 429.7KB/s   00:47 ETA
+test_file                                   85%   71MB 404.4KB/s   00:31 ETA
+test_file                                  100%   83MB 423.3KB/s   03:21
 
 ```
