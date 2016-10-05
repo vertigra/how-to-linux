@@ -86,6 +86,7 @@ test_file                                              99%   83MB 102.8KB/s   13
 
 ### ISP 2
 
+**Put to LA №1**
 ```bash
 Uploading test_file to /root/test_file
 test_file                                    3% 3040KB 210.8KB/s   06:29 ETA
