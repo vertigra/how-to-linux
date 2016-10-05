@@ -115,3 +115,16 @@ test_file                                   76%   63MB 429.7KB/s   00:47 ETA
 test_file                                   85%   71MB 404.4KB/s   00:31 ETA
 test_file                                  100%   83MB 423.3KB/s   03:21
 ```
+**Get file from LA**
+```bash
+Fetching /root/test_file to test_file
+/root/test_file                              1% 1248KB  91.5KB/s   15:16 ETA
+/root/test_file                             11% 9824KB 379.4KB/s   03:18 ETA
+/root/test_file                             19%   16MB 235.4KB/s   04:52 ETA
+/root/test_file                             24%   21MB 190.7KB/s   05:35 ETA
+/root/test_file                             25%   21MB 123.4KB/s   08:31 ETA
+/root/test_file                             79%   66MB 415.4KB/s   00:41 ETA
+/root/test_file                             85%   71MB 390.7KB/s   00:30 ETA
+/root/test_file                            100%   83MB 287.4KB/s   04:56
+
+```
