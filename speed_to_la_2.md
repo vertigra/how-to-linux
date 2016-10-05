@@ -114,5 +114,4 @@ test_file                                   65%   54MB 400.6KB/s   01:13 ETA
 test_file                                   76%   63MB 429.7KB/s   00:47 ETA
 test_file                                   85%   71MB 404.4KB/s   00:31 ETA
 test_file                                  100%   83MB 423.3KB/s   03:21
-
 ```
