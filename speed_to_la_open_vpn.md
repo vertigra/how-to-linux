@@ -17,7 +17,7 @@ test_file                                              99%   83MB 149.0KB/s   09
 
 **Put file to Netherlands № 1**
 ```bash
-Uploading test_file to /home/vertigo/test_file
+Uploading test_file to /root/test_file
 test_file                                               3% 3008KB 145.5KB/s   09:24 ETA
 test_file                                               4% 4192KB 129.7KB/s   10:23 ETA
 test_file                                              37%   31MB 154.6KB/s   05:44 ETA
@@ -56,7 +56,6 @@ test_file                                              71%   60MB 134.6KB/s   02
 test_file                                              83%   69MB 112.9KB/s   02:07 ETA
 test_file                                              88%   74MB 107.7KB/s   01:27 ETA
 test_file                                              99%   83MB 131.1KB/s   10:49
-
 ```
 
 **Get file from LA**
