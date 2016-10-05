@@ -170,9 +170,9 @@ Fetching /root/test_file to test_file
 ### Client -> Client
 
 **Client-Client Netherlands VPN**
-```bash
-Client ISP2 get file from client ISP1
 
+*Client ISP2 get file from client ISP1*
+```bash
 sftp> get test_file
 Fetching /root/test_file to test_file
 /root/test_file                              8% 1120KB  42.5KB/s   04:28 ETA
@@ -183,8 +183,8 @@ Fetching /root/test_file to test_file
 /root/test_file                            100%   12MB  61.2KB/s   03:25
 ```
 
+*Client ISP2 put file to client ISP1*
 ```bash
-Client ISP2 put file to client ISP1
 Uploading test_file to /root/test_file
 test_file                                    3%  480KB  48.0KB/s   04:11 ETA
 test_file                                    7%  928KB  51.7KB/s   03:44 ETA
@@ -200,8 +200,8 @@ test_file                                  100%   12MB  49.2KB/s   04:15
 
 **Client-Client LA VPN**
 
+*Client ISP2 get file from client ISP1*
 ```bash
-Client ISP2 get file from client ISP1
 sftp> get test_file
 Fetching /root/test_file to test_file
 /root/test_file                              1%  224KB  30.9KB/s   06:39 ETA
@@ -222,8 +222,8 @@ Fetching /root/test_file to test_file
 /root/test_file                            100%   12MB  51.0KB/s   04:06
 ```
 
+*Client ISP2 put file to client ISP1*
 ```bash
-Client ISP2 put file to client ISP1
 Uploading test_file to /root/test_file
 test_file                                    6%  832KB  86.6KB/s   02:15 ETA
 test_file                                   10% 1280KB  95.7KB/s   01:57 ETA
@@ -244,8 +244,8 @@ test_file                                  100%   12MB  51.0KB/s   04:06
 
 **Client-Client Netherlands VPN**
 
+*Client ISP1 get file from client ISP1*
 ```bash
-From client ISP1 get file to client ISP1
 sftp> get test_file
 Fetching /root/test_file to test_file
 /root/test_file                                4%  512KB  51.1KB/s   03:55 ETA
@@ -258,8 +258,8 @@ Fetching /root/test_file to test_file
 /root/test_file                              100%   12MB 106.3KB/s   01:58
 ```
 
+*Client ISP1 put file to client ISP1*
 ```bash
-Client ISP1 put file to client ISP1
 sftp> put test_file
 Uploading test_file to /root/test_file
 test_file                                               5%  736KB  40.9KB/s   04:48 ETA
@@ -273,5 +273,4 @@ test_file                                              39% 4896KB  84.9KB/s   01
 test_file                                              52% 6624KB 108.5KB/s   00:54 ETA
 test_file                                              70% 8864KB 105.5KB/s   00:34 ETA
 test_file                                             100%   12MB  72.1KB/s   02:54
-
 ```
