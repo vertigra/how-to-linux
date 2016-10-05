@@ -147,5 +147,23 @@ Fetching /root/test_file to test_file
 /root/test_file                     71%   59MB 247.3KB/s   01:38 ETA
 /root/test_file                     80%   67MB 306.5KB/s   00:53 ETA
 /root/test_file                    100%   83MB 291.4KB/s   04:52
+```
+**Get file from LA**
+```bash
+sftp> get test_file
+Fetching /root/test_file to test_file
+/root/test_file                              5% 4512KB 216.6KB/s   06:11 ETA
+/root/test_file                             10% 8512KB 294.4KB/s   04:20 ETA
+/root/test_file                             17%   15MB 276.1KB/s   04:12 ETA
+/root/test_file                             20%   17MB 188.3KB/s   05:59 ETA
+/root/test_file                             44%   37MB 169.4KB/s   04:41 ETA
+/root/test_file                             50%   42MB 312.6KB/s   02:13 ETA
+/root/test_file                             51%   43MB 323.0KB/s   02:06 ETA
+/root/test_file                             52%   44MB 309.7KB/s   02:09 ETA
+/root/test_file                             61%   51MB 247.2KB/s   02:13 ETA
+/root/test_file                             69%   57MB 372.3KB/s   01:10 ETA
+/root/test_file                             72%   61MB 231.3KB/s   01:39 ETA
+/root/test_file                             99%   83MB 175.5KB/s   00:00 ETA
+/root/test_file                            100%   83MB 252.5KB/s   05:37
 
 ```
