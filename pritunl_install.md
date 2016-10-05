@@ -17,7 +17,7 @@ deb http://repo.pritunl.com/stable/apt jessie main
 # systemctl start mongod pritunl
 # systemctl enable mongod pritunl
 ```
-Заходим на 127.0.0.1 или внешний ip сервера
+Заходим на 127.0.0.1 или внешний ip сервера (сервис висит на порту 443, дополнительно указывать это не нужно). 
 
 
 
