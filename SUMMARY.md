@@ -37,3 +37,4 @@
 ### Measurement speed
 ---
 * [Speed comparison](speed_to_la.md)
+* [Speed comparsion 2](speed_to_la.md)
