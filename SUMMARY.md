@@ -34,6 +34,7 @@
 ---
 * [debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used)](error_dailog.md)
 * [[mntent]: warning: no final newline at the end of /etc/fstab]](fstab_errror_newline.md)
+* [Starting NFS statd: [FAILED]](failed_nfs_statd_on_startup.md)
 
 ### Measurement speed
 ---
