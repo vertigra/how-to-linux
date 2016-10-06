@@ -3,6 +3,8 @@
 
 ### Put and get without VPN
 
+Compilation data from (Netherlands) [here](https://linux.nesterof.com/speed_to_la.html) and (LA) [here](https://linux.nesterof.com/speed_to_la_2.html)
+
 | Put            | ISP 1 | ISP 2 |
 | --             | --    | --    |
 | LA №1          | 10:07 | 03:10 |
@@ -17,6 +19,8 @@
 
 
 ### Put and get with VPN
+
+Compilation data from [here](https://linux.nesterof.com/speed_to_la_open_vpn.html)
 
 *Server < -- > client*
 
