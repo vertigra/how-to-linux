@@ -1,4 +1,4 @@
- # Speed comparsion table
+# Speed comparsion table
 
 
 ### Put and get without VPN
@@ -35,6 +35,6 @@
 *Client < -- > client*
 
 | VPN         | ISP2 get ISP1 | ISP2 put ISP1 | ISP1 get ISP1 | ISP1 put ISP1 |
-| --          | --         | --         | --         | --         |
-| Netherlands | 03:25      | 04:15      | 01:58      | 02:54      |
-| LA          | 1:3        | 2:3        | 3:3        | 4:3        |
+| --          | --            | --            | --            | --            |
+| Netherlands | 03:25         | 04:15         | 01:58         | 02:54         |
+| LA          | 04:06         | 04:06         | 04:58         | 06:09         |
