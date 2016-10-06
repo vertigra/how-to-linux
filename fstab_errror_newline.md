@@ -1,0 +1,1 @@
+# [mntent]: warning: no final newline at the end of /etc/fstab
