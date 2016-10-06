@@ -277,5 +277,26 @@ test_file                                             100%   12MB  72.1KB/s   02
 **Client-Client LA VPN**
 *Client ISP1 get file from client ISP1*
 ```bash
+Fetching /root/test_file to test_file
+/root/test_file                                1%  224KB  31.9KB/s   06:26 ETA
+/root/test_file                                8% 1056KB  42.6KB/s   04:29 ETA
+/root/test_file                               35% 4480KB  44.8KB/s   03:00 ETA
+/root/test_file                               46% 5792KB  36.2KB/s   03:06 ETA
+/root/test_file                              100%   12MB  42.1KB/s   04:58
+```
+
+*Client ISP1 put file to client ISP1*
+```bash
+Uploading test_file to /root/test_file
+test_file                                               3%  480KB  23.0KB/s   08:45 ETA
+test_file                                              10% 1376KB  17.6KB/s   10:36 ETAr
+test_file                                              23% 3008KB  34.4KB/s   04:37 ETA
+test_file                                              31% 3936KB  35.0KB/s   04:06 ETA
+test_file                                              38% 4800KB  45.4KB/s   02:50 ETA
+test_file                                              42% 5280KB  44.1KB/s   02:44 ETA
+test_file                                              60% 7648KB  34.7KB/s   02:21 ETA
+test_file                                              67% 8480KB  53.0KB/s   01:16 ETA
+test_file                                              95%   12MB  31.5KB/s   00:16 ETA
+test_file                                             100%   12MB  34.0KB/s   06:09
 
 ```
