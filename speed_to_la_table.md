@@ -18,7 +18,7 @@
 
 ### Put and get with VPN
 
-** Server < - > client **
+** Server < -- > client **
 
 | Put            | ISP 1 | ISP 2 |
 | --             | --    |   --  |
