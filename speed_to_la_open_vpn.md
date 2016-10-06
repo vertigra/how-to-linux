@@ -18,14 +18,14 @@ test_file                                              99%   83MB 149.0KB/s   09
 **Put file to Netherlands № 1**
 ```bash
 Uploading test_file to /root/test_file
-test_file                                               3% 3008KB 145.5KB/s   09:24 ETA
-test_file                                               4% 4192KB 129.7KB/s   10:23 ETA
-test_file                                              37%   31MB 154.6KB/s   05:44 ETA
-test_file                                              70%   59MB  87.9KB/s   04:45 ETA
-test_file                                              77%   65MB  96.3KB/s   03:14 ETA
-test_file                                              85%   71MB 114.2KB/s   01:46 ETA
-test_file                                              90%   75MB  84.8KB/s   01:37 ETA
-test_file                                              99%   83MB 122.6KB/s   11:34
+test_file                                              3% 3008KB 145.5KB/s   09:24 ETA
+test_file                                              4% 4192KB 129.7KB/s   10:23 ETA
+test_file                                             37%   31MB 154.6KB/s   05:44 ETA
+test_file                                             70%   59MB  87.9KB/s   04:45 ETA
+test_file                                             77%   65MB  96.3KB/s   03:14 ETA
+test_file                                             85%   71MB 114.2KB/s   01:46 ETA
+test_file                                             90%   75MB  84.8KB/s   01:37 ETA
+test_file                                             99%   83MB 122.6KB/s   11:34
 ```
 
 **Put file to LA №2**
