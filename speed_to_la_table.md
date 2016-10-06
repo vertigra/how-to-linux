@@ -1,6 +1,4 @@
 # Speed comparsion table
-
-
 ### Put and get without VPN
 
 Compilation data from (Netherlands) [here](https://linux.nesterof.com/speed_to_la.html) and (LA) [here](https://linux.nesterof.com/speed_to_la_2.html)
@@ -16,7 +14,6 @@ Compilation data from (Netherlands) [here](https://linux.nesterof.com/speed_to_l
 | --             | --    | --    |
 | LA             | 09:01 | 04:56 |
 | Netherlands    | 05:37 | 03:43 |
-
 
 ### Put and get with VPN
 
