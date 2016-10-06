@@ -1,4 +1,4 @@
-# Speed comparsion table
+ # Speed comparsion table
 
 
 ### Put and get without VPN
@@ -17,6 +17,8 @@
 
 
 ### Put and get with VPN
+
+** Server < - > client **
 
 | Put            | ISP 1 | ISP 2 |
 | --             | --    |   --  |
