@@ -18,7 +18,7 @@
 
 ### Put and get with VPN
 
-** Server < -- > client **
+*Server < -- > client*
 
 | Put            | ISP 1 | ISP 2 |
 | --             | --    |   --  |
@@ -31,3 +31,10 @@
 | --             | --    | --    |
 | LA             | 09:18 | 05:37 |
 | Netherlands    | 07:10 | 04:52 |
+
+*Client < -- > client*
+
+| VPN         |ISP2<-ISP1|ISP2->ISP1|ISP1<-ISP1|ISP1->ISP1|
+| --          | --       | --       | --       | --       |
+| Netherlands | 1:2      | 2:2      | 3:2      | 4:2      |
+| LA          | 1:3      | 2:3      | 3:3      | 4:3      |
