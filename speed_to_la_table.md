@@ -19,7 +19,7 @@ Compilation data from (Netherlands) [here](https://linux.nesterof.com/speed_to_l
 
 Compilation data from [here](https://linux.nesterof.com/speed_to_la_open_vpn.html)
 
-*Server < -- > client*
+*Server < - > client*
 
 | Put            | ISP 1 | ISP 2 |
 | --             | --    |   --  |
@@ -33,7 +33,7 @@ Compilation data from [here](https://linux.nesterof.com/speed_to_la_open_vpn.htm
 | LA             | 09:18 | 05:37 |
 | Netherlands    | 07:10 | 04:52 |
 
-*Client < -- > client*
+*Client < - > client*
 
 | VPN         | ISP2 get ISP1 | ISP2 put ISP1 | ISP1 get ISP1 | ISP1 put ISP1 |
 | --          | --            | --            | --            | --            |
