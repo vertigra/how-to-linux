@@ -5,6 +5,7 @@
 # yum install nfs-utils nfs-utils-lib
 # service rpcbind start
 # service nfs start
+# chkconfig nfs on && chkconfig rpcbind on
 Starting NFS services:                                     [  OK  ]
 Starting NFS mountd:                                       [  OK  ]
 Starting NFS daemon:                                       [  OK  ]
