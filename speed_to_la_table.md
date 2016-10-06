@@ -34,7 +34,7 @@
 
 *Client < -- > client*
 
-| VPN         |ISP2<-ISP1|ISP2->ISP1|ISP1<-ISP1|ISP1->ISP1|
-| --          | --       | --       | --       | --       |
-| Netherlands | 1:2      | 2:2      | 3:2      | 4:2      |
-| LA          | 1:3      | 2:3      | 3:3      | 4:3      |
+| VPN         | ISP2 get ISP1 | ISP2 put ISP1 | ISP1 get ISP1 | ISP1 put ISP1 |
+| --          | --         | --         | --         | --         |
+| Netherlands | 03:25      | 04:15      | 01:58      | 02:54      |
+| LA          | 1:3        | 2:3        | 3:3        | 4:3        |
