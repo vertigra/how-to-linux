@@ -6,7 +6,7 @@
 # apt-get update && apt-get upgrade
 ```
 
-Устанавливаем нужный софт (зачем нужен [dialog](https://linux.nesterof.com/error_dailog.html) 
+Устанавливаем нужный софт
 ```bash
 # apt-get install dialog && apt-get install joe && apt-get install mc && apt-get install iptables-persistent
 (on all question - yes)
@@ -54,3 +54,5 @@
 
 COMMIT
 ```
+
+Копируем правила фаервола IPv6:
