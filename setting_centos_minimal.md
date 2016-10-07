@@ -94,7 +94,13 @@ Port 22 change on Port 2500 (any)
 -A INPUT -p tcp --dport 2500 -m state --state NEW -j ACCEPT
 ```
 
-Перезагружаемся и проверяем - должен измениться порт подключения ssh, логин от пользователя root должен выдавать ошибку `Permission denied, please try again.` (залогиниться можно только от вновь созданого пользователя и повысить привелигии до `root` командой `su`). Так же можно проверить статус iptables (`iptables -vL or ip6tables -vL)`
+Перезагружаемся и проверяем - должен измениться порт подключения ssh, логин от пользователя root должен выдавать ошибку `Permission denied, please try again.` (залогиниться можно только от вновь созданого пользователя и повысить привелигии до `root` командой `su`). Так же можно проверить статус iptables (`iptables -vL` для IPv4, или `ip6tables -vL` для IPv6).
+
+Далее необязательно:
+
+[Отключаем IPv6](https://linux.nesterof.com/disable_ipv6.html)
+[Подключаемся к OpenVpn сереверу](https://linux.nesterof.com/client-openvpn-senting.html)
+
 
 
 
