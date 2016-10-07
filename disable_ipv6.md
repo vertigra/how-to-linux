@@ -21,7 +21,7 @@ net.ipv6.conf.eth0.disable_ipv6 = 1 (изменить на свой внешни
 Запрещаем весь траффик на IPv6 интерфейсе. 
 ```bash
 # joe /etc/iptables/rules.v6
-(добавляем)
+(copy this)
 *filter
 
 -A INPUT -j REJECT
