@@ -93,3 +93,14 @@ COMMIT
 ```bash
 # iptables-restore < /etc/iptables/rules.v4 && ip6tables-restore < /etc/iptables/rules.v6
 ```
+
+Добавляем нового пользователя командой `adduser username` (указываем пароль и указываем имя и номера телефонов, кроме пароля все необязательно).
+
+Перевешиваем SSH на другой порт и запрещаем логиниться под пользвателем root.
+```bash
+# joe /etc/ssh/sshd_config
+
+PermitRootLogin yes change on PermitRootLogin no
+
+Port 22 change on Port 2500 (any)
+```
