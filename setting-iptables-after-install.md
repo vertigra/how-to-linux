@@ -10,6 +10,7 @@
 Копируем правила для IPv4
 ```bash
 joe /etc/iptables/rules.v4
+(copy this)
 
 *filter
 
