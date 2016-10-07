@@ -57,10 +57,8 @@ COMMIT
 
 Копируем правила фаервола IPv6 (запрещаем весь трафик по IPv6):
 ```bash
-joe /etc/iptables/rules.v6
+# joe /etc/iptables/rules.v6
 (copy this)
-
-joe /etc/iptables/rules.v6
 
 *filter
 
@@ -93,5 +91,5 @@ COMMIT
 
 Применяем правила:
 ```bash
-# iptables-restore < /etc/iptables/rules.v4 && iptables-restore < /etc/iptables/rules.v6
+# iptables-restore < /etc/iptables/rules.v4 && ip6tables-restore < /etc/iptables/rules.v6
 ```
