@@ -3,7 +3,7 @@
 
 ```bash
 # joe /etc/sysctl.d/99-sysctl.conf
-(добавляем)
+(copy this)
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 1
@@ -15,7 +15,7 @@ net.ipv6.conf.eth0.disable_ipv6 = 1 (изменить на свой внешни
 ```
 ```bash
 # joe /etc/hosts
-(закоментить)
+(commented)
 #::1            localhost ip6-localhost ip6-loopback
 ```
 Запрещаем весь траффик на IPv6 интерфейсе. 
