@@ -4,4 +4,5 @@
 ```bash
 # apt-get update && apt-get upgrade
 # apt-get install dialog && apt-get install joe && apt-get install mc && apt-get install iptables-persistent
+(on all question - yes)
 ```
