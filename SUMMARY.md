@@ -3,7 +3,7 @@
 
 ### System
 ---
-* [Первоначальная настройка Debain-8.0-x86_64-minimal) после исталяции](setting_centos_minimal.md)
+* [Первоначальная настройка Debain-8.0-x86_64-minimal после исталяции](setting_centos_minimal.md)
 * [Как забрать/положить файлы через командную строку](sftp.md)
 * [Как создать tar.gz](tar.md)
 * [Как отключить IPv6 в Debian 8 Jessie](disable_ipv6.md)
@@ -34,7 +34,7 @@
 ### Errors
 ---
 * [debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used)](error_dailog.md)
-* [[mntent]: warning: no final newline at the end of /etc/fstab]](fstab_errror_newline.md)
+* [[mntent]: warning: no final newline at the end of /etc/fstab](fstab_errror_newline.md)
 * [Starting NFS statd: [FAILED]](failed_nfs_statd_on_startup.md)
 
 ### Measurement speed
