@@ -115,5 +115,4 @@ Port 22 change on Port 2500 (any)
 -A INPUT -p tcp --dport 2500 -m state --state NEW -j ACCEPT
 ```
 
-
 Перезагружаемся 
