@@ -6,7 +6,7 @@
 Сначала сбросить все существующие правила `# iptables -F && sudo iptables -X`. 
 
 Копируем правила (предварительно скопировав текущую конфигурацию) IPv4.
-```conf
+```config
 # cd /etc/iptables
 # mv rules.v4 rules.v4.old
 # joe rules.v4
