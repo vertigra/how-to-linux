@@ -1,2 +1,2 @@
 # Первоначальная настройка Debain-8.0-x86_64-minimal) после исталяции
-*OC:Debian 8*
+*OC: Debian 8 Jessie*
