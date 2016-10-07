@@ -4,8 +4,9 @@
 Для загрузки правил после перезагрузки
 ```bash
 # apt-get install iptables-persistent
-(на все вопросы отвечаем yes)
+(all question - yes)
 ```
+
 Копируем правила для IPv4
 ```bash
 joe /etc/iptables/rules.v4
@@ -41,8 +42,9 @@ joe /etc/iptables/rules.v4
 -A FORWARD -j REJECT
 
 COMMIT
-
 ```
+
+**После `COMMIT` должна быть `newline` (переходим в конец файла и жмем `Enter`)**
 
 Применяем правила
 ```bash
@@ -51,7 +53,8 @@ iptables-restore < /etc/iptables/rules.v4
 
 Копируем правила для IPv6
 ```bash
-joe /etc/iptables/rules.v6
+# joe /etc/iptables/rules.v6
+(copy this)
 
 *filter
 
@@ -80,7 +83,6 @@ joe /etc/iptables/rules.v6
 -A FORWARD -j REJECT
 
 COMMIT
-
 ```
 Применяем правила
 
