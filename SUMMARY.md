@@ -3,6 +3,7 @@
 
 ### System
 ---
+* [Первоначальная настройка Debain-8.0-x86_64-minimal) после исталяции](setting_centos_minimal.md)
 * [Как забрать/положить файлы через командную строку](sftp.md)
 * [Как создать tar.gz](tar.md)
 * [Как отключить IPv6 в Debian 8 Jessie](disable_ipv6.md)
