@@ -12,7 +12,6 @@
 -A INPUT -i eth0 -p tcp -m state --state ESTABLISHED --sport 2500 -j ACCEPT
 -A OUTPUT -o eth0 -p tcp -m state --state NEW,ESTABLISHED --dport 2500 -j ACCEPT
 ```
-
 где,
 
 * `INPUT` — для входящих пакетов адресованных непосредственно локальному процессу (клиенту или серверу).
@@ -21,3 +20,5 @@
 * `-p tcp` — транспортный протокол
 * `--state ESTABLISHED` — пакет является частью уже существующего сеанса. 
 * `--state NEW` — пакет открывает новый сеанс
+
+Эта цепочка правил разрешить исходящее ssh соединение на порту 2500 (`$ ssh -p 2500 user@ip`) 
