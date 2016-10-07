@@ -104,3 +104,16 @@ PermitRootLogin yes change on PermitRootLogin no
 
 Port 22 change on Port 2500 (any)
 ```
+
+**Меняем в правилах фаервола порт 22 на тот что указали в sshd_config**
+```bash
+# joe /etc/iptables/rules.v4
+
+# Allow SSH connections.
+-A INPUT -p tcp --dport 22 -m state --state NEW -j ACCEPT
+(change)
+-A INPUT -p tcp --dport 2500 -m state --state NEW -j ACCEPT
+```
+
+
+Перезагружаемся 
