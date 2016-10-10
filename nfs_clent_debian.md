@@ -7,4 +7,7 @@
 
 (uncoment this)
 Domain = test.localdomain
+
+# tests mount
+# mount -t nfs 192.168.1.1:/mnt/nfs /mnt
 ```
