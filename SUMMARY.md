@@ -41,10 +41,3 @@
 * [debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used)](error_dailog.md)
 * [[mntent]: warning: no final newline at the end of /etc/fstab](fstab_errror_newline.md)
 * [Starting NFS statd: [FAILED]](failed_nfs_statd_on_startup.md)
-
-### Measurement speed
----
-* [Speed comparison](speed_to_la.md)
-* [Speed comparsion 2](speed_to_la_2.md)
-* [Speed comparsion with OpenVPN](speed_to_la_open_vpn.md)
-* [Speed comparsion table](speed_to_la_table.md)
