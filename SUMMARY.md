@@ -15,6 +15,7 @@
 ### NFS
 ---
 * [Как поднять сервер NFS в CentOS 6.8](up_server_nfs_centos.md)
+* [Как поднять клиент NFS в Debian 8](nfs_clent_debian.md)
 
 ### OpenVPN
 ---
