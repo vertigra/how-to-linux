@@ -12,6 +12,10 @@
 * [Как использовать netstat](netstat-example.md)
 * [Как добавить диск в CentOS 6.8](add_hdd_centos.md)
 
+### Java
+---
+* [Как установить Java 8 (JDK/JRE 8u101) с использованием PPA](install_java_8_ppa.md)
+
 ### NFS
 ---
 * [Как поднять сервер NFS в CentOS 6.8](up_server_nfs_centos.md)
@@ -32,12 +36,12 @@
 * [Как управлять iptables](komandi_iptables.md)
 * [Как разрешить в iptables исходящий трафик для определеннного порта](allow_connect_for_port.md)
 
-### Xen
----
-* [Автозапуск виртуальных машин в Xen](autostart_vm_xen.md)
-
 ### Errors
 ---
 * [debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used)](error_dailog.md)
 * [[mntent]: warning: no final newline at the end of /etc/fstab](fstab_errror_newline.md)
 * [Starting NFS statd: [FAILED]](failed_nfs_statd_on_startup.md)
+
+### Xen
+---
+* [Автозапуск виртуальных машин в Xen](autostart_vm_xen.md)
