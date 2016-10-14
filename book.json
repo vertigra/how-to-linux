@@ -5,11 +5,11 @@
         "back-to-top-button",
         "fontsettings"
     ],
-    "pluginsConfig":{
+    "pluginsConfig": {
         "fontsettings": {
-            "theme": "night",
+            "theme": "sepia",
             "family": "serif",
-            "size": 2
+            "size": "2"
         }
     }
 }
