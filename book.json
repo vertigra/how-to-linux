@@ -3,5 +3,11 @@
         "theme-faq",
         "fontsettings"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "fontsettings": {
+            "theme": "night",
+            "family": "serif",
+            "size": "2"
+        }
+    }
 }
