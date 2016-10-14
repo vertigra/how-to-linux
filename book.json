@@ -1,13 +1,15 @@
 {
     "plugins": [
         "theme-faq",
+        "hide-published-with",
+        "back-to-top-button",
         "fontsettings"
     ],
     "pluginsConfig":{
         "fontsettings": {
             "theme": "night",
             "family": "serif",
-            "size": "2"
+            "size": 2
         }
     }
 }
