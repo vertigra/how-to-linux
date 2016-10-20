@@ -1,0 +1,1 @@
+# wget: The certificate of ... is not trusted
