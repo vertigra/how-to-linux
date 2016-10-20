@@ -12,9 +12,10 @@
 * [Как использовать netstat](netstat-example.md)
 * [Как добавить диск в CentOS 6.8](add_hdd_centos.md)
 
-### Java
+### Java & TeamCity Server
 ---
 * [Как установить Java 8 (JDK/JRE 8u101) с использованием PPA](install_java_8_ppa.md)
+* [Как установить TeamCity Server 10.0.1](install_team_city_server.md)
 
 ### NFS
 ---
