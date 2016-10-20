@@ -1,4 +1,4 @@
-# Как установить TeamCity Server 10.0.1
+# Как установить TeamCity Server 10.0.2
 *OC: Debian 8 Jessie*
 
 Хорошо написано [здесь](http://maxim.rubchinsky.com/install-teamcity-ubuntu/).
@@ -7,5 +7,5 @@
 2. Скачиваем TeamCity 
    ```
    # cd \opt
-   # wget  wget https://download.jetbrains.com/teamcity/TeamCity-10.0.2.war
+   # wget https://download.jetbrains.com/teamcity/TeamCity-10.0.2.war
    ```
