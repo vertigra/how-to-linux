@@ -7,7 +7,7 @@ ERROR: The certificate of `www.dropbox.com' is not trusted.
 ERROR: The certificate of `www.dropbox.com' hasn't got a known issuer.
 ```
 
-надо сделать так
+надо сделать так:
 ```bash
 # apt-get install ca-certificates
 ```
