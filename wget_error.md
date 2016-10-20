@@ -11,3 +11,6 @@ ERROR: The certificate of `www.dropbox.com' hasn't got a known issuer.
 ```bash
 # apt-get install ca-certificates
 ```
+
+[Ветка на StackOverflow](http://stackoverflow.com/questions/9224298/how-do-i-fix-certificate-errors-when-running-wget-on-an-https-url-in-cygwin)
+
