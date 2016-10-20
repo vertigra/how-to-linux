@@ -6,5 +6,6 @@
 1. [Ставим Java](https://linux.nesterof.com/install_java_8_ppa.html)
 2. Скачиваем TeamCity 
    ```
-   wget 
+   # cd \opt
+   # wget  wget https://download.jetbrains.com/teamcity/TeamCity-10.0.2.war
    ```
