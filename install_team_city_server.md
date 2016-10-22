@@ -50,5 +50,15 @@
    # chmod +x /etc/init.d/teamcity
    # update-rc.d /etc/init.d/teamcity defaults
    ```
+   
+5. Запускаем демона
+   ```bash
+   # /etc/init.d/teamcity start
+   ```
+   
+6. Удаляем архив
+   ```bash
+    rm /opt/TeamCity-10.0.2.tar.gz
+   ```
 
 
