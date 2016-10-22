@@ -58,7 +58,7 @@
    
 6. Удаляем архив
    ```bash
-   rm /opt/TeamCity-10.0.2.tar.gz
+   # rm /opt/TeamCity-10.0.2.tar.gz
    ```
 
 7. Переходим на внешний адрес сервера 
