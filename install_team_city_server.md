@@ -58,7 +58,16 @@
    
 6. Удаляем архив
    ```bash
-    rm /opt/TeamCity-10.0.2.tar.gz
+   rm /opt/TeamCity-10.0.2.tar.gz
    ```
+
+7. Переходим на внешний адрес сервера 
+   ```bash
+   http://ip.server:8111
+   ```
+   и жмем Proceed.
+   
+8. На странице Database connection setup выбираем тип базы данных - Internal(HSQLDB)
+9. Заключительный этап - указать логин и пароль админимстратора.
 
 
