@@ -46,8 +46,9 @@
    ```
    
 4. Меняем права и ставим в автозапуск
-   ```
-   # 
+   ```bash
+   # chmod +x /etc/init.d/teamcity
+   # update-rc.d /etc/init.d/teamcity defaults
    ```
 
 
