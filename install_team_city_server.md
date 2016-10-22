@@ -11,10 +11,12 @@
    # tar -xvf TeamCity-10.0.2.tar.gz
    # chown -R $user-name TeamCity
    ```
-3. Добавляем скрипт автозапуска (меняем $user-name на существующий в системе)
-   ```bash
-   # joe gedit /etc/init.d/teamcity
    
+3. Добавляем скрипт автозапуска (меняем $user-name на существующий в системе)
+   ```
+   # joe gedit /etc/init.d/teamcity
+   ```
+   ```bash
    #!/bin/sh
    ### BEGIN INIT INFO
    # Provides:          teamcity
@@ -42,6 +44,10 @@
          
     exit 0
    ```
-
+   
+4. Меняем права и ставим в автозапуск
+   ```
+   # 
+   ```
 
 
