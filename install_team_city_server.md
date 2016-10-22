@@ -29,15 +29,15 @@
    # Short-Description: team-city startup script
    ### END INIT INFO
 
-    export TEAMCITY_DATA_PATH="/opt/JetBrains/TeamCity/.BuildServer"
+    export TEAMCITY_DATA_PATH="/opt/TeamCity/bin/.BuildServer"
          
     case $1 in
     start)
-    start-stop-daemon --start  -c $user-name --exec /opt/JetBrains/TeamCity/bin/runAll.sh start
+    start-stop-daemon --start  -c $user-name --exec /opt/TeamCity/bin/runAll.sh start
     ;;
          
     stop)
-    start-stop-daemon --start -c $user-name  --exec  /opt/JetBrains/TeamCity/bin/runAll.sh stop
+    start-stop-daemon --start -c $user-name  --exec  /opt/TeamCity/bin/runAll.sh stop
     ;;
          
     esac
