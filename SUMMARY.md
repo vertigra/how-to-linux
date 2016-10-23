@@ -38,6 +38,11 @@
 * [Как управлять iptables](komandi_iptables.md)
 * [Как разрешить в iptables исходящий трафик для определеннного порта](allow_connect_for_port.md)
 
+### MySQL
+---
+* [Как установить MySQL сервер](mysql_install.md)
+
+
 ### Errors
 ---
 * [debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used)](error_dailog.md)
