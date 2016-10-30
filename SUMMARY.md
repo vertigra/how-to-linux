@@ -8,6 +8,7 @@
 * [Как забрать/положить файлы через SCP](scp.md)
 * [Как создать tar.gz](tar.md)
 * [Как распаковать tar.gz](open_tar.gz.md)
+* [Как распаковать .rar](unrar.md)
 * [Как отключить IPv6 в Debian 8 Jessie](disable_ipv6.md)
 * [Как использовать netstat](netstat-example.md)
 * [Как добавить диск в CentOS 6.8](add_hdd_centos.md)
