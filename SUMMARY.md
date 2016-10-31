@@ -55,3 +55,7 @@
 ---
 * [Автозапуск виртуальных машин в Xen](autostart_vm_xen.md)
 * [Как установить программу в XEN 6.5](install_apps_xen_6.5.md)
+
+### Oracle VM VirtualBox
+---
+* [Как установить VboxGuestAdditions](install_vbox_guest.md)
