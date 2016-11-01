@@ -1,1 +1,2 @@
 # Как установить Firebird 1.5.6 (x32) на Debian 8 (x64)
+*OC: Debian 8 Jessie (x64)*
