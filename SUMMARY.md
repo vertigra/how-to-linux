@@ -43,6 +43,10 @@
 ---
 * [Как установить MySQL сервер](mysql_install.md)
 
+### Firebird
+---
+* [Как установить Firebird 1.5.6 (x32) на Debian 8 (x64)](install_firebird.md)
+
 
 ### Errors
 ---
