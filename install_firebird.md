@@ -7,6 +7,7 @@
 # dpkg --add-architecture i386
 # apt-get update
 # apt-get install libstdc++5:i386 xinetd lib32ncurses5
+# cd ~
 # wget http://downloads.sourceforge.net/project/firebird/firebird-linux-i386/1.5.6-Release/FirebirdCS-1.5.6.5026-0.i686.tar.gz
 # tar xzvf FirebirdCS-1.5.6.5026-0.i686.tar.gz
 # cd FirebirdCS-1.5.6.5026-0.i686
@@ -32,4 +33,10 @@ Install completed
 joe /etc/profile 
 (add in last line in file)
 PATH=$PATH:/opt/firebird/bin
+```
+
+А также удалить инсталяционные файлы сервера
+```bash
+# rm -R ~/FirebirdCS-1.5.6.5026-0.i686
+# rm ~/FirebirdCS-1.5.6.5026-0.i686.tar.gz
 ```
