@@ -20,5 +20,7 @@
   # chmod 660 datbasefilename.fdb
   ```
   
- 
- 
+Пример использовния утилиты gbak (бэкап базы данных)
+```bash
+$ gbak -b -g -v -user SYSDBA -password masterkey datbasefilename.fdb testbackup.fbk
+```
