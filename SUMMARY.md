@@ -46,7 +46,7 @@
 ### Firebird
 ---
 * [Как установить Firebird 1.5.6 (x32) на Debian 8 (x64)](install_firebird.md)
-* [Какие права назначить на дирректорию и файл базы данных](database_file_priveleges.md)
+* [Какие права назначить на дирректорию и файл базы данных Firebird](database_file_priveleges.md)
 
 
 ### Errors
