@@ -25,7 +25,7 @@
 
 Возможно работает и на XEN 7 - не проверялось.
 
-* Командой ```# xe vm-list``` узнаем uuid(RO) виртуальной машины
+* Командой ```# xe vm-list``` узнаем uuid ( RO) виртуальной машины
   ```bash
   uuid ( RO)           : 2a3f702d-6fb0-0d8c-a670-e124fd7cb6e8
   name-label ( RW): debian.client
