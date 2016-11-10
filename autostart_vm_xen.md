@@ -55,9 +55,9 @@
 
 Можно также использовать ```name-label``` например
 ```bash
- xe vm-list params | grep name-label
- name-label ( RW): centos.server
- name-label ( RW): debian.client
+# xe vm-list params | grep name-label
+name-label ( RW): centos.server
+name-label ( RW): debian.client
 ```
 
 В ```/etc/rc.local``` следует писать тогда так:
