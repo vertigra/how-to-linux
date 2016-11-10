@@ -33,10 +33,23 @@
   ```
 
 * Прописываем в ```/etc/rc.local``` виртуальные машины которые следует запускать автоматически.
-  Параметр ```sleep 20``` - задержка 20 секунд(необязательный).
+  Параметр ```sleep 20``` - задержка 20 секунд(необязательный). 
   ```bash
   # joe /etc/rc.local
   (add this in end file)
   sleep 20
   xe vm-start uuid=2a3f702d-6fb0-0d8c-a670-e124fd7cb6e8
   ```
+  
+  Если VM несколько так:
+  ```bash
+  # joe /etc/rc.local
+  (add this in end file)
+  #First VM
+  sleep 20
+  xe vm-start uuid=2a3f702d-6fb0-0d8c-a670-e124fd7cb6e8
+  #Second VM
+  sleep 20
+  xe vm-start uuid=3b4a321d-7dw1-1a9c-a670-e1r23sg5df61
+  ```
+  
