@@ -45,10 +45,10 @@
   ```bash
   # joe /etc/rc.local
   (add this in end file)
-  #First VM
+  # First VM
   sleep 20
   xe vm-start uuid=2a3f702d-6fb0-0d8c-a670-e124fd7cb6e8
-  #Second VM
+  # Second VM
   sleep 40
   xe vm-start uuid=3b4a321d-7dw1-1a9c-a670-e1r23sg5df61
   ```
@@ -62,8 +62,10 @@ name-label ( RW): debian.client
 
 В ```/etc/rc.local``` следует писать тогда так:
 ```bash
+# First VM
 sleep 20
 xe vm-start vm=centos.server
+# Second VM
 sleep 40
 xe vm-start vm=debian.client
 ```
