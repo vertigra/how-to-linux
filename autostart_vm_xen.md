@@ -67,4 +67,4 @@ xe vm-start vm=centos.server
 sleep 40
 xe vm-start vm=debian.client
 ```
-  
+Назначать по именам неудобно - придется каждый раз переписывать конфигурацию при изменении имени VM.  
