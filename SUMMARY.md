@@ -61,6 +61,7 @@
 * [Автозапуск виртуальных машин в Xen](autostart_vm_xen.md)
 * [Как установить программу в XEN 6.5](install_apps_xen_6.5.md)
 * [Как уменьшить размер системного виртуального жесткого диска](crop_virtual_hdd.md)
+* [Как задать и сбросить параметр other_config](add_remove_other_config.md)
 
 ### Oracle VM VirtualBox
 ---
