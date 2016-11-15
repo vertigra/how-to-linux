@@ -38,15 +38,17 @@
   ```
   В функции `usbsrv_install()` (поиск в joe CTRL+KF) коментируем:
   ```bash
-  if [ ! -d $KERNELDIR ]; then
-      exit_with_error "Kernel sources or kernel headers directory not found. Please install 
-      the  corresponding package first."
-  fi
+  (must be)
+  # if [ ! -d $KERNELDIR ]; then
+  #     exit_with_error "Kernel sources or kernel headers directory not found. Please install 
+  #     the  corresponding package first."
+  # fi
   ```
   В функции usbsrv_make_kernel_module() коментируем:
   ```bash
-  make KERNELDIR=$KERNELDIR clean; /dev/null 2>1
-  make $make_flags $driver_config KERNELDIR=$KERNELDIR $script_dir/buildlog.txt 2>1
+  (must be)
+  # make KERNELDIR=$KERNELDIR clean; /dev/null 2>1
+  # make $make_flags $driver_config KERNELDIR=$KERNELDIR $script_dir/buildlog.txt 2>1
   ```
   Сохраняем и закрываем.
 * Запускаем инсталятор `# ./installer.sh install-server`
