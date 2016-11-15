@@ -13,8 +13,9 @@
 
 Сделано по [этой](https://www.citrix.com/blogs/2012/02/29/usb-over-network-with-xenserver-6/) инструкции с поправкой на 64-х битную архитектуру сервера.
 
-* Качаем DDK(Driver Development Kit) 6.5.0 https://www.citrix.com/downloads/xenserver/product-software/xenserver-65-standard.html#ctx-dl-eula
-* 
+* Качаем DDK(Driver Development Kit) 6.5.0 https://www.citrix.com/downloads/xenserver/product-software/xenserver-65-standard.html#ctx-dl-eula (нужен логин на citrix.com)
+* Распаковываем на той машине где установлен Xen Center (или монтируем образ на виртуальный дисковод).
+* Импортируем виртуальную машину с помощью Xen Center (XenServer -> Import...). В locate указать ova.xml (J:\ddk\ova.xml)
 
 
 
