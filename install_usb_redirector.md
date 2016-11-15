@@ -13,8 +13,11 @@
 Сделано по [этой](https://www.citrix.com/blogs/2012/02/29/usb-over-network-with-xenserver-6/) инструкции с поправкой на 64-х битную архитектуру xen сервера.
 
 * Качаем DDK(Driver Development Kit) 6.5.0 https://www.citrix.com/downloads/xenserver/product-software/xenserver-65-standard.html#ctx-dl-eula (нужен учетная запись на [citrix.com](https://identity.citrix.com/Utility/STS/Sign-In?ReturnUrl=https://www.citrix.com%2Faccount))
-* Распаковываем на той машине где установлен Xen Center (или монтируем образ на виртуальный дисковод).
+
+* Распаковываем на той машине где установлен Xen Center (или монтируем образ на виртуальный дисковод)
+
 * Импортируем виртуальную машину с помощью Xen Center (XenServer -> Import...). В locate указать ova.xml (например J:\ddk\ova.xml). После импорта машина инсталируется (в процессе инсталяции будет запрос пароля для пользователя root)
+
 * После логина в консоли DDK делаем следующее:
   ```bash
   # wget http://www.incentivespro.com/usb-redirector-linux-x86_64.tar.gz
@@ -25,17 +28,20 @@
   # tar czvf  usb-redirector-linux-x86_64.tgz usb-redirector-linux-x86_64 
   # scp usb-redirector-linux-x86_64.tgz root@ip_xen_server:/root
   ```
-  после этого виртуальную машину DDK можно выключить.
+  после этого виртуальную машину DDK можно выключить
+  
 * В консоли Xen делаем следующее:
   ```bash
   # cd ~
   # tar xzvf usb-redirector-linux-x86_64.tgz
   # cd usb-redirector-linux-x86_64
   ```
+  
   редактируем файл `installer.sh`
   ```bash
   # joe installer.sh
   ```
+  
   В функции `usbsrv_install()` (поиск в joe CTRL+KF) коментируем:
   ```bash
   (must be)
@@ -44,13 +50,16 @@
   #     the  corresponding package first."
   # fi
   ```
+  
   В функции usbsrv_make_kernel_module() коментируем:
   ```bash
   (must be)
   # make KERNELDIR=$KERNELDIR clean; /dev/null 2>1
   # make $make_flags $driver_config KERNELDIR=$KERNELDIR $script_dir/buildlog.txt 2>1
   ```
+  
   Сохраняем и закрываем.
+  
 * Запускаем инсталятор `# ./installer.sh install-server`
   ```bash
   *** Installing USB Redirector for Linux v3.6
@@ -70,15 +79,18 @@
   connections from remote clients.
   ***  INSTALLATION SUCCESSFUL! To uninstall, run /usr/local/usb-redirector/uninstall.sh
   ```
-* Добавляем разрешающее правило в фаервол `joe /etc/sysconfig/iptables`
   
+* Добавляем разрешающее правило в фаервол `joe /etc/sysconfig/iptables` (перед правилом REJECT)
   ```bash
   -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 22 -j ACCEPT
   -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 80 -j ACCEPT
   -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 443 -j ACCEPT
   (add this)
   -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 32032 -j ACCEPT
+  -A RH-Firewall-1-INPUT -j REJECT --reject-with icmp-host-prohibited
+  COMMIT
   ```
+  
 * Посмотреть подключеные устройства можно так:
   ```bash
   # usbsrv -list 
@@ -96,6 +108,7 @@
 
   ===================== ======================= ===================
   ```
+  
   Расшарить так:
   ```bash
   usbsrv -s 3
@@ -104,4 +117,5 @@
   USB device has been shared
   ===================== ======================= ===================
   ```
+  
 * После этого в гостевой машине следует поставить клиента, указать код лицензии и подключиться к запущеному серверу. 
