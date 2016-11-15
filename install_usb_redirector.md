@@ -49,5 +49,57 @@
   make KERNELDIR=$KERNELDIR clean; /dev/null 2>1
   make $make_flags $driver_config KERNELDIR=$KERNELDIR $script_dir/buildlog.txt 2>1
   ```
+  Сохраняем и закрываем.
+* Запускаем инсталлер `./installer.sh install-server`
+  ```bash
+  *** Installing USB Redirector for Linux v3.6
+  ***  Destination dir: /usr/local/usb-redirector
+  ***  Checking installation...
+  ***  Detecting system...
+  ***     distribution: redhat
+  ***     kernel: 3.10.0+2
+  ***  Compiling kernel module...
+  ***  Kernel module successfully compiled
+  ***  Creating directories...
+  ***  Preparing scripts...
+  ***  Copying files...
+  ***  Setting up init script...
+  ***  Starting daemon...
+  ***  Please allow incoming connections on 32032 port for USB Sever to be able to accept  
+  connections from remote clients.
+  ***  INSTALLATION SUCCESSFUL! To uninstall, run /usr/local/usb-redirector/uninstall.sh
+  ```
+* Добавляем разрешающее правило в фаервол `joe /etc/sysconfig/iptables`
+  
+  ```bash
+  -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 22 -j ACCEPT
+  -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 80 -j ACCEPT
+  -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 443 -j ACCEPT
+  (add this)
+  -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 32032 -j ACCEPT
+  ```
+* Посмотреть подключеные устройства можна так:
+  ```bash
+  # usbsrv -list 
 
+  ================= USB SERVER OPERATION SUCCESSFUL ===============
+  List of local USB devices:
 
+   1: Generic USB K/B Composite USB Device
+      Vid: 13ba   Pid: 0017   Port: 2-2
+      Status: plugged
+
+   3: WindowsCE CASIO.
+      Vid: 07cf   Pid: 3303   Port: 1-1
+      Status: plugged
+
+  ===================== ======================= ===================
+  ```
+  Расшарить так:
+  ```bash
+  usbsrv -s 3
+
+  ====================== OPERATION SUCCESSFUL =====================
+  USB device has been shared
+  ===================== ======================= ===================
+  ```
