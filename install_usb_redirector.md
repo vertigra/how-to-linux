@@ -3,15 +3,15 @@
 
 [Что такое IOMMU.](https://ru.wikipedia.org/wiki/IOMMU)
 
-Если аппаратура не поддерживает IOMMU то многочисленые иструкции по прокидыванию портов в Xen работать не будут. [Тут](https://discussions.citrix.com/topic/378774-xenserver-7-usb-passthrough-on-xen-46/) обсуждение, а [это](https://medium.com/@alexander.bazhenov/%D0%BF%D1%80%D0%BE%D0%B1%D1%80%D0%BE%D1%81-usb-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2-%D0%B2-xenserver-50a9b4e8a80a#.u2xieyosg) пример мануала.
-Выход - USB over IP. Клиент-серверное приложение которое позволяет прокидывать USB на гостевые машины, установив серверную часть непосредственно на Xen.
+Если аппаратура не поддерживает IOMMU то многочисленые иструкции по прокидыванию usb-портов(или pci-устройств) в Xen работать не будут. [Тут](https://discussions.citrix.com/topic/378774-xenserver-7-usb-passthrough-on-xen-46/) обсуждение, а [это](https://medium.com/@alexander.bazhenov/%D0%BF%D1%80%D0%BE%D0%B1%D1%80%D0%BE%D1%81-usb-%D1%83%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2-%D0%B2-xenserver-50a9b4e8a80a#.u2xieyosg) пример мануала.
+Решение - USB over IP. Клиент-серверное приложение которое позволяет прокидывать USB на гостевые машины, установив серверную часть непосредственно на Xen.
 Почти все решения платные или со значительными ограничениями. 
 Первое рассмотренное решение [USB Redirector](http://www.incentivespro.com/index.htm) - существует только платная версия. Второе [VirtualHere](https://virtualhere.com/home) - триальная версия позволяет прокидывать один USB-порт. Обсуждение на эту тему [здесь.](http://blog.vadmin.ru/2010/04/usb.html)
 Бесплатный проект [The USB/IP Project](https://sourceforge.net/projects/usbip/) не рассмтривается так как последний релиз под Linux датирован 13.01.2009.
 
 ### USB Redirector
 
-Сделано по [этой](https://www.citrix.com/blogs/2012/02/29/usb-over-network-with-xenserver-6/) инструкции с поправкой на 64-х битную архитектуру сервера.
+Сделано по [этой](https://www.citrix.com/blogs/2012/02/29/usb-over-network-with-xenserver-6/) инструкции с поправкой на 64-х битную архитектуру xen сервера.
 
 * Качаем DDK(Driver Development Kit) 6.5.0 https://www.citrix.com/downloads/xenserver/product-software/xenserver-65-standard.html#ctx-dl-eula (нужен логин на citrix.com)
 * Распаковываем на той машине где установлен Xen Center (или монтируем образ на виртуальный дисковод).
@@ -33,7 +33,7 @@
   # tar xzvf usb-redirector-linux-x86_64.tgz
   # cd usb-redirector-linux-x86_64
   ```
-  редактируем файл `insatller.sh`
+  редактируем файл `installer.sh`
   ```bash
   # joe installer.sh
   ```
@@ -50,7 +50,7 @@
   make $make_flags $driver_config KERNELDIR=$KERNELDIR $script_dir/buildlog.txt 2>1
   ```
   Сохраняем и закрываем.
-* Запускаем инсталлер `./installer.sh install-server`
+* Запускаем инсталятор `# ./installer.sh install-server`
   ```bash
   *** Installing USB Redirector for Linux v3.6
   ***  Destination dir: /usr/local/usb-redirector
@@ -78,7 +78,7 @@
   (add this)
   -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 32032 -j ACCEPT
   ```
-* Посмотреть подключеные устройства можна так:
+* Посмотреть подключеные устройства можно так:
   ```bash
   # usbsrv -list 
 
