@@ -67,3 +67,7 @@
 ### Oracle VM VirtualBox
 ---
 * [Как установить VboxGuestAdditions](install_vbox_guest.md)
+
+### Gentoo
+---
+* [Как установить Gentoo с minimal-cd](install_gentoo.md)
