@@ -283,6 +283,11 @@
   (chroot) livecd / # eselect profile set 1
   ```
 
+### Редактируем make.conf
+
+* Сборка системы управляется USE флагами, которые храняться в файле `/etc/portage/make.conf`. Список USE флагов можно посмотреть командой `less /usr/portage/profiles/use.desc`
+
+
   
   
   
