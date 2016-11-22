@@ -164,3 +164,31 @@
   Calling ioctl() to re-read partition table.
   Syncing disks.
   ```
+
+### Форматирование диска (ssh)
+
+* Форматируем файловые системы. Для раздела /boot - ext2. Для раздела /root - ext4. Для раздела подкачки - swap.
+  ```bash
+  livecd ~ # mkfs.ext2 -L boot /dev/xvda1
+  livecd ~ # mkfs.ext4 -L root /dev/xvda3
+  livecd ~ # mkswap -L swap /dev/xvda2
+  ```
+* Подключаем своп
+  ```bash
+  livecd ~ # swapon /dev/xvda2
+  ```
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
