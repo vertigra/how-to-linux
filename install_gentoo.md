@@ -16,5 +16,6 @@
 
 ---
 **NOTE**
+
 *Устанавливалось с носителя: [gentoo-install-amd64-minimal-20161103.iso](http://ftp.halifax.rwth-aachen.de/gentoo/releases/amd64/autobuilds/20161103/install-amd64-minimal-20161103.iso)
 
