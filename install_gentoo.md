@@ -187,7 +187,7 @@
   livecd ~ # mount /dev/xvda1 /mnt/gentoo/boot
   ```
   
-### Получение установочных файлов
+### Получение установочных файлов (ssh)
 
 * Скачиваем установочные файлы. Последняя версия на момент установки: stage3-amd64-20161117.tar.bz2
   ```bash
@@ -197,9 +197,27 @@
   
 * Распаковываем
   ```bash
-  livecd ~ # tar xvjpf stage3-*.tar.bz2
+  livecd / # tar xvjpf stage3-*.tar.bz2
   ```
 
+* Выбираем ближайшее зеркало для установки
+  ```bash
+  livecd / # mirrorselect -i -o >>/mnt/gentoo/etc/portage/make.conf
+  ```
+  
+* Копируем файл с адересами днс-серверов
+  ```bash
+  livecd / # cp -L /etc/resolv.conf /mnt/gentoo/etc/
+  ```
+
+### Монтирование слежебных файловых систем (ssh)
+
+* Для доступа к устройствам компьютера после смены корня системы необходимо смонтировать файловые системы /dev, /sys и /proc в корень устанавливаемой системы
+  ```bash
+  livecd / # mount -t proc none /mnt/gentoo/proc
+  livecd / # mount --rbind /sys /mnt/gentoo/sys
+  livecd / # mount --rbind /dev /mnt/gentoo/dev
+  ```
   
   
   
