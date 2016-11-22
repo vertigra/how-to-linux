@@ -26,15 +26,15 @@
 * Скачиваем minimal installation cd c сайта [gentoo.org](https://gentoo.org/downloads/) и пишем его на флэшку или диск
 * После загрузки с диска проверяем сеть (у меня DHCP поэтому дополнтельно настраивать ничего не нужно)
   ```bash
-  # ping google.com
+  livecd ~ # ping google.com
   ```
 * Меняем пароль суперпользователя
   ```bash
-  # passwd root
+  livecd ~ # passwd root
   ```
 * Запускаем демон sshd
   ```bash
-  # rc-service sshd start
+  livecd ~ # rc-service sshd start
   ```
 * Смотрим внешний ip-адрес сетевой карты 
   ```bash
