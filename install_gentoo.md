@@ -1,0 +1,1 @@
+# Как установить Gentoo с minimal-cd
