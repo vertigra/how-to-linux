@@ -10,4 +10,4 @@
 
 **NOTE**
 
-*Конфигурация виртуальной машины на которую производилась инсталяция: процессор (Vendor: AuthenticAMD, Model: AMD Phenom(tm) II X4 945 Processor, Speed: 3013 MHz) - Number of vCPUs - 2, Topology - 2 sockets with 1 core per socket, vCPU priority - Normal; память 512 Mb; жесткий диск -13Гб, position 0; сеть DHCP. Время установки 6-7 часов.
+*Конфигурация виртуальной машины на которую производилась инсталяция: процессор (Vendor: AuthenticAMD, Model: AMD Phenom(tm) II X4 945 Processor, Speed: 3013 MHz) - Number of vCPUs - 2, Topology - 2 sockets with 1 core per socket, vCPU priority - Normal; память 512 Mb; жесткий диск -13Гб, position 0; сеть DHCP. Время установки 6-7 часов.*
