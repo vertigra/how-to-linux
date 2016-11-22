@@ -7,7 +7,7 @@
 ---
 ***NOTE***
 
-*Инсталяция производилась на виртуальную машину (Citrix Xen Server) поэтому имя жесткого диска и его разделов (/dev/xvda, /dev/xvda1 /dev/xvda2, /dev/xvda3) на реальном железе будет отличаться (sda, sda1, sda2, sda3)*
+*Инсталяция производилась на виртуальную машину (Citrix Xen Server) поэтому имя жесткого диска и его разделов (/dev/xvda, /dev/xvda1, /dev/xvda2, /dev/xvda3) на реальном железе будет отличаться (/dev/sda, /dev/sda1, /dev/sda2, /dev/sda3)*
 
 ---
 ***NOTE***
@@ -197,11 +197,12 @@
   
 * Распаковываем
   ```bash
-  livecd / # tar xvjpf stage3-*.tar.bz2
+  livecd gentoo # tar xvjpf stage3-*.tar.bz2
   ```
 
 * Выбираем ближайшее зеркало для установки
   ```bash
+  livecd gentoo # cd /
   livecd / # mirrorselect -i -o >>/mnt/gentoo/etc/portage/make.conf
   ```
   
