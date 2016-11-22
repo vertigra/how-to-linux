@@ -202,22 +202,38 @@
 
 * Выбираем ближайшее зеркало для установки
   ```bash
-  livecd gentoo # cd /
-  livecd / # mirrorselect -i -o >>/mnt/gentoo/etc/portage/make.conf
+  livecd gentoo # mirrorselect -i -o >>/mnt/gentoo/etc/portage/make.conf
   ```
   
 * Копируем файл с адересами днс-серверов
   ```bash
-  livecd / # cp -L /etc/resolv.conf /mnt/gentoo/etc/
+  livecd gentoo # cp -L /etc/resolv.conf /mnt/gentoo/etc/
   ```
 
 ### Монтирование слежебных файловых систем (ssh)
 
 * Для доступа к устройствам компьютера после смены корня системы необходимо смонтировать файловые системы /dev, /sys и /proc в корень устанавливаемой системы
   ```bash
-  livecd / # mount -t proc none /mnt/gentoo/proc
-  livecd / # mount --rbind /sys /mnt/gentoo/sys
-  livecd / # mount --rbind /dev /mnt/gentoo/dev
+  livecd gentoo # mount -t proc none /mnt/gentoo/proc
+  livecd gentoo # mount --rbind /sys /mnt/gentoo/sys
+  livecd gentoo # mount --rbind /dev /mnt/gentoo/dev
+  ```
+
+### Смена корня файловой системы
+
+* Меням корень фаловой системы. Точка монтирования `/mnt/gentoo`
+  ```bash
+  livecd gentoo # chroot /mnt/gentoo /bin/bash
+  ```
+
+* Перегружаем настройки профиля
+  ```bash
+  livecd gentoo # source /etc/profile
+  ```
+  
+* Меняем приглашение командной строки
+  ```bash
+  livecd gentoo # export PS1="(chroot) $PS1"
   ```
   
   
