@@ -177,6 +177,24 @@
   ```bash
   livecd ~ # swapon /dev/xvda2
   ```
+
+### Монтирование разделов (ssh)
+
+* Монтируем созданые разделы. Точка монтирования `/mnt/gentoo`
+  ```bash
+  livecd ~ # mount /dev/xvda3 /mnt/gentoo
+  livecd ~ # mkdir /mnt/gentoo/boot
+  livecd ~ # mount /dev/xvda1 /mnt/gentoo/boot
+  ```
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
   
