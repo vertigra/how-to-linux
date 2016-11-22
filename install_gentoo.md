@@ -187,6 +187,15 @@
   livecd ~ # mount /dev/xvda1 /mnt/gentoo/boot
   ```
   
+### Получение установочных файлов
+
+* Скачиваем установочные файлы. Последняя верся на момент установки - stage3-amd64-20161117.tar.bz2
+  ```bash
+  livecd ~ # cd /mnt/gentoo
+  livecd ~ # wget -c http://gentoo.ussg.indiana.edu/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-20161117.tar.bz2
+  ```
+
+  
   
   
   
