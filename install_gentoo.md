@@ -61,4 +61,106 @@
   /root - 11.9 Gb
   ```
   Хорошо написано про разметку с помощью fdisk [здесь](http://www.oldnix.org/fdisk-linux/).
-* 
+* Проверяем существующую разметку - команда `p`
+  ```bash
+  livecd ~ # fdisk /dev/xvda
+
+  Welcome to fdisk (util-linux 2.26.2).
+  Changes will remain in memory only, until you decide to write them.
+  Be careful before using the write command.
+
+  Device does not contain a recognized partition table.
+  Created a new DOS disklabel with disk identifier 0x0ff8c11f.
+  ----
+  Command (m for help): p
+  Disk /dev/xvda: 13 GiB, 13958643712 bytes, 27262976 sectors
+  Units: sectors of 1 * 512 = 512 bytes
+  Sector size (logical/physical): 512 bytes / 512 bytes
+  I/O size (minimum/optimal): 512 bytes / 512 bytes
+  Disklabel type: dos
+  Disk identifier: 0xad15584a
+  ```
+
+* Размечаем раздел /boot (100 мегабайт) - команда `n`
+  ```bash
+  Command (m for help): n
+  Partition type
+     p   primary (0 primary, 0 extended, 4 free)
+     e   extended (container for logical partitions)
+  Select (default p):
+
+  Using default response p.
+  Partition number (1-4, default 1):
+  First sector (2048-27262976, default 2048):
+  Last sector, +sectors or +size{K,M,G,T,P} (2048-27262976, default 27262976): +100M
+
+  Created a new partition 1 of type 'Linux' and of size 100 MiB.
+  ```
+  На все запросы fdisk оставляем значния по умолчанию, кроме запроса last sector, там пишем +100M.
+  
+* Размечаем раздел под swap
+  ```bash
+  Command (m for help): n
+  Partition type
+     p   primary (1 primary, 0 extended, 3 free)
+     e   extended (container for logical partitions)
+  Select (default p):
+
+  Using default response p.
+  Partition number (2-4, default 2):
+  First sector (206848-27262976, default 206848):
+  Last sector, +sectors or +size{K,M,G,T,P} (206848-27262976, default 27262976): +1G
+
+  Created a new partition 2 of type 'Linux' and of size 1 GiB.
+  ```
+  Так же оставляем все значения по умолчанию, в запросе last sector пишем +1G.
+
+* Размечаем раздел под root
+  ```bash
+  Command (m for help): n
+  Partition type
+     p   primary (2 primary, 0 extended, 2 free)
+     e   extended (container for logical partitions)
+  Select (default p):
+
+  Using default response p.
+  Partition number (3,4, default 3):
+  First sector (2304000-27262976, default 2304000):
+  Last sector, +sectors or +size{K,M,G,T,P} (2304000-27262976, default 27262976):
+
+  Created a new partition 3 of type 'Linux' and of size 11.9 GiB.
+  ```
+  Здесь все запросы включая last sector - по умолчанию.
+
+* Меняем тип раздела для swap - команда `t`
+  ```bash
+  Command (m for help): t
+  Partition number (1-3, default 3): 2
+  Partition type (type L to list all types): 82
+
+  Changed type of partition 'Linux' to 'Linux swap / Solaris'
+  ```
+  Для раздела 2 (Partition number) указываем тип раздела (Partition type) 82.
+  
+* Проверяем что получилось - команда `p`
+  ```bash
+  Command (m for help): p
+  Disk /dev/xvda: 13 GiB, 13958643712 bytes, 27262976 sectors
+  Units: sectors of 1 * 512 = 512 bytes
+  Sector size (logical/physical): 512 bytes / 512 bytes
+  I/O size (minimum/optimal): 512 bytes / 512 bytes
+  Disklabel type: dos
+  Disk identifier: 0xad15584a
+
+  Device     Boot   Start      End  Sectors  Size Id Type
+  /dev/xvda1         2048   206847   204800  100M 83 Linux
+  /dev/xvda2       206848  2303999  2097152    1G 82 Linux swap / Solaris
+  /dev/xvda3      2304000 27262975 24958976 11.9G 83 Linux
+  ```
+* Если все правильно, сохраняем - команда `w`
+  ```bash
+  Command (m for help): w
+  The partition table has been altered.
+  Calling ioctl() to re-read partition table.
+  Syncing disks.
+  ```
