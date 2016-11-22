@@ -28,19 +28,22 @@
   ```bash
   livecd ~ # ping google.com
   ```
+  
 * Меняем пароль суперпользователя
   ```bash
   livecd ~ # passwd root
   ```
+  
 * Запускаем демон sshd
   ```bash
   livecd ~ # rc-service sshd start
   ```
-* Смотрим внешний ip-адрес сетевой карты 
+  
+* Смотрим внешний ip-адрес сетевой карты и подключаемся к нему по ssh 
   ```bash
   livecd ~ # ifconfig
   eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 10.254.253.226  netmask 255.255.255.0  broadcast 10.254.253.255
+        inet 192.168.1.226  netmask 255.255.255.0  broadcast 192.168.1.255
         inet6 fe80::44fe:24ff:fe50:913f  prefixlen 64  scopeid 0x20<link>
         ether 46:fe:24:50:91:3f  txqueuelen 1000  (Ethernet)
         RX packets 8104  bytes 1056415 (1.0 MiB)
@@ -48,3 +51,14 @@
         TX packets 972  bytes 883977 (863.2 KiB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
    ```
+   
+### Разметка диска (ssh)
+
+* Так как машина тестовая, то будет использоваться упрощенная разметка диска: 
+  ```
+  /boot - 100 Mb 
+  /swap - 1 Gb
+  /root - 11.9 Gb
+  ```
+  Хорошо написано про разметку с помощью fdisk [здесь](http://www.oldnix.org/fdisk-linux/).
+* 
