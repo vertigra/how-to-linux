@@ -189,10 +189,15 @@
   
 ### Получение установочных файлов
 
-* Скачиваем установочные файлы. Последняя верся на момент установки - stage3-amd64-20161117.tar.bz2
+* Скачиваем установочные файлы. Последняя версия на момент установки: stage3-amd64-20161117.tar.bz2
   ```bash
   livecd ~ # cd /mnt/gentoo
   livecd ~ # wget -c http://gentoo.ussg.indiana.edu/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-20161117.tar.bz2
+  ```
+  
+* Распаковываем
+  ```bash
+  livecd ~ # tar xvjpf stage3-*.tar.bz2
   ```
 
   
