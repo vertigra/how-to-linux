@@ -234,7 +234,24 @@
 * Меняем приглашение командной строки
   ```bash
   livecd gentoo # export PS1="(chroot) $PS1"
+  (chroot) livecd / #
   ```
+
+### Установка снимков дерева Portage
+
+* Устанавливаем снимок дерева Portage
+  ```bash
+  (chroot) livecd / # mkdir /usr/portage
+  (chroot) livecd / # mkdir -p /usr/portage/profiles
+  (chroot) livecd / # echo «gentoo» > /usr/portage/profiles/repo_name
+  (chroot) livecd / # emerge-webrsync
+  ```
+
+* Обновляем снимок дерев
+  ```bash
+  (chroot) livecd / # emerge --sync
+  ```
+
   
   
   
