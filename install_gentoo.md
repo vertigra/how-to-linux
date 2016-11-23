@@ -369,7 +369,7 @@
 
 ### Установка программ
 
-* Устанавливаем необходимые программы
+* Устанавливаем необходимый набор программ
   ```bash
   (chroot) livecd / # emerge udev syslog-ng grub dhcpcd vixie-cron
   ```
