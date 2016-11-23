@@ -320,7 +320,7 @@
   PORTDIR="/usr/portage"
   DISTDIR="${PORTDIR}/distfiles"
   PKGDIR="${PORTDIR}/packages"
-  MAKEOPTS="-j2"
+  MAKEOPTS="-j3"
 
   GENTOO_MIRRORS="http://gentoo.c3sl.ufpr.br/ ftp://gentoo.c3sl.ufpr.br/gentoo/   ftp://xeon.gentoo.ru/mirrors/gen$
   ```
@@ -363,10 +363,16 @@
 
 ---
 **NOTE**
-Установка ядра через ssh зависла на 
+Установка ядра через ssh зависла и была перезапущена в консоли. При этом объем оперативной памяти выделеный на виртуальную машину был увеличен до 1Gb и количество ядер 4. Переменная `MAKEOPTS="-j3` не изменялась.
 
 ---
 
+### Установка программ
+
+* Устанавливаем необходимые программы
+  ```bash
+  (chroot) livecd / # emerge udev syslog-ng grub dhcpcd vixie-cron
+  ```
 
 
   
