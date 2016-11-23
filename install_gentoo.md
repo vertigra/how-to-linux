@@ -453,7 +453,7 @@
 
 * Генерируем файл grub.cfg
   ```bash
-  grub-mkconfig -o /boot/grub/grub.cfg
+  (chroot) livecd /# grub-mkconfig -o /boot/grub/grub.cfg
   ```
 
 //* Смотрим название созданного образа ядра и initrd
