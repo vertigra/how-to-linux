@@ -379,6 +379,14 @@
   * grub - загрузчик операционной системы, подробнее [тут](https://ru.wikipedia.org/wiki/GNU_GRUB)
   * dhcpcd — свободная реализация клиента DHCP и DHCPv6. На данный момент является наиболее развитым DHCP-клиентом с открытым исходным кодом, подробнее [тут](http://roy.marples.name/projects/dhcpcd/index)
   * vixie-cron одна из реализаций программы cron, подробнее [тут](https://wiki.gentoo.org/wiki/Cron/ru#vixie_cron)
+
+* Добавляем `udev` в автозагрузку
+  ```bash
+  (chroot) livecd / # rc-update add udev boot
+  ```
+
+
+###
   
   
   
