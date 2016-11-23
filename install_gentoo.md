@@ -336,7 +336,6 @@
 * В файл `/etc/locale.gen` добавляем локаль
   ```bash
   (chroot) livecd / # echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-  (chroot) livecd / # echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen
   ```
   
 * Генерируем 
@@ -345,7 +344,6 @@
     * Generating locale-archive: forcing # of jobs to 1
     * Generating 2 locales (this might take a while) with 1 jobs
     *  (1/2) Generating en_US.UTF-8 ...                                            [ ok ]
-    *  (2/2) Generating ru_RU.UTF-8 ...                                            [ ok ]
     * Generation complete
   ```
 
@@ -425,7 +423,7 @@
   # <fs>                  <mountpoint>    <type>          <opts>          <dump/pass>
 
   # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
-  /dev/xvda1              /boot           ext2            noauto,noatime  1 2
+  /dev/xvda1              /boot           ext2            noatime         1 2
   /dev/xvda3              /               ext4            noatime         0 1
   /dev/xvda2              none            swap            sw              0 0
   /dev/cdrom              /mnt/cdrom      auto            noauto,ro       0 0
@@ -471,7 +469,7 @@
 * Устанавливаем загрузчик
   ```bash
   (chroot) livecd /# grep -v rootfs /proc/mounts > /etc/mtab
-  (chroot) livecd /# grub2-install /dev/xvda
+  (chroot) livecd /# grub-install /dev/xvda
   ```
 
 * Генерируем файл grub.cfg
