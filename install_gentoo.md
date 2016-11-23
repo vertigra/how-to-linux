@@ -391,7 +391,27 @@
 
 * В файле `fstab` указываем точки монтрования файловых систем в соответствии с разметкой диска
   ```bash
-  ----файл fstab---
+  # /etc/fstab: static file system information.
+  #
+  # noatime turns off atimes for increased performance (atimes normally aren't
+  # needed); notail increases performance of ReiserFS (at the expense of storage
+  # efficiency).  It's safe to drop the noatime options if you want and to
+  # switch between notail / tail freely.
+  #
+  # The root filesystem should have a pass number of either 0 or 1.
+  # All other filesystems should have a pass number of 0 or greater than 1.
+  #
+  # See the manpage fstab(5) for more information.
+  #
+
+  # <fs>                  <mountpoint>    <type>          <opts>          <dump/pass>
+
+  # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
+  /dev/xvda1              /boot           ext2            noauto,noatime  1 2
+  /dev/xvda3              /               ext4            noatime         0 1
+  /dev/xvda2              none            swap            sw              0 0
+  /dev/cdrom              /mnt/cdrom      auto            noauto,ro       0 0
+  (required condition - empty string in end of file)
   ```
 
 ### Настройка сети (console)
