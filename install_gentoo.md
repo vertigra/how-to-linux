@@ -391,6 +391,32 @@
   ```bash
   ----файл fstab---
   ```
+
+### Настройка сети (console)
+
+* Для автоматического получения ip-адреса настроим DHCP
+  ```bash
+  (chroot) livecd / # echo 'config_eth0="dhcp"' >> /etc/conf.d/net
+  ```
+  
+  `eth_0` - имя сетевой карты. Посмотреть его можно командой `ifconfig`
+  
+* Добавляем сетевой интерфейс в автозагрузку
+  ```bash
+  (chroot) livecd / # cd /etc/init.d
+  (chroot) livecd init.d # ln -s net.lo net.eth0
+  (chroot) livecd init.d # rc-update add net.eth0 default
+     * service net.eth0 added to runlevel default
+  (chroot) livecd init.d # cd /
+  ```
+  
+### Устанавливаем пароль root
+
+* Устанавливаем пароль суперпользователя
+  ```bash
+  (chroot) livecd init.d # passwd
+  ```
+  
   
   
   
