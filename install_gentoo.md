@@ -374,9 +374,11 @@
   (chroot) livecd / # emerge udev syslog-ng grub dhcpcd vixie-cron
   ```
   
-  udev - менеджер устройств для новых версий ядра Linux, подробнее [тут](https://ru.wikipedia.org/wiki/Udev)
-  syslog-ng - открытая реализация протокола Syslog для Unix и Unix-подобных систем, подробнее [тут](https://redhat-club.org/2011/%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-syslog-ng-%D0%B4%D0%BB%D1%8F-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D0%B8%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%B1%D0%BE%D1%80%D0%B0-%D0%B8-%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D1%85-%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9)
-  grub - загрузчик операционной системы, подробнее [тут](https://ru.wikipedia.org/wiki/GNU_GRUB)
+  * udev - менеджер устройств для новых версий ядра Linux, подробнее [тут](https://ru.wikipedia.org/wiki/Udev)
+  * syslog-ng - открытая реализация протокола Syslog для Unix и Unix-подобных систем, подробнее [тут](https://redhat-club.org/2011/%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-syslog-ng-%D0%B4%D0%BB%D1%8F-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D0%B8%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%B1%D0%BE%D1%80%D0%B0-%D0%B8-%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D1%85-%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9)
+  * grub - загрузчик операционной системы, подробнее [тут](https://ru.wikipedia.org/wiki/GNU_GRUB)
+  * dhcpcd — свободная реализация клиента DHCP и DHCPv6. На данный момент является наиболее развитым DHCP-клиентом с открытым исходным кодом, подробнее [тут](http://roy.marples.name/projects/dhcpcd/index)
+  * vixie-cron одна из реализаций программы cron, подробнее [тут](https://wiki.gentoo.org/wiki/Cron/ru#vixie_cron)
   
   
   
