@@ -380,9 +380,11 @@
    * dhcpcd — свободная реализация клиента DHCP и DHCPv6. На данный момент является наиболее развитым DHCP-клиентом с открытым исходным кодом, подробнее [тут](http://roy.marples.name/projects/dhcpcd/index)
    * vixie-cron одна из реализаций программы cron, подробнее [тут](https://wiki.gentoo.org/wiki/Cron/ru#vixie_cron)
 
-* Добавляем `udev` в автозагрузку
+* Добавляем в автозагрузку
   ```bash
   (chroot) livecd / # rc-update add udev boot
+  (chroot) livecd / # rc-update add syslog-ng default
+  (chroot) livecd / # rc-update add vixie-cron default
   ```
 
 ### Редактируем fstab (console)
@@ -410,12 +412,36 @@
   (chroot) livecd init.d # cd /
   ```
   
-### Устанавливаем пароль root
+### Устанавливаем пароль root (console)
 
 * Устанавливаем пароль суперпользователя
   ```bash
   (chroot) livecd init.d # passwd
   ```
+  
+### Меняем раскладку клавиатуры (console)
+
+* В файле `nano /etc/conf.d/keymaps` меняем `keymap="us"` на `keymap="-u ru"`
+
+### Установка загрузчика (console)
+
+* Устанавливаем загрузчик
+  ```bash
+  (chroot) livecd /# grep -v rootfs /proc/mounts > /etc/mtab
+  (chroot) livecd /# grub-install /dev/xvda
+  ```
+
+* Генерируем файл grub.cfg
+  ```bash
+  grub-mkconfig -o /boot/grub/grub.cfg
+  ```
+
+//* Смотрим название созданного образа ядра и initrd
+//  ```bash
+//  (chroot) livecd init.d # ls /boot/kernel* /boot/initramfs*
+//  /boot/initramfs-genkernel-x86_64-4.4.26-gentoo /boot/kernel-genkernel-x86_64-4.4.26-gentoo
+//  ```
+
   
   
   
