@@ -283,9 +283,9 @@
   (chroot) livecd / # eselect profile set 1
   ```
 
-### Редактируем make.conf
+### Редактируем make.conf (ssh)
 
-* Сборка системы управляется USE флагами, которые храняться в файле `/etc/portage/make.conf`. Список USE флагов можно посмотреть командой `less /usr/portage/profiles/use.desc`
+* Основные опции сборки системы храняться в файле `/etc/portage/make.conf`. `
 * Файл make.conf по умолчанию
   ```bash
   ---------файл make.conf------
@@ -295,12 +295,77 @@
   ```
   CFLAGS и CXXFLAGS - параметры оптимизации компилятора gcc для языков C (CFLAGS) и C++ (CXXFLAGS)
   CHOST - указывает компилятору gcc для какой архитектуры процессора собирать код
-  USE - указывает глобальные опции сборки ПО
+  USE - указывает глобальные опции сборки ПО, полный список команда # less /usr/portage/profiles/use.desc
   PORTDIR - расположение дерева Portage
   DISTDIR - каталог для хранения сжатых исходных кодов
   PKGDIR - каталог для хранения сжатых установочных бинарных пакетов
   ```
+  
+* Редактируем файл make.conf `nano /etc/portage/make.conf` и дописываем следующие флаги `USE="-X -gtk -gtk2 -qt -qt4 -gnome -kde -xinetd unicode bindist"`. Это флаги отключат поддержку X сервера, xinetd, запретит собирать библиотеки для kde и gnome и добавит поддержку unicode.
+* Добавляем переменную `MAKEOPTS="-j3"` (на виртуальную машину выделено два ядра). Предназначена она для контроля запускаемых процессов компиляции при сборке пакета. Рекомендуется устанавливать ее значение исходя из количества ядер процессора плюс 1.
+* Файл `make.conf` после редактирования
+  ```bash
+  # These settings were set by the catalyst build script that automatically
+  # built this stage.
+  # Please consult /usr/share/portage/config/make.conf.example for a more
+  # detailed example.
+  CFLAGS="-O2 -pipe"
+  CXXFLAGS="${CFLAGS}"
+  # WARNING: Changing your CHOST is not something that should be done lightly.
+  # Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
+  CHOST="x86_64-pc-linux-gnu"
+  # These are the USE and USE_EXPAND flags that were used for
+  # buidling in addition to what is provided by the profile. 
+  USE="-X -gtk -gtk2 -qt -qt4 -gnome -kde -xinetd unicode bindist"
+  PORTDIR="/usr/portage"
+  DISTDIR="${PORTDIR}/distfiles"
+  PKGDIR="${PORTDIR}/packages"
+  MAKEOPTS="-j2"
 
+  GENTOO_MIRRORS="http://gentoo.c3sl.ufpr.br/ ftp://gentoo.c3sl.ufpr.br/gentoo/   ftp://xeon.gentoo.ru/mirrors/gen$
+  ```
+
+### Настройки времени и локали (ssh)
+
+* Выбираем часовой пояс `# ls /usr/share/zoneinfo`, находим свое местоположение и копируем
+  ```bash
+  (chroot) livecd / # cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+  (chroot) livecd / # echo "Europe/Moscow" > /etc/timezone
+  ```
+  
+* В файл `/etc/locale.gen` добавляем локаль
+  ```bash
+  (chroot) livecd / # echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+  (chroot) livecd / # echo "ru_RU.UTF-8 UTF-8" >> /etc/locale.gen
+  ```
+  
+* Генерируем 
+  ```bash
+  (chroot) livecd / # locale-gen
+    * Generating locale-archive: forcing # of jobs to 1
+    * Generating 2 locales (this might take a while) with 1 jobs
+    *  (1/2) Generating en_US.UTF-8 ...                                            [ ok ]
+    *  (2/2) Generating ru_RU.UTF-8 ...                                            [ ok ]
+    * Generation complete
+  ```
+  
+### Установка ядра (console)
+
+* Устанавливаем исходные коды ядра
+  ```bash
+  (chroot) livecd / # emerge gentoo-sources
+  ```
+* Собираем и устанавливаем ядро genkernel
+  ```bash
+  (chroot) livecd / # emerge genkernel
+  (chroot) livecd / # genkernel all
+  ```
+
+---
+**NOTE**
+Установка ядра через ssh зависла на 
+
+---
 
 
 
