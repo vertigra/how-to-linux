@@ -4,7 +4,7 @@
 ---
 ***NOTE*** 
 
-*Для сборки ядра и модулей необходим раздел root не меньше 12 Гб *
+*Для сборки ядра и модулей необходим раздел root не меньше 12 Гб*
 
 ---
 ***NOTE***
@@ -36,6 +36,8 @@ livecd / # source /etc/profile
 livecd / # export PS1="(chroot) $PS1"
 (chroot) livecd / #
 ```
+
+---
 
 По мотивам [этой](http://www.oldnix.org/install-gentoo-linux/) и [этой](http://www.r-notes.ru/administrirovanie/gentoo-linux/116-gentoo-tipovaya-ustanovka.html) статьи с [продолжением](http://www.r-notes.ru/administrirovanie/gentoo-linux/117-gentoo-tipovaya-ustanovka-chast-2.html).
 
@@ -114,7 +116,7 @@ livecd / # export PS1="(chroot) $PS1"
 
   Created a new partition 1 of type 'Linux' and of size 100 MiB.
   ```
-  На все запросы fdisk оставляем значния по умолчанию, кроме запроса last sector, там пишем +100M.
+  На все запросы fdisk оставляем значения по умолчанию, кроме запроса last sector, там пишем +100M.
   
 * Размечаем раздел под swap (1 гигабайт)
   ```bash
