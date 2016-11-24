@@ -31,7 +31,7 @@
   
 * Меняем пароль суперпользователя
   ```bash
-  livecd ~ # passwd root
+  livecd ~ # passwd rootrc
   ```
   
 * Запускаем демон sshd
@@ -388,9 +388,10 @@
 
 * Устанавливаем необходимый набор программ
   ```bash
-  (chroot) livecd / # emerge udev syslog-ng dhcpcd vixie-cron
+  (chroot) livecd / # emerge udev syslog-ng dhcpcd vixie-cron grub
   ```
   
+   * grub - загрузчик
    * udev - менеджер устройств для новых версий ядра Linux, подробнее [тут](https://ru.wikipedia.org/wiki/Udev)
    * syslog-ng - открытая реализация протокола Syslog для Unix и Unix-подобных систем, подробнее [тут](https://redhat-club.org/2011/%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-syslog-ng-%D0%B4%D0%BB%D1%8F-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D0%B8%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%B1%D0%BE%D1%80%D0%B0-%D0%B8-%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%BD%D1%8B%D1%85-%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D0%B9)
    * dhcpcd — свободная реализация клиента DHCP и DHCPv6. На данный момент является наиболее развитым DHCP-клиентом с открытым исходным кодом, подробнее [тут](http://roy.marples.name/projects/dhcpcd/index)
@@ -460,11 +461,6 @@
 * В файле `nano /etc/conf.d/keymaps` меняем `keymap="us"` на `keymap="-u ru"`
 
 ### Установка загрузчика (console)
-
-* Устанавливаем grub
-  ```bash
-  (chroot) livecd /# emerge --ask --newuse --deep sys-boot/grub:2
-  ```
 
 * Устанавливаем загрузчик
   ```bash
