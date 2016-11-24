@@ -21,6 +21,22 @@
 
 *Устанавливалось с носителя: [gentoo-install-amd64-minimal-20161103.iso](http://ftp.halifax.rwth-aachen.de/gentoo/releases/amd64/autobuilds/20161103/install-amd64-minimal-20161103.iso). Версия установки - чистая консоль без поддержки X-сервера*
 
+---
+***NOTE***
+*Если установка прервалась после после смены корня системы, вернуться к нужному этапу можно загрузившись с live-cd и набрать:
+```bash
+livecd ~ # swapon /dev/xvda2
+livecd ~ # mount /dev/xvda3 /mnt/gentoo
+livecd ~ # mount /dev/xvda1 /mnt/gentoo/boot
+livecd ~ # mount -t proc none /mnt/gentoo/proc
+livecd ~ # mount --rbind /sys /mnt/gentoo/sys
+livecd ~ # mount --rbind /dev /mnt/gentoo/dev
+livecd ~ # chroot /mnt/gentoo /bin/bash
+livecd / # source /etc/profile
+livecd / # export PS1="(chroot) $PS1"
+(chroot) livecd / #
+```
+
 По мотивам [этой](http://www.oldnix.org/install-gentoo-linux/) и [этой](http://www.r-notes.ru/administrirovanie/gentoo-linux/116-gentoo-tipovaya-ustanovka.html) статьи с [продолжением](http://www.r-notes.ru/administrirovanie/gentoo-linux/117-gentoo-tipovaya-ustanovka-chast-2.html).
 
 ### Подготовка (консоль сервера) ###
