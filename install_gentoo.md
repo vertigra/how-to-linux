@@ -1,4 +1,6 @@
-# Как установить Gentoo с minimal-cd
+# Как установить Gentoo на XEN
+> **черновик**
+
 ---
 ***NOTE*** 
 
@@ -379,8 +381,30 @@
   ```
 
 ---
-**NOTE**
+***NOTE***
+
 Установка ядра через ssh зависла и была перезапущена в консоли. При этом объем оперативной памяти выделеный на виртуальную машину был увеличен до 1Gb и количество ядер 4. Переменная `MAKEOPTS="-j3` не изменялась.
+
+---
+
+--- 
+***NOTE***
+
+После перезагрузки система не грузилась. При этом видно было что разрешение экрана изменяется, то есть что-то происходит. Было пересобрано ядро следующим образом
+```bash
+(chroot) livecd / # cd /usr/src/linux
+(chroot) livecd / # make menuconfig
+```
+
+Из ядра убраны/добавлены:
+```
+Character devices  --->
+                [*] HPET - High Precision Event Timer
+<*> Real Time Clock  --->
+                [ ]   Set system time from RTC on startup and resume
+                < >   PC-style "CMOS" [4]
+``` 
+(chroot) livecd / # make && make install modules_install
 
 ---
 
@@ -473,13 +497,14 @@
   (chroot) livecd /# grub-mkconfig -o /boot/grub/grub.cfg
   ```
 
-//* Смотрим название созданного образа ядра и initrd
-//  ```bash
-//  (chroot) livecd init.d # ls /boot/kernel* /boot/initramfs*
-//  /boot/initramfs-genkernel-x86_64-4.4.26-gentoo /boot/kernel-genkernel-x86_64-4.4.26-gentoo
-//  ```
+### Финальная перезагрузка
 
-  
+* Размонтируем файловые системы и перегрузимся
+  ```bash
+  (chroot) livecd /# exit
+  livecd # umount -l /mnt/gentoo/dev{/shm,/pts,}
+  livecd # reboot
+  ```
   
   
   
