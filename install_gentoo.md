@@ -197,22 +197,22 @@ livecd / # export PS1="(chroot) $PS1"
 
 * Форматируем файловые системы. Для раздела /boot - ext2. Для раздела /root - ext4. Для раздела подкачки - swap.
   ```bash
-  livecd ~ # mkfs.ext2 -L boot /dev/xvda1
-  livecd ~ # mkfs.ext4 -L root /dev/xvda3
-  livecd ~ # mkswap -L swap /dev/xvda2
+  livecd ~ # mkfs.ext2 -L boot /dev/sda1
+  livecd ~ # mkfs.ext4 -L root /dev/sda3
+  livecd ~ # mkswap -L swap /dev/sda2
   ```
 * Подключаем своп
   ```bash
-  livecd ~ # swapon /dev/xvda2
+  livecd ~ # swapon /dev/sda2
   ```
 
 ### Монтирование разделов (ssh)
 
 * Монтируем созданые разделы. Точка монтирования `/mnt/gentoo`
   ```bash
-  livecd ~ # mount /dev/xvda3 /mnt/gentoo
+  livecd ~ # mount /dev/sda3 /mnt/gentoo
   livecd ~ # mkdir /mnt/gentoo/boot
-  livecd ~ # mount /dev/xvda1 /mnt/gentoo/boot
+  livecd ~ # mount /dev/sda1 /mnt/gentoo/boot
   ```
   
 ### Получение установочных файлов (ssh)
@@ -220,7 +220,7 @@ livecd / # export PS1="(chroot) $PS1"
 * Скачиваем установочные файлы. Последняя версия на момент установки: stage3-amd64-20161117.tar.bz2
   ```bash
   livecd ~ # cd /mnt/gentoo
-  livecd ~ # wget -c http://gentoo.ussg.indiana.edu/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-20161117.tar.bz2
+  livecd ~ # wget -c http://gentoo.ussg.indiana.edu/releases/x86/autobuilds/current-stage3-i686/stage3-i486-20161122.tar.bz2
   ```
   
 * Распаковываем
