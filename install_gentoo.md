@@ -165,7 +165,7 @@ livecd / # export PS1="(chroot) $PS1"
   Partition number (1-3, default 3): 2
   Partition type (type L to list all types): 82
 
-  Changed type of partition 'Linux' to 'Linux swap / Solaris'
+  Changed type of partition 'Linux' to 'Linux swap / Solaris'.
   ```
   Для раздела 2 (Partition number) указываем тип раздела (Partition type) 82.
   
