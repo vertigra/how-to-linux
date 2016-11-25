@@ -51,7 +51,7 @@ livecd / # export PS1="(chroot) $PS1"
   
 * Меняем пароль суперпользователя
   ```bash
-  livecd ~ # passwd rootrc
+  livecd ~ # passwd
   ```
   
 * Запускаем демон sshd
