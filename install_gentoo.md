@@ -172,18 +172,19 @@ livecd / # export PS1="(chroot) $PS1"
 * Проверяем что получилось - команда `p`
   ```bash
   Command (m for help): p
-  Disk /dev/xvda: 13 GiB, 13958643712 bytes, 27262976 sectors
+  Disk /dev/sda: 12 GiB, 12884901888 bytes, 25165824 sectors
   Units: sectors of 1 * 512 = 512 bytes
   Sector size (logical/physical): 512 bytes / 512 bytes
   I/O size (minimum/optimal): 512 bytes / 512 bytes
   Disklabel type: dos
-  Disk identifier: 0xad15584a
+  Disk identifier: 0x9ebcbacc
 
   Device     Boot   Start      End  Sectors  Size Id Type
-  /dev/xvda1         2048   206847   204800  100M 83 Linux
-  /dev/xvda2       206848  2303999  2097152    1G 82 Linux swap / Solaris
-  /dev/xvda3      2304000 27262975 24958976 11.9G 83 Linux
+  /dev/sda1          2048   206847   204800  100M 83 Linux
+  /dev/sda2        206848  2303999  2097152    1G 82 Linux swap / Solaris
+  /dev/sda3       2304000 25165823 22861824 10.9G 83 Linux
   ```
+  
 * Если все правильно, сохраняем - команда `w`
   ```bash
   Command (m for help): w
