@@ -4,17 +4,13 @@
 ---
 ***NOTE*** 
 
-*Для сборки ядра и модулей необходим раздел root не меньше 12 Гб*
+*Для сборки ядра и модулей необходим раздел root не меньше 11 Гб*
 
 ---
+
 ***NOTE***
 
-*Инсталяция производилась на виртуальную машину (Citrix Xen Server) поэтому имя жесткого диска и его разделов (/dev/xvda, /dev/xvda1, /dev/xvda2, /dev/xvda3) на реальном железе будет отличаться (/dev/sda, /dev/sda1, /dev/sda2, /dev/sda3)*
-
----
-***NOTE***
-
-*Конфигурация виртуальной машины на которую производилась инсталяция: процессор (Vendor: AuthenticAMD, Model: AMD Phenom(tm) II X4 945 Processor, Speed: 3013 MHz) - Number of vCPUs - 2, Topology - 2 sockets with 1 core per socket, vCPU priority - Normal; память 512 Mb; жесткий диск -13Гб, position 0; сеть DHCP. Время установки 6-7 часов.*
+*Конфигурация виртуальной машины на которую производилась инсталяция: процессор (Vendor: AuthenticAMD, Model: AMD Phenom(tm) II X4 945 Processor, Speed: 3013 MHz) - Number of vCPUs - 2, Topology - 4 sockets with 1 core per socket, vCPU priority - Normal; память 1 Gb; жесткий диск -12Гб, position 0; сеть DHCP. Время установки 6-7 часов.*
 
 ---
 ***NOTE***
@@ -62,14 +58,23 @@ livecd / # export PS1="(chroot) $PS1"
 * Смотрим внешний ip-адрес сетевой карты и подключаемся к нему по ssh 
   ```bash
   livecd ~ # ifconfig
-  eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
-        inet 192.168.1.226  netmask 255.255.255.0  broadcast 192.168.1.255
-        inet6 fe80::44fe:24ff:fe50:913f  prefixlen 64  scopeid 0x20<link>
-        ether 46:fe:24:50:91:3f  txqueuelen 1000  (Ethernet)
-        RX packets 8104  bytes 1056415 (1.0 MiB)
-        RX errors 0  dropped 19  overruns 0  frame 0
-        TX packets 972  bytes 883977 (863.2 KiB)
-        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+  enp0s4: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+          inet 10.254.253.104  netmask 255.255.255.0  broadcast 10.254.253.255
+          inet6 fe80::e4e1:62ff:fea6:2f9c  prefixlen 64  scopeid 0x20<link>
+          ether e6:e1:62:a6:2f:9c  txqueuelen 1000  (Ethernet)
+          RX packets 205  bytes 15596 (15.2 KiB)
+          RX errors 0  dropped 0  overruns 0  frame 0
+          TX packets 60  bytes 8013 (7.8 KiB)
+          TX errors 0  dropped 0 overruns 0  carrier 0  collisions 173
+
+  lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+          inet 127.0.0.1  netmask 255.0.0.0
+          inet6 ::1  prefixlen 128  scopeid 0x10<host>
+          loop  txqueuelen 1  (Local Loopback)
+          RX packets 6  bytes 108 (108.0 B)
+          RX errors 0  dropped 0  overruns 0  frame 0
+          TX packets 6  bytes 108 (108.0 B)
+          TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
    ```
    
 ### Разметка диска (ssh)
@@ -78,27 +83,27 @@ livecd / # export PS1="(chroot) $PS1"
   ```
   /boot - 100 Mb 
   /swap - 1 Gb
-  /root - 11.9 Gb
+  /root - 10.9 Gb
   ```
   Хорошо написано про разметку с помощью fdisk [здесь](http://www.oldnix.org/fdisk-linux/).
 * Проверяем существующую разметку - команда `p`
   ```bash
-  livecd ~ # fdisk /dev/xvda
+  livecd ~ # fdisk /dev/sda
 
   Welcome to fdisk (util-linux 2.26.2).
   Changes will remain in memory only, until you decide to write them.
   Be careful before using the write command.
 
   Device does not contain a recognized partition table.
-  Created a new DOS disklabel with disk identifier 0x0ff8c11f.
-  ----
+  Created a new DOS disklabel with disk identifier 0x9ebcbacc.
+
   Command (m for help): p
-  Disk /dev/xvda: 13 GiB, 13958643712 bytes, 27262976 sectors
+  Disk /dev/sda: 12 GiB, 12884901888 bytes, 25165824 sectors
   Units: sectors of 1 * 512 = 512 bytes
   Sector size (logical/physical): 512 bytes / 512 bytes
   I/O size (minimum/optimal): 512 bytes / 512 bytes
   Disklabel type: dos
-  Disk identifier: 0xad15584a
+  Disk identifier: 0x9ebcbacc
   ```
 
 * Размечаем раздел /boot (100 мегабайт) - команда `n`
@@ -111,8 +116,8 @@ livecd / # export PS1="(chroot) $PS1"
 
   Using default response p.
   Partition number (1-4, default 1):
-  First sector (2048-27262976, default 2048):
-  Last sector, +sectors or +size{K,M,G,T,P} (2048-27262976, default 27262976): +100M
+  First sector (2048-25165823, default 2048):
+  Last sector, +sectors or +size{K,M,G,T,P} (2048-25165823, default 25165823): +100M
 
   Created a new partition 1 of type 'Linux' and of size 100 MiB.
   ```
@@ -128,11 +133,12 @@ livecd / # export PS1="(chroot) $PS1"
 
   Using default response p.
   Partition number (2-4, default 2):
-  First sector (206848-27262976, default 206848):
-  Last sector, +sectors or +size{K,M,G,T,P} (206848-27262976, default 27262976): +1G
+  First sector (206848-25165823, default 206848):
+  Last sector, +sectors or +size{K,M,G,T,P} (206848-25165823, default 25165823): +1G
 
   Created a new partition 2 of type 'Linux' and of size 1 GiB.
   ```
+  
   Так же оставляем все значения по умолчанию, в запросе last sector пишем +1G.
 
 * Размечаем раздел под root (оставшееся место, 11,9 гигабайт)
@@ -145,11 +151,12 @@ livecd / # export PS1="(chroot) $PS1"
 
   Using default response p.
   Partition number (3,4, default 3):
-  First sector (2304000-27262976, default 2304000):
-  Last sector, +sectors or +size{K,M,G,T,P} (2304000-27262976, default 27262976):
+  First sector (2304000-25165823, default 2304000):
+  Last sector, +sectors or +size{K,M,G,T,P} (2304000-25165823, default 25165823):
 
-  Created a new partition 3 of type 'Linux' and of size 11.9 GiB.
+  Created a new partition 3 of type 'Linux' and of size 10.9 GiB.
   ```
+  
   Здесь все запросы включая last sector - по умолчанию.
 
 * Меняем тип раздела для swap - команда `t`
