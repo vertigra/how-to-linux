@@ -316,7 +316,25 @@ livecd / # export PS1="(chroot) $PS1"
 * Основные опции сборки системы храняться в файле `/etc/portage/make.conf`. `
 * Файл make.conf по умолчанию
   ```bash
-  ---------файл make.conf------
+  # These settings were set by the catalyst build script that automatically
+  # built this stage.
+  # Please consult /usr/share/portage/config/make.conf.example for a more
+  # detailed example.
+  CFLAGS="-O2 -march=i486 -pipe"
+  CXXFLAGS="${CFLAGS}"
+  # WARNING: Changing your CHOST is not something that should be done lightly.
+  # Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
+  CHOST="i486-pc-linux-gnu"
+  # These are the USE and USE_EXPAND flags that were used for
+  # buidling in addition to what is provided by the profile.
+  USE="bindist"
+  PORTDIR="/usr/portage"
+  DISTDIR="${PORTDIR}/distfiles"
+  PKGDIR="${PORTDIR}/packages"
+
+  GENTOO_MIRRORS="rsync://gentoo.bloodhost.ru/gentoo-distfiles ftp://gentoo.bloodhost.ru/  http://gentoo.bloodhost.ru/ ftp://xeon.gentoo.ru/mirrors/gentoo/distfiles/ ftp://mirror.yand
+ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/"
+
   ```
   
   Значение переменных
