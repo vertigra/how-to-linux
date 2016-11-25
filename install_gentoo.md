@@ -345,10 +345,11 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/"
   PORTDIR - расположение дерева Portage
   DISTDIR - каталог для хранения сжатых исходных кодов
   PKGDIR - каталог для хранения сжатых установочных бинарных пакетов
+  GENTOO_MIRRORS - зеркала, выбираются после команды
   ```
 ---
-***NOTE***
-[Здесь](http://gentoo-en.vfose.ru/wiki/User:Pepoluan/Paravirtualized_Gentoo_VMs_on_XenServer) рекомендуют следующее:
+***NOTE***   
+[Здесь](http://gentoo-en.vfose.ru/wiki/User:Pepoluan/Paravirtualized_Gentoo_VMs_on_XenServer) рекомендуют следующее:   
  For performance reasons, is strongly recommended to use the following as the value for CFLAGS:
 
     x86 DomU, Intel host: "-O2 -march=nocona -pipe -fomit-frame-pointer -mno-tls-direct-seg-refs"
@@ -356,32 +357,34 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/"
     x86 DomU, AMD host: "-O2 -march=k8 -pipe -fomit-frame-pointer -mno-tls-direct-seg-refs"
     amd64 DomU, AMD host: "-O2 -march=k8 -pipe -fomit-frame-pointer"
 
-Так как платформа у меня AMD выбираем ""-O2 -march=k8 -pipe -fomit-frame-pointer -mno-tls-direct-seg-refs"
+Так как платформа у меня AMD выбираем `CFLAGS="-O2 -march=k8 -pipe -fomit-frame-pointer -mno-tls-direct-seg-refs"`
 
 ---
   
 * Редактируем файл make.conf `nano /etc/portage/make.conf` и дописываем следующие флаги `USE="-X -gtk -gtk2 -qt -qt4 -gnome -kde -xinetd unicode bindist"`. Это флаги отключат поддержку X сервера, xinetd, запретит собирать библиотеки для kde и gnome и добавит поддержку unicode.
-* Добавляем переменную `MAKEOPTS="-j3"` (на виртуальную машину выделено два ядра). Предназначена она для контроля запускаемых процессов компиляции при сборке пакета. Рекомендуется устанавливать ее значение исходя из количества ядер процессора плюс 1.
+* Добавляем переменную `MAKEOPTS="-j5"` (на виртуальную машину выделено четыре ядра). Предназначена она для контроля запускаемых процессов компиляции при сборке пакета. Рекомендуется устанавливать ее значение исходя из количества ядер процессора плюс 1.
 * Файл `make.conf` после редактирования
   ```bash
   # These settings were set by the catalyst build script that automatically
-  # built this stage.
+  #  built this stage.
   # Please consult /usr/share/portage/config/make.conf.example for a more
   # detailed example.
-  CFLAGS="-O2 -pipe"
+  CFLAGS="-O2 -march=k8 -pipe -fomit-frame-pointer -mno-tls-direct-seg-refs"
   CXXFLAGS="${CFLAGS}"
   # WARNING: Changing your CHOST is not something that should be done lightly.
   # Please consult http://www.gentoo.org/doc/en/change-chost.xml before changing.
-  CHOST="x86_64-pc-linux-gnu"
+  CHOST="i686-pc-linux-gnu"
   # These are the USE and USE_EXPAND flags that were used for
-  # buidling in addition to what is provided by the profile. 
+  # buidling in addition to what is provided by the profile.
   USE="-X -gtk -gtk2 -qt -qt4 -gnome -kde -xinetd unicode bindist"
   PORTDIR="/usr/portage"
   DISTDIR="${PORTDIR}/distfiles"
   PKGDIR="${PORTDIR}/packages"
-  MAKEOPTS="-j3"
+  MAKEOPTS="-j5"
 
-  GENTOO_MIRRORS="http://gentoo.c3sl.ufpr.br/ ftp://gentoo.c3sl.ufpr.br/gentoo/   ftp://xeon.gentoo.ru/mirrors/gen$
+  GENTOO_MIRRORS="rsync://gentoo.bloodhost.ru/gentoo-distfiles ftp://gentoo.bloodhost.ru/ http://gentoo.bloodhost.ru/ ftp://xeon.gentoo.ru/mirrors/gentoo/distfiles/ ftp://mirror.yan$
+
+
   ```
 
 ### Настройки времени и локали (ssh)
