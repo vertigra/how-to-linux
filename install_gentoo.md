@@ -442,14 +442,12 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/
   ```bash
   (chroot) livecd / # genkernel --install all
   ```
+>тут должно быть про настройку genkernel.conf
 --- 
 ***NOTE***
 
 После перезагрузки система не грузилась. При этом видно было что разрешение экрана изменяется, то есть что-то происходит. Было пересобрано ядро следующим образом
-```bash
-(chroot) livecd / # cd /usr/src/linux
-(chroot) livecd / # make menuconfig
-```
+
 
 Из ядра убраны/добавлены:
 ```
