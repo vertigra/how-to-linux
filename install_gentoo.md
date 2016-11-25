@@ -346,6 +346,19 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/"
   DISTDIR - каталог для хранения сжатых исходных кодов
   PKGDIR - каталог для хранения сжатых установочных бинарных пакетов
   ```
+---
+***NOTE***
+[Здесь](http://gentoo-en.vfose.ru/wiki/User:Pepoluan/Paravirtualized_Gentoo_VMs_on_XenServer) рекомендуют следующее:
+ For performance reasons, is strongly recommended to use the following as the value for CFLAGS:
+
+    x86 DomU, Intel host: "-O2 -march=nocona -pipe -fomit-frame-pointer -mno-tls-direct-seg-refs"
+    amd64 DomU, Intel host: "-O2 -march=nocona -pipe -fomit-frame-pointer"
+    x86 DomU, AMD host: "-O2 -march=k8 -pipe -fomit-frame-pointer -mno-tls-direct-seg-refs"
+    amd64 DomU, AMD host: "-O2 -march=k8 -pipe -fomit-frame-pointer"
+
+Так как платформа у меня AMD выбираем ""-O2 -march=k8 -pipe -fomit-frame-pointer -mno-tls-direct-seg-refs"
+
+---
   
 * Редактируем файл make.conf `nano /etc/portage/make.conf` и дописываем следующие флаги `USE="-X -gtk -gtk2 -qt -qt4 -gnome -kde -xinetd unicode bindist"`. Это флаги отключат поддержку X сервера, xinetd, запретит собирать библиотеки для kde и gnome и добавит поддержку unicode.
 * Добавляем переменную `MAKEOPTS="-j3"` (на виртуальную машину выделено два ядра). Предназначена она для контроля запускаемых процессов компиляции при сборке пакета. Рекомендуется устанавливать ее значение исходя из количества ядер процессора плюс 1.
