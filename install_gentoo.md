@@ -438,14 +438,6 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/
   (chroot) livecd / # emerge genkernel
   (chroot) livecd / # genkernel all
   ```
-
----
-***NOTE***
-
-Установка ядра через ssh зависла и была перезапущена в консоли. При этом объем оперативной памяти выделеный на виртуальную машину был увеличен до 1Gb и количество ядер 4. Переменная `MAKEOPTS="-j3` не изменялась.
-
----
-
 --- 
 ***NOTE***
 
