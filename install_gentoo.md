@@ -21,9 +21,9 @@
 ***NOTE***
 *Если установка прервалась после после смены корня системы, вернуться к нужному этапу можно загрузившись с live-cd и набрать:
 ```bash
-livecd ~ # swapon /dev/xvda2
-livecd ~ # mount /dev/xvda3 /mnt/gentoo
-livecd ~ # mount /dev/xvda1 /mnt/gentoo/boot
+livecd ~ # swapon /dev/sda2
+livecd ~ # mount /dev/sda3 /mnt/gentoo
+livecd ~ # mount /dev/sda1 /mnt/gentoo/boot
 livecd ~ # mount -t proc none /mnt/gentoo/proc
 livecd ~ # mount --rbind /sys /mnt/gentoo/sys
 livecd ~ # mount --rbind /dev /mnt/gentoo/dev
@@ -436,7 +436,11 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/
 * Собираем и устанавливаем ядро genkernel
   ```bash
   (chroot) livecd / # emerge genkernel
-  (chroot) livecd / # genkernel all
+  ```
+  Настраиваем /etc/genkernel.conf
+  
+  ```bash
+  (chroot) livecd / # genkernel --install all
   ```
 --- 
 ***NOTE***
@@ -499,9 +503,9 @@ Character devices  --->
   # <fs>                  <mountpoint>    <type>          <opts>          <dump/pass>
 
   # NOTE: If your BOOT partition is ReiserFS, add the notail option to opts.
-  /dev/xvda1              /boot           ext2            noatime         1 2
-  /dev/xvda3              /               ext4            noatime         0 1
-  /dev/xvda2              none            swap            sw              0 0
+  /dev/sda1              /boot           ext2            noatime         1 2
+  /dev/sda2              /               ext4            noatime         0 1
+  /dev/sda3              none            swap            sw              0 0
   /dev/cdrom              /mnt/cdrom      auto            noauto,ro       0 0
   (required condition - empty string in end of file)
   ```
@@ -528,24 +532,30 @@ Character devices  --->
 
 * Устанавливаем пароль суперпользователя
   ```bash
-  (chroot) livecd init.d # passwd
+  (chroot) livecd init.d # passwd root
   ```
   
 ### Меняем раскладку клавиатуры (console)
 
-* В файле `nano /etc/conf.d/keymaps` меняем `keymap="us"` на `keymap="-u ru"`
+>(del)* В файле `nano /etc/conf.d/keymaps` меняем `keymap="us"` на `keymap="-u ru"`
 
 ### Установка загрузчика (console)
 
 * Устанавливаем загрузчик
   ```bash
   (chroot) livecd /# grep -v rootfs /proc/mounts > /etc/mtab
-  (chroot) livecd /# grub-install /dev/xvda
+  (chroot) livecd /# grub-install /dev/sda
+  Installing for i386-pc platform.
+  Installation finished. No error reported.
   ```
 
 * Генерируем файл grub.cfg
   ```bash
   (chroot) livecd /# grub-mkconfig -o /boot/grub/grub.cfg
+  Generating grub configuration file ...
+  Found linux image: /boot/kernel-genkernel-x86-4.4.26-gentoo
+  Found initrd image: /boot/initramfs-genkernel-x86-4.4.26-gentoo
+  done
   ```
 
 ### Финальная перезагрузка
