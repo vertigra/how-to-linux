@@ -382,9 +382,8 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/"
   PKGDIR="${PORTDIR}/packages"
   MAKEOPTS="-j5"
 
-  GENTOO_MIRRORS="rsync://gentoo.bloodhost.ru/gentoo-distfiles ftp://gentoo.bloodhost.ru/ http://gentoo.bloodhost.ru/ ftp://xeon.gentoo.ru/mirrors/gentoo/distfiles/ ftp://mirror.yan$
-
-
+  GENTOO_MIRRORS="rsync://gentoo.bloodhost.ru/gentoo-distfiles ftp://gentoo.bloodhost.ru/  http://gentoo.bloodhost.ru/ ftp://xeon.gentoo.ru/mirrors/gentoo/distfiles/ ftp://mirror.yand
+ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/
   ```
 
 ### Настройки времени и локали (ssh)
