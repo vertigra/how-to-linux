@@ -458,9 +458,16 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/
   (chroot) livecd / # genkernel --install all
   ```
   
-  
+---
 ***NOTE***
-> тут про драйвер
+Минимальная необходимая конфигурация для XEN
+```
+Linux/x86 4.4.26-gentoo Kernel Configuration
+[]64-bit kernel
+Device driver --->
+    Graphics support --->
+      <M> Cirrus driver for QUEMU emulated device
+```
 
 ---
 
