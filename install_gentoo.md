@@ -15,7 +15,7 @@
 ---
 ***NOTE***
 
-*Устанавливалось с носителя: [gentoo-install-amd64-minimal-20161103.iso](http://ftp.halifax.rwth-aachen.de/gentoo/releases/amd64/autobuilds/20161103/install-amd64-minimal-20161103.iso). Версия установки - чистая консоль без поддержки X-сервера*
+*Устанавливалось с носителя: [gentoo-install-x86-minimal-20161122.iso](http://distfiles.gentoo.org/releases/x86/autobuilds/20161122/install-x86-minimal-20161122.iso). Версия установки - чистая консоль без поддержки X-сервера*
 
 ---
 ***NOTE***
@@ -39,7 +39,7 @@ livecd / # export PS1="(chroot) $PS1"
 
 ### Подготовка (консоль сервера) ###
 
-* Скачиваем minimal installation cd c сайта [gentoo.org](https://gentoo.org/downloads/) и пишем его на флэшку или диск
+* Скачиваем minimal installation cd c сайта [gentoo.org](https://gentoo.org/downloads/) и пишем его на флэшку или диск (в случае xen монтируем образ диска на виртуальный дисоквод вм )
 * После загрузки с диска проверяем сеть (у меня DHCP поэтому дополнтельно настраивать ничего не нужно)
   ```bash
   livecd ~ # ping google.com
@@ -438,26 +438,29 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/
   (chroot) livecd / # emerge genkernel
   ```
   Настраиваем /etc/genkernel.conf
+  ```bash
+  (chroot) livecd / # nano /etc/genkernel.conf
+  ```
+  Меняем значение следующих опций:
+  ```bash
+  # Run 'make menuconfig' before compiling this kernel?
+  MENUCONFIG="yes"
+
+  # Make symlinks in BOOTDIR automatically?
+  SYMLINK="yes"
+
+  # Add new kernel to grub?
+  #BOOTLOADER="grub"
+  ```
   
+  Запускаем сборку ядра:
   ```bash
   (chroot) livecd / # genkernel --install all
   ```
->тут должно быть про настройку genkernel.conf
---- 
+  
+  
 ***NOTE***
-
-После перезагрузки система не грузилась. При этом видно было что разрешение экрана изменяется, то есть что-то происходит. Было пересобрано ядро следующим образом
-
-
-Из ядра убраны/добавлены:
-```
-Character devices  --->
-                [*] HPET - High Precision Event Timer
-<*> Real Time Clock  --->
-                [ ]   Set system time from RTC on startup and resume
-                < >   PC-style "CMOS" [4]
-``` 
-(chroot) livecd / # make && make install modules_install
+> тут про драйвер
 
 ---
 
