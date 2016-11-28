@@ -49,7 +49,6 @@ livecd / # export PS1="(chroot) $PS1"
   --- google.com ping statistics ---
   3 packets transmitted, 3 received, 0% packet loss, time 2003ms
   rtt min/avg/max/mdev = 48.738/51.676/55.615/2.907 ms
-
   ```
   
 * Меняем пароль суперпользователя
