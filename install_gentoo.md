@@ -455,7 +455,7 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/
   
   Запускаем сборку ядра:
   ```bash
-  (chroot) livecd / # genkernel --install all
+  (chroot) livecd / # genkernel --install all 
   ```
   
 ---
@@ -466,7 +466,10 @@ Linux/x86 4.4.26-gentoo Kernel Configuration
 []64-bit kernel
 Device driver --->
     Graphics support --->
-      <M> Cirrus driver for QUEMU emulated device
+      Change <M> on <*> here
+      <*> Direct Renderinng Manager (XFree86 4.1.0 and higher DRI support --->
+      Set * here
+      <*> Cirrus driver for QUEMU emulated device
 ```
 
 ---
