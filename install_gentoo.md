@@ -226,7 +226,7 @@ livecd / # export PS1="(chroot) $PS1"
 * Скачиваем установочные файлы. Последняя версия на момент установки: stage3-amd64-20161117.tar.bz2
   ```bash
   livecd ~ # cd /mnt/gentoo
-  livecd ~ # wget -c http://gentoo.ussg.indiana.edu/releases/x86/autobuilds/current-stage3-i686/stage3-i486-20161122.tar.bz2
+  livecd ~ # wget -c http://gentoo.ussg.indiana.edu/releases/x86/autobuilds/current-stage3-i686/stage3-i686-20161122.tar.bz2
   ```
   
 * Распаковываем
