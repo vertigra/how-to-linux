@@ -40,7 +40,16 @@ livecd / # export PS1="(chroot) $PS1"
 * Скачиваем minimal installation cd c сайта [gentoo.org](https://gentoo.org/downloads/) и пишем его на флэшку или диск (в случае xen монтируем образ диска на виртуальный дисоквод вм )
 * После загрузки с диска проверяем сеть (у меня DHCP поэтому дополнтельно настраивать ничего не нужно)
   ```bash
-  livecd ~ # ping google.com
+  livecd ~ #  ping -c 3 google.com
+  PING google.com (37.29.18.38) 56(84) bytes of data.
+  64 bytes from 37.29.18.38: icmp_seq=1 ttl=57 time=55.6 ms
+  64 bytes from 37.29.18.38: icmp_seq=2 ttl=57 time=50.6 ms
+  64 bytes from 37.29.18.38: icmp_seq=3 ttl=57 time=48.7 ms
+
+  --- google.com ping statistics ---
+  3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+  rtt min/avg/max/mdev = 48.738/51.676/55.615/2.907 ms
+
   ```
   
 * Меняем пароль суперпользователя
