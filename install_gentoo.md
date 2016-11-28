@@ -459,10 +459,11 @@ ex.ru/gentoo-distfiles/ http://mirror.yandex.ru/gentoo-distfiles/
   ```
   
 ---
-***NOTE***
-Минимальная необходимая конфигурация для XEN
+***NOTE***   
+**Минимальная необходимая конфигурация для XEN (без этого не запустится)
 ```
 Linux/x86 4.4.26-gentoo Kernel Configuration
+--------------------------------------------
 []64-bit kernel
 Device driver --->
     Graphics support --->
@@ -517,26 +518,8 @@ Device driver --->
   /dev/sda1              /boot           ext2            noatime         1 2
   /dev/sda2              /               ext4            noatime         0 1
   /dev/sda3              none            swap            sw              0 0
-  /dev/cdrom              /mnt/cdrom      auto            noauto,ro       0 0
+  /dev/cdrom             /mnt/cdrom      auto            noauto,ro       0 0
   (required condition - empty string in end of file)
-  ```
-
-### Настройка сети (console)
-
-* Для автоматического получения ip-адреса настроим DHCP
-  ```bash
-  (chroot) livecd / # echo 'config_eth0="dhcp"' >> /etc/conf.d/net
-  ```
-  
-  `eth0` - имя сетевой карты. Посмотреть его можно командой `ifconfig`
-  
-* Добавляем сетевой интерфейс в автозагрузку
-  ```bash
-  (chroot) livecd / # cd /etc/init.d
-  (chroot) livecd init.d # ln -s net.lo net.eth0
-  (chroot) livecd init.d # rc-update add net.eth0 default
-     * service net.eth0 added to runlevel default
-  (chroot) livecd init.d # cd /
   ```
   
 ### Устанавливаем пароль root (console)
@@ -575,6 +558,8 @@ Device driver --->
   ```bash
   (chroot) livecd /# exit
   livecd # umount -l /mnt/gentoo/dev{/shm,/pts,}
+  livecd # umount -l /mnt/gentoo/boot
+  livecd # umount -l /mnt/gentoo
   livecd # reboot
   ```
   
