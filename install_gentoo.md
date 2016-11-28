@@ -526,7 +526,7 @@ Device driver --->
   ```bash
   (chroot) livecd init.d # passwd root
   ```
-  
+
 ### Установка загрузчика (console)
 
 * Устанавливаем загрузчик
