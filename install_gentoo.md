@@ -7,7 +7,6 @@
 *Для сборки ядра и модулей необходим раздел root не меньше 11 Гб*
 
 ---
-
 ***NOTE***
 
 *Конфигурация виртуальной машины на которую производилась инсталяция: процессор (Vendor: AuthenticAMD, Model: AMD Phenom(tm) II X4 945 Processor, Speed: 3013 MHz) - Number of vCPUs - 2, Topology - 4 sockets with 1 core per socket, vCPU priority - Normal; память 1 Gb; жесткий диск -12Гб, position 0; сеть DHCP. Время установки 6-7 часов.*
@@ -34,7 +33,6 @@ livecd / # export PS1="(chroot) $PS1"
 ```
 
 ---
-
 По мотивам [этой](http://www.oldnix.org/install-gentoo-linux/) и [этой](http://www.r-notes.ru/administrirovanie/gentoo-linux/116-gentoo-tipovaya-ustanovka.html) статьи с [продолжением](http://www.r-notes.ru/administrirovanie/gentoo-linux/117-gentoo-tipovaya-ustanovka-chast-2.html).
 
 ### Подготовка (консоль сервера) ###
@@ -561,33 +559,4 @@ Device driver --->
   livecd # umount -l /mnt/gentoo/boot
   livecd # umount -l /mnt/gentoo
   livecd # reboot
-  ```
-  
-  
-  
-
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  ``` 
