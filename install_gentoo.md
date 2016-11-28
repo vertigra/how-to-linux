@@ -290,30 +290,25 @@ livecd / # export PS1="(chroot) $PS1"
 
 * Выбираем профиль для установки `[1]` из предлoженных
   ```bash
-  (chroot) livecd / # eselect profile list
+  (chroot) livecd / #  eselect profile list
   Available profile symlink targets:
-    [1]   default/linux/amd64/13.0 *
-    [2]   default/linux/amd64/13.0/selinux
-    [3]   default/linux/amd64/13.0/desktop
-    [4]   default/linux/amd64/13.0/desktop/gnome
-    [5]   default/linux/amd64/13.0/desktop/gnome/systemd
-    [6]   default/linux/amd64/13.0/desktop/kde
-    [7]   default/linux/amd64/13.0/desktop/kde/systemd
-    [8]   default/linux/amd64/13.0/desktop/plasma
-    [9]   default/linux/amd64/13.0/desktop/plasma/systemd
-    [10]  default/linux/amd64/13.0/developer
-    [11]  default/linux/amd64/13.0/no-multilib
-    [12]  default/linux/amd64/13.0/systemd
-    [13]  default/linux/amd64/13.0/x32
-    [14]  hardened/linux/amd64
-    [15]  hardened/linux/amd64/selinux
-    [16]  hardened/linux/amd64/no-multilib
-    [17]  hardened/linux/amd64/no-multilib/selinux
-    [18]  hardened/linux/amd64/x32
-    [19]  hardened/linux/musl/amd64
-    [20]  hardened/linux/musl/amd64/x32
-    [21]  default/linux/uclibc/amd64
-    [22]  hardened/linux/uclibc/amd64
+    [1]   default/linux/x86/13.0 *
+    [2]   default/linux/x86/13.0/selinux
+    [3]   default/linux/x86/13.0/desktop
+    [4]   default/linux/x86/13.0/desktop/gnome
+    [5]   default/linux/x86/13.0/desktop/gnome/systemd
+    [6]   default/linux/x86/13.0/desktop/kde
+    [7]   default/linux/x86/13.0/desktop/kde/systemd
+    [8]   default/linux/x86/13.0/desktop/plasma
+    [9]   default/linux/x86/13.0/desktop/plasma/systemd
+    [10]  default/linux/x86/13.0/developer
+    [11]  default/linux/x86/13.0/systemd
+    [12]  hardened/linux/x86
+    [13]  hardened/linux/x86/selinux
+    [14]  hardened/linux/musl/x86
+    [15]  default/linux/uclibc/x86
+    [16]  hardened/linux/uclibc/x86
+
   (chroot) livecd / # eselect profile set 1
   ```
 
