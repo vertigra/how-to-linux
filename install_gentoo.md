@@ -527,10 +527,6 @@ Device driver --->
   (chroot) livecd init.d # passwd root
   ```
   
-### Меняем раскладку клавиатуры (console)
-
->(del)* В файле `nano /etc/conf.d/keymaps` меняем `keymap="us"` на `keymap="-u ru"`
-
 ### Установка загрузчика (console)
 
 * Устанавливаем загрузчик
