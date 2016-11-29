@@ -1,16 +1,28 @@
 # Как уменьшить размер установленной системы
 > **черновик**
 
-* eclean - утилита очистки архивов и бинарных пакетов используемых Portege
-  
-  Установка:
-  ```bash
-  root #emerge --ask app-portage/gentoolkit
-  These are the packages that would be merged, in order:
+В процессе установки генты на eee pc 900, сразу после компиляции и установки ядра, еще до этапа установки минимального набора программ я обнаружил что места на root разделе катастрофически мало ~ 200 Mb.
 
-  Calculating dependencies... done!
-  [ebuild  N     ] app-portage/gentoolkit-0.3.0.9-r2    PYTHON_TARGETS="python2_7 python3_4 (-pypy)"
+Размер разделов определен конфигруцией жесткого диска eee pc
+```
+Disk /dev/sda: 3.8 GiB, 4034838528 bytes, 7880544 sectors
+Disk /dev/sdb: 7.5 GiB, 8069677056 bytes, 15761088 sectors
+```
 
-  Would you like to merge these packages? [Yes/No] yes
+То есть у нас два жестких диска размером 3.8 и 7.5 Gb, что как оказалось катастрофически мало.
 
-  ```
+Схема разметки разделов такая:
+```
+/dev/sda: 3.8 GiB
+/dev/sda1 swap  1G 82 Linux swap / Solaris
+/dev/sda2 /home 2.8G 83 Linux
+/dev/sdb: 7.5 GiB
+/dev/sdb1 /boot 100M 83 Linux
+/dev/sdb2 /     7.4G 83 Linux
+```
+
+Утилита `eclean` из пакета `app-portage/gentoolkit-0.3.0.9-r2` на данном этапе мне ничем помочь не смогла.
+
+Тогда было решено пересобрать @world с `USE` флагом `-doc`. Этот флаг должен отключать (или включать если без `-`) установку документации. Заодно я добавил флаги `-qt3 -qt4` потому как собираюсь использовать lxde (c gtk3).
+
+После добавления флагов нужно запустить пересборку пакетов командой `emerge --ask --changed-use --deep @world`. Так как места катастрофически мало, нужно переопределить  переменную `PORTAGE_TMPDIR="/home/tmp"`. Такиом образом сборка пакетов будет происходить в пустующем разделе `/home`, а не в `/var/tmp`. 
