@@ -196,5 +196,17 @@
   esac
   exit $?
   ```
+* Делаем исполняемым и добавляем службу в автозапуск:
+  ```bash
+  # cd /etc/init.d
+  # chmod +x ./vhusbdpin
+  # chkconfig --add vhusbdpin
+  # vhusbdpin chkconfig on 
+  ```
   
-  
+* Добавляем правило в iptables (перед правилом `-A RH-Firewall-1-INPUT -j REJECT --reject-with icmp-host-prohibited`)
+  ```bash
+  -A RH-Firewall-1-INPUT -m conntrack --ctstate NEW -m tcp -p tcp --dport 7575 -j ACCEPT
+  ```
+
+* Качаем клиент [отсюда](https://www.virtualhere.com/usb_client_software) и ставим на гостевую машину.
