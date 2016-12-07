@@ -18,7 +18,7 @@
 
 Сделано по [этой](https://www.citrix.com/blogs/2012/02/29/usb-over-network-with-xenserver-6/) инструкции с поправкой на 64-х битную архитектуру xen сервера.
 
-* Качаем DDK(Driver Development Kit) 6.5.0 https://www.citrix.com/downloads/xenserver/product-software/xenserver-65-standard.html#ctx-dl-eula (нужен учетная запись на [citrix.com](https://identity.citrix.com/Utility/STS/Sign-In?ReturnUrl=https://www.citrix.com%2Faccount))
+* Качаем DDK(Driver Development Kit) 6.5.0 https://www.citrix.com/downloads/xenserver/product-software/xenserver-65-standard.html#ctx-dl-eula (нужна учетная запись на [citrix.com](https://identity.citrix.com/Utility/STS/Sign-In?ReturnUrl=https://www.citrix.com%2Faccount))
 
 * Распаковываем на той машине где установлен Xen Center (или монтируем образ на виртуальный дисковод)
 
@@ -48,7 +48,7 @@
   # joe installer.sh
   ```
   
-  В функции `usbsrv_install()` (поиск в joe CTRL+KF) коментируем:
+  В функции `usbsrv_install()` (поиск в joe CTRL+KF) закоментируем:
   ```bash
   (must be)
   # if [ ! -d $KERNELDIR ]; then
@@ -57,7 +57,7 @@
   # fi
   ```
   
-  В функции usbsrv_make_kernel_module() коментируем:
+  В функции usbsrv_make_kernel_module() закоментируем:
   ```bash
   (must be)
   # make KERNELDIR=$KERNELDIR clean; /dev/null 2>1
@@ -130,7 +130,7 @@
 
 Здесь все намного проще:
 
-* Качаем сервер под [нужную архитектуру](https://www.virtualhere.com/usb_server_software), в случае xen это x86_64, делаем файл исполняемым и переносим в `usr/sbin`
+* Качаем сервер под [нужную архитектуру](https://www.virtualhere.com/usb_server_software), в случае xen это x86_64, делаем файл исполняемым и переносим в `/usr/sbin`
   ```bash
   # cd /tmp
   # wget https://www.virtualhere.com/sites/default/files/usbserver/vhusbdx86_64
