@@ -124,4 +124,77 @@
   ===================== ======================= ===================
   ```
   
-* После этого в гостевой машине следует поставить клиента, указать код лицензии и подключиться к запущеному серверу. 
+* После этого в гостевой машине следует поставить клиента, указать код лицензии и подключиться к запущеному серверу.
+
+### VirualHere
+
+Здесь все намного проще:
+
+* Качаем сервер под [нужную архитектуру](https://www.virtualhere.com/usb_server_software), в случае xen это x86_64, делаем файл исполняемым и переносим в `usr/sbin`
+  ```bash
+  # cd /tmp
+  # wget https://www.virtualhere.com/sites/default/files/usbserver/vhusbdx86_64
+  # chmod +x ./vhusbdx86_64
+  # mv vhusbdx86_64 /usr/sbin
+  ```
+* Добавляем скрипт автозапуска демона при старте системы:
+  ```bash
+  # joe /etc/init.d/vhusbdpin
+  ```
+  
+  Сам скрипт:
+  ```sh
+  #!/bin/sh
+  # chkconfig: - 98 01
+  # description:  VirtualHere USB Sharing
+  # processname:
+
+  # Source function library.
+  if [ -f /etc/init.d/functions ] ; then
+    . /etc/init.d/functions
+  elif [ -f /etc/rc.d/init.d/functions ] ; then
+    . /etc/rc.d/init.d/functions
+  else
+    exit 0
+  fi
+  KIND="vhusbdpin"
+  start() {
+          echo -n $"Starting $KIND services: "
+          daemon /usr/sbin/vhusbdx86_64 -b
+          echo
+  }
+
+  stop() {
+          echo -n $"Shutting down $KIND services: "
+          killproc vhusbdx86_64
+          echo
+  }
+
+  restart() {
+          echo -n $"Restarting $KIND services: "
+                  killproc vhusbdx86_64
+
+          daemon /usr/sbin/vhusbdx86_64 -b
+          echo
+  }
+
+  case "$1" in
+    start)
+          start
+        ;;
+
+  stop)
+          stop
+        ;;
+
+  restart)
+          restart
+        ;;
+          *)
+          echo $"Usage: $0 {start|stop|restart}"
+          exit 1
+  esac
+  exit $?
+  ```
+  
+  
