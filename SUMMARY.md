@@ -45,7 +45,7 @@
 
 * [Как настроить iptables после инсталяции Debian 8 Jessie](setting-iptables-after-install.md)
 * [Как настроить iptables на сервере OpenVPN](iptabes_with_openvpn_server.md)
-* [Как управлять iptables](komandi_iptables.md)
+* [Как управлять iptables](iptables.md)
 * [Как разрешить в iptables исходящий трафик для определеннного порта](allow_connect_for_port.md)
 
 ## MySQL
