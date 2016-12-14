@@ -1,7 +1,9 @@
 # Как добавить диск в CentOS 6.8
-*OC: CentOS 6.8(Final)*
+
+> OC: CentOS 6.8(Final)*
 
 Находим диск (названия дисков может отличаться):
+
 ```bash
 # fdisk -l
 
@@ -40,8 +42,10 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disk identifier: 0x00000000
 ```
+
 Подключенный диск появился виден как `/dev/xvdb`.
-```bash 
+
+```bash
 # fdisk /dev/xvdb
 
 Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
@@ -68,7 +72,7 @@ Command action
    p   print the partition table
    q   quit without saving changes
    s   create a new empty Sun disklabel
-   t   change a partition's system id
+   t   change a partition\'s system id
    u   change display/entry units
    v   verify the partition table
    w   write table to disk and exit
@@ -87,15 +91,17 @@ Partition number (1-4): 1
 First cylinder (1-1044, default 1): 1
 Last cylinder or +size or +sizeM or +sizeK (1-1044, default 1044): 
 Using default value 1044
- 
+
 Command (m for help): w
 The partition table has been altered!
- 
+
 Calling ioctl() to re-read partition table.
 Syncing disks.
 [13:25:45] [root@localhost ~]#
 ```
+
 Проверяем:
+
 ```bash
 # fdisk -l /dev/xvdb
 
@@ -109,7 +115,9 @@ Disk identifier: 0xd85212d9
     Device Boot      Start         End      Blocks   Id  System
 /dev/xvdb1               1        1305    10482381   83  Linux
 ```
+
 Форматируем в ext3
+
 ```bash
 # mkfs -t ext3 /dev/xvdb1
 
@@ -136,12 +144,16 @@ Writing superblocks and filesystem accounting information: done
 This filesystem will be automatically checked every 28 mounts or
 180 days, whichever comes first.  Use tune2fs -c or -i to override.
 ```
+
 Пробуем подключить
+
 ```bash
 # mkdir /mnt/xvdb
 # mount -t ext3 /dev/xvdb1 /mnt/xvdb
 ```
+
 Проверяем
+
 ```bash
 # df -h
 Filesystem                   Size  Used Avail Use% Mounted on
@@ -150,10 +162,11 @@ tmpfs                        249M     0  249M   0% /dev/shm
 /dev/xvda1                   477M   71M  382M  16% /boot
 /dev/xvdb1                   9.9G  151M  9.2G   2% /mnt/xvdb
 ```
+
 Добавляем в fstab (`joe /etc/fstab`)
 
 ```bash
 /dev/xvdb1              /mnt/xvdb               ext3    defaults        0 0
 ```
- И после перезагрузки проверяем (`df -h`)
 
+И после перезагрузки проверяем (`df -h`).

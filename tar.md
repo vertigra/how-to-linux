@@ -1,6 +1,6 @@
 # Как создать tar.gz
-*OC: Debian 8 Jessie*
 
+> OC: Debian 8 Jessie
 
 ```bash
 tar -zcvf file.tar.gz /full/path — создать .tar.gz (архив)
