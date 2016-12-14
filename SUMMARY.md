@@ -91,4 +91,3 @@
 ---
 
 * [Как установить Gentoo на Xen](install_gentoo.md)
-* [Как уменьшить размер установленной gentoo системы](clean_gentoo.md)

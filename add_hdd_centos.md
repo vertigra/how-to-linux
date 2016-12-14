@@ -1,6 +1,6 @@
 # Как добавить диск в CentOS 6.8
 
-> OC: CentOS 6.8(Final)*
+> OC: CentOS 6.8(Final)
 
 Находим диск (названия дисков может отличаться):
 
@@ -72,7 +72,7 @@ Command action
    p   print the partition table
    q   quit without saving changes
    s   create a new empty Sun disklabel
-   t   change a partition\'s system id
+   t   change a partition \'\s system id
    u   change display/entry units
    v   verify the partition table
    w   write table to disk and exit
