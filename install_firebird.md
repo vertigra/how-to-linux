@@ -1,5 +1,6 @@
-# Как установить Firebird 1.5.6 (x32) на Debian 8 (x64)
-*OC: Debian 8 Jessie (x64)*
+# Как установить Firebird 1.5.6 \(x32\) на Debian 8 \(x64\)
+
+> OC: Debian 8
 
 Основано на [этой](http://blog.elve.name/?p=608) статье, которая немного устарела и не работает.
 
@@ -14,7 +15,8 @@
 # ./install.sh
 ```
 
-После команды ```./install.sh ``` увидим следующее
+После команды `./install.sh` увидим следующее
+
 ```bash
 Firebird classic 1.5.6.5026-0.i686 Installation
 
@@ -26,9 +28,10 @@ GSEC>
 Install completed
 ```
 
-Утилита GSEC предупреждает - максимальная длина пароля 8 символов (все остальные будут отброшены).
+Утилита GSEC предупреждает - максимальная длина пароля 8 символов \(все остальные будут отброшены\).
 
-Теперь следует прописать в ```/etc/ptofile```  путь до бинарных файлов firebird.
+Теперь следует прописать в `/etc/ptofile`  путь до бинарных файлов firebird.
+
 ```bash
 joe /etc/profile 
 (add in last line in file)
@@ -36,9 +39,11 @@ PATH=$PATH:/opt/firebird/bin
 ```
 
 И удалить инсталяционные файлы сервера.
+
 ```bash
 # rm -R ~/FirebirdCS-1.5.6.5026-0.i686
 # rm ~/FirebirdCS-1.5.6.5026-0.i686.tar.gz
 ```
 
 После чего нужно [настроить права дирректории и файла базы данных](https://linux.nesterof.com/database_file_priveleges.html).
+
