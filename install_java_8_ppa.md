@@ -1,5 +1,6 @@
-# Как установить Java 8 (JDK/JRE 8u101) с использованием PPA
-*OC: Debian 8 Jessie*
+# Как установить Java 8 \(JDK/JRE 8u101\) с использованием PPA
+
+> OC: Debian 8 Jessie
 
 Взято [отсюда](http://tecadmin.net/install-java-8-on-debian/)
 
@@ -21,3 +22,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.101-b13, mixed mode)
 
 # apt-get install oracle-java8-set-default
 ```
+
+
+
