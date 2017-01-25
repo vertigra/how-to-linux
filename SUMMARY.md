@@ -80,6 +80,7 @@
 * [Как уменьшить размер системного виртуального жесткого диска](crop_virtual_hdd.md)
 * [Как задать и сбросить параметр other_config](add_remove_other_config.md)
 * [Как прокинуть USB без IOMMU](install_usb_redirector.md)
+* [Как правильно выключить Citrix Xen Server](shutdown_xen.md)
 
 ## Oracle VM VirtualBox
 
