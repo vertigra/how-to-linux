@@ -26,6 +26,6 @@ ssh root@xen_host_ip "xe host-disable ; xe vm-shutdown --multiple ; xe host-shut
 Статьи по теме:
 
 1. [blog.henrikandersen.se](http://blog.henrikandersen.se/2011/05/02/starting-and-stopping-xenserver-with-the-xe-command/)
-2. [superuser.com]http://superuser.com/questions/1062931/shut-down-all-vms-on-xenserver-6-5-0
+2. [superuser.com](http://superuser.com/questions/1062931/shut-down-all-vms-on-xenserver-6-5-0)
 
 
