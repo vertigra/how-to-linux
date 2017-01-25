@@ -71,7 +71,7 @@
 * [Starting NFS statd: [FAILED]](failed_nfs_statd_on_startup.md)
 * [wget: The certificate of ... is not trusted](wget_error.md)
 
-## Xen
+## Citrix Xen Server
 
 ---
 
