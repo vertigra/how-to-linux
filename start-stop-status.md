@@ -1,17 +1,23 @@
 # Как управлять OpenVPN демоном
-*OC: Debian 8 Jessie*
+
+_OC: Debian 8 Jessie_
 
 Автоматический запуск при старте
+
 ```bash
 # systemctl enable openvpn.service
 ```
+
 Запуск/остановка/перезапуск демона
+
 ```bash
 # systemctl start openvpn.service
 # systemctl stop openvpn.service
 # systemctl restart openvpn.service
 ```
+
 Мониторинг демона OpenVPN
+
 ```bash
 # systemctl status openvpn*.service
 
@@ -34,5 +40,6 @@ Main PID: 5725 (openvpn)
   CGroup: /system.slice/system-openvpn.slice/openvpn@server.service
        └─5725 /usr/sbin/openvpn --daemon ovpn-server --status /run/openvpn/server.status 10 --cd /etc/openvpn --config ...
 ```
+
 
 
