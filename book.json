@@ -4,7 +4,7 @@
         "hide-published-with",
         "back-to-top-button",
         "fontsettings",
-        "sitemap-general"
+        "sitemap-codingbelief"
     ],
     "pluginsConfig": {
         "fontsettings": {
@@ -14,6 +14,9 @@
         },
         "sitemap-general": {
             "prefix": "/"
+        },
+        "sitemap-codingbelief": {
+            "hostname": "https://linux.nesterof.com/"
         }
     }
 }
