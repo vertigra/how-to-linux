@@ -3,13 +3,17 @@
         "theme-faq",
         "hide-published-with",
         "back-to-top-button",
-        "fontsettings"
+        "fontsettings",
+        "sitemap"
     ],
     "pluginsConfig": {
         "fontsettings": {
             "theme": "sepia",
             "family": "serif",
             "size": 2
+        },
+        "sitemap": {
+            "hostname": "linux.nesterof.com"
         }
     }
 }
