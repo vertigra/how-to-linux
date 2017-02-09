@@ -4,7 +4,8 @@
         "hide-published-with",
         "back-to-top-button",
         "fontsettings",
-        "sitemap-codingbelief"
+        "sitemap-codingbelief",
+        "search-plus"
     ],
     "pluginsConfig": {
         "fontsettings": {
