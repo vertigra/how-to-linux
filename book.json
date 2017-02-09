@@ -5,7 +5,9 @@
         "back-to-top-button",
         "fontsettings",
         "sitemap-codingbelief",
-        "search-plus"
+        "search-plus",
+        "search2",
+        "search-pro"
     ],
     "pluginsConfig": {
         "fontsettings": {
@@ -18,6 +20,9 @@
         },
         "sitemap-codingbelief": {
             "hostname": "https://linux.nesterof.com/"
+        },
+        "search2": {
+            "maxIndexSize": 1000000
         }
     }
 }
