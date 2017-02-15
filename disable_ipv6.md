@@ -53,5 +53,43 @@ COMMIT
 precedence ::ffff:0:0/96 100
 ```
 
+***UPD** [Здесь](http://vacadem.ru/blog/linux-unix-and-other/disable-ipv6-in-debian.html) пишут что надо еще так: 
 
+> В файле /etc/netconfig закомментировать строки
 
+```bash
+#udp6       tpi_clts      v     inet6    udp     -       -
+#tcp6       tpi_cots_ord  v     inet6    tcp     -       -
+```
+
+> В файле /etc/hosts закомментировать **все строки**, относящиеся к IPv6
+
+```bash
+# The following lines are desirable for IPv6 capable hosts
+#::1     ip6-localhost ip6-loopback
+#fe00::0 ip6-localnet
+#ff00::0 ip6-mcastprefix
+#ff02::1 ip6-allnodes
+#ff02::2 ip6-allrouters
+```
+
+> В /etc/ssh/ssh_config
+
+```bash
+AddressFamily inet
+```
+
+В /etc/ssh/sshd_config раскомментировать строку ListenAddress для ipv4
+
+```bash
+#ListenAddress ::
+ListenAddress 0.0.0.0
+```
+
+> В /etc/exim4/update-exim4.conf
+
+```bash
+disable_ipv6 = true
+```
+
+> Перегрузить и убедиться что интерфейс не имеет адреса IPv6
