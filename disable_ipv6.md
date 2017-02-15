@@ -53,7 +53,7 @@ COMMIT
 precedence ::ffff:0:0/96 100
 ```
 
-***UPD** [Здесь](http://vacadem.ru/blog/linux-unix-and-other/disable-ipv6-in-debian.html) пишут что надо еще так: 
+**UPD** [Здесь](http://vacadem.ru/blog/linux-unix-and-other/disable-ipv6-in-debian.html) пишут что надо еще так: 
 
 > В файле /etc/netconfig закомментировать строки
 
