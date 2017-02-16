@@ -122,3 +122,39 @@ udp6       0      0 [::]:sunrpc             [::]:*
 ```
 
 Tо есть да, сервисы таки надо отключать.
+
+После выполнения всех действий написаных после UPD имеем следующее (висящий dhclient по udp6):
+
+```bash
+# netstat -tulpn |  grep -E "tcp6|udp6"
+udp6       0      0 :::48384                :::*                                426/dhclient
+```
+
+[Здесь](https://serveradmin.ru/nastroyka-seti-v-debian/) и [здесь](https://lists.debian.org/debian-user/2014/01/msg00234.html) написано как его отключить:
+
+>For dhclient edit /etc/dhcp/dhclient.conf and replace:-
+>request subnet-mask, broadcast-address, time-offset, routers,
+>        domain-name, domain-name-servers, domain-search, host-name,
+>        dhcp6.name-servers, dhcp6.domain-search,
+>        netbios-name-servers, netbios-scope, interface-mtu,
+>        rfc3442-classless-static-routes, ntp-servers;
+
+>with:-
+>request subnet-mask, broadcast-address, time-offset, routers,
+>        domain-name, domain-name-servers, domain-search, host-name,
+>        netbios-name-servers, netbios-scope, interface-mtu,
+>        rfc3442-classless-static-routes, ntp-servers;
+
+В первом случае это не помогло (как и мне):
+
+> dhclient почему-то остался висеть на ipv6 порту, но ладно, это не страшно, запрашивать по ipv6 он все равно ничего не будет.
+
+Во втором вроде помогло:
+
+> The above examples work with Wheezy.
+
+Самое правдоподобное объяснение можно почитать [тут](http://www.linuxquestions.org/questions/linux-newbie-8/dhcp-ipv6-4175466992/)
+
+> The list shows dhclient as listening on IPv6 socket ::/UDP/62879. As long as the kernel has IPv6 support, it may not be possible to prevent applications (especially if they're running as root) from binding to an IPv6 socket. Since none of your interfaces have IPv6 addresses this shouldn't be a problem, but it does seem a little odd.
+
+> Does the port number stay the same if you restart dhclient? This bug report seems to indicate that there is an NSUPDATE-related issure with dhclient, causing it to listen on random high ports.
