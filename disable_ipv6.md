@@ -8,7 +8,8 @@
 net.ipv6.conf.all.disable_ipv6 = 1
 net.ipv6.conf.default.disable_ipv6 = 1
 net.ipv6.conf.lo.disable_ipv6 = 1
-net.ipv6.conf.eth0.disable_ipv6 = 1 (изменить на свой внешний интерфейс)
+net.ipv6.conf.eth0.disable_ipv6 = 1 
+net.ipv6.conf.<eth>.disable_ipv6 = 1 (указать все сетевые интерфейсы)
 ```
 
 Применяем изменения
@@ -149,7 +150,7 @@ udp6       0      0 :::48384                :::*                                
 
 > dhclient почему-то остался висеть на ipv6 порту, но ладно, это не страшно, запрашивать по ipv6 он все равно ничего не будет.
 
-Во втором вроде помогло:
+Во втором вроде помогло (может потомучто **Wheezy**):
 
 > The above examples work with Wheezy.
 
@@ -158,3 +159,4 @@ udp6       0      0 :::48384                :::*                                
 > The list shows dhclient as listening on IPv6 socket ::/UDP/62879. As long as the kernel has IPv6 support, it may not be possible to prevent applications (especially if they're running as root) from binding to an IPv6 socket. Since none of your interfaces have IPv6 addresses this shouldn't be a problem, but it does seem a little odd.
 
 > Does the port number stay the same if you restart dhclient? This bug report seems to indicate that there is an NSUPDATE-related issure with dhclient, causing it to listen on random high ports.
+
