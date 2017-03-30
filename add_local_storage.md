@@ -6,9 +6,9 @@
 1. Подключаем диск и смотрим как он определился в системе:
 
  ```bash
- 
+  
  # fdisk -l
-
+ 
  WARNING: GPT (GUID Partition Table) detected on '/dev/sda'! The util fdisk doesn't support GPT. Use GNU Parted.
 
 
