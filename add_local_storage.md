@@ -9,7 +9,7 @@
  
  # fdisk -l
  
- WARNING: GPT (GUID Partition Table) detected on '/dev/sda'! The util fdisk doesn't support GPT. Use GNU Parted.
+ WARNING: GPT (GUID Partition Table) detected on /dev/sda! The util fdisk doesn't support GPT. Use GNU Parted.
  
  
  Disk /dev/sda: 250.0 GB, 250059350016 bytes
