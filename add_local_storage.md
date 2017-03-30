@@ -18,7 +18,7 @@
     Device Boot      Start         End      Blocks   Id  System
  /dev/sda1   *           1       30283   244198583+  ee  EFI GPT
  
- WARNING: GPT (GUID Partition Table) detected on '/dev/sdb'! The util fdisk doesn't support GPT. Use GNU Parted.
+ WARNING: GPT (GUID Partition Table) detected on /dev/sdb! The util fdisk doesn't support GPT. Use GNU Parted.
  
  
  Disk /dev/sdb: 250.0 GB, 250059350016 bytes
