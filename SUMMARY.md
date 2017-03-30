@@ -82,6 +82,7 @@
 * [Как задать и сбросить параметр other_config](add_remove_other_config.md)
 * [Как прокинуть USB без IOMMU](install_usb_redirector.md)
 * [Как правильно выключить Citrix Xen Server](shutdown_xen.md)
+* [Как добавить Local Storage в Citrix Xen Server](add_local_storage.md)
 
 ## Oracle VM VirtualBox
 
