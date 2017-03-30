@@ -15,11 +15,14 @@
  Units = cylinders of 16128 * 512 = 8257536 bytes
    Device Boot      Start         End      Blocks   Id  System
  /dev/sda1   *           1       30283   244198583+  ee  EFI GPT
+ 
  WARNING: GPT (GUID Partition Table) detected on /dev/sdb! The util fdisk doesn't support GPT. Use GNU Parted.
+ 
  Disk /dev/sdb: 250.0 GB, 250059350016 bytes
  255 heads, 63 sectors/track, 30401 cylinders
  Units = cylinders of 16065 * 512 = 8225280 bytes
  Disk /dev/sdb doesn't contain a valid partition table
+ 
  Disk /dev/sdc: 250.0 GB, 250000000000 bytes
  255 heads, 63 sectors/track, 30394 cylinders
  Units = cylinders of 16065 * 512 = 8225280 bytes
