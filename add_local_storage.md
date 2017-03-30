@@ -6,7 +6,6 @@
 1. Подключаем диск и смотрим как он определился в системе:
 
  ```bash
- 
  # fdisk -l
  WARNING: GPT (GUID Partition Table) detected on /dev/sda! The util fdisk doesn't support GPT. Use GNU Parted.
  
@@ -36,14 +35,12 @@
 1. После чего выполним инициализацию диска для работы с LVM
 
  ```bash
- 
  # pvcreate /dev/sdb
  ```
   
 1. Смотрим UUID хоста гипервизора
 
  ```bash
- 
  # xe host-list
  uuid ( RO): 039081cb-ecfe-4163-bf6e-992b1ef1a142
  name-label ( RW): xenserver
@@ -53,7 +50,6 @@
 1. Теперь можно создать локальное хранилище
 
  ```bash
- 
  # xe sr-create content-type=user host-uuid=039081cb-ecfe-4163-bf6e-992b1ef1a142 type=lvm device-config-device=/dev/sdc name-label="Temp Local Storage"
  ```
  
