@@ -33,7 +33,6 @@
  Units = cylinders of 16065 * 512 = 8225280 bytes
 
  Disk /dev/sdc doesn't contain a valid partition table
-
  ```
  
  Диск опеределился как `/dev/sdc`.
@@ -42,10 +41,10 @@
 
 1. После чего выполним инициализацию диска для работы с LVM
 
-  ```bash
+ ```bash
  
-   # pvcreate /dev/sdb
-  ```
+ # pvcreate /dev/sdb
+ ```
   
 1. Смотрим UUID хоста гипервизора
 
@@ -60,6 +59,7 @@
 1. Теперь можно создать локальное хранилище
 
  ```bash
+ 
  # xe sr-create content-type=user host-uuid=039081cb-ecfe-4163-bf6e-992b1ef1a142 type=lvm device-config-device=/dev/sdc name-label="Temp Local Storage"
  ```
  
