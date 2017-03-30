@@ -16,7 +16,7 @@
  256 heads, 63 sectors/track, 30282 cylinders
  Units = cylinders of 16128 * 512 = 8257536 bytes
 
-    Device Boot      Start         End      Blocks   Id  System
+ Device Boot      Start         End      Blocks   Id  System
  /dev/sda1   *           1       30283   244198583+  ee  EFI GPT
 
  WARNING: GPT (GUID Partition Table) detected on '/dev/sdb'! The util fdisk doesn't support GPT. Use GNU Parted.
