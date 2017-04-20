@@ -1,5 +1,7 @@
 # Какие права назначить на дирректорию и файл базы данных Firebird
 
+[Копия](https://nesterof.com/2017/04/21/install_firebird_on_debian/)
+
 > OC: Debian 8 Jessie (x64)
 
 Основано на [этой](http://www.firebirdfaq.org/faq102/) статье.
@@ -24,5 +26,5 @@
 Пример использовния утилиты gbak (бэкап базы данных)
 
 ```bash
-//$ gbak -b -g -v -user SYSDBA -password masterkey datbasefilename.fdb testbackup.fbk
+$ gbak -b -g -v -user SYSDBA -password masterkey datbasefilename.fdb testbackup.fbk
 ```
