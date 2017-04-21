@@ -1,6 +1,8 @@
 # Как использовать netstat
 *OC: Debian 8 Jessie*
 
+[Основная статься](https://nesterof.com/2017/04/21/how-use-netstat/)
+
 ```bash
 # netstat -lnptux
 
