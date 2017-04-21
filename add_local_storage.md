@@ -1,5 +1,7 @@
 # Как добавить Local Storage в Citrix Xen Server
 
+[Основная статья](https://nesterof.com/2017/04/21/add-local-storage-in-xenserver/)
+
 > OC: XEN 6.5
 
 Взято [отсюда](https://serveradmin.ru/kak-podklyuchit-zhestkiy-disk-v-xenserver/)
