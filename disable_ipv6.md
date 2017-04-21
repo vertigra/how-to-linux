@@ -1,5 +1,7 @@
 # Как отключить IPv6 в Debian 8 Jessie
 
+[Копия](https://nesterof.com/2017/04/21/how-disable-ipv6-on-debian/)
+
 > OC: Debian 8 Jessie*
 
 ```bash
