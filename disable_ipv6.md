@@ -163,3 +163,13 @@ udp6       0      0 :::48384                :::*                                
 
 > Does the port number stay the same if you restart dhclient? This bug report seems to indicate that there is an NSUPDATE-related issure with dhclient, causing it to listen on random high ports.
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98112747-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
