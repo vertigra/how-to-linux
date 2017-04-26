@@ -21,3 +21,13 @@ deb http://repo.pritunl.com/stable/apt jessie main
 Командой `pritunl setup-key` в командной строке сервера получаем ключ инсталяции и копируем его в поле "Enter setup key" веб интерфеса. После окончания установки можно заходить в веб-интерфейс. Пароль и логин по умолчанию `pritunl`.
 
 
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98112747-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
