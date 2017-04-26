@@ -1,6 +1,8 @@
 # Как настроить iptables после инсталяции Debian 8 Jessie
 *OC: Debian 8 Jessie*
 
+[Основная статья](https://nesterof.com/2017/04/26/setup-iptables-on-debian-8/)
+
 Для загрузки правил после перезагрузки
 ```bash
 # apt-get install iptables-persistent
