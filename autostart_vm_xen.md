@@ -1,5 +1,7 @@
 # Автозапуск виртуальных машин
 
+\[Оригинал\]\(https://nesterof.com/2017/05/01/autostart-vm-on-citrix-xen-server/\)
+
 > OC: XEN 7
 
 Определеяем UUID пула, для которого мы хотим включить Auto Start
