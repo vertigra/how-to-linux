@@ -1,6 +1,8 @@
 # Как правильно выключить Citrix Xen Server
 > OC: XEN 6.5
 
+[Основная статья](https://nesterof.com/2017/05/01/how-shutdown-citrix-xen-server/)
+
 Что бы выключить:
 
 ```bash
