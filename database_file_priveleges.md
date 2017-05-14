@@ -1,6 +1,6 @@
 # Какие права назначить на дирректорию и файл базы данных Firebird
 
-[Копия](https://nesterof.com/2017/04/21/install_firebird_on_debian/)
+[Основная статья](https://nesterof.com/2017/04/21/install_firebird_on_debian/)
 
 > OC: Debian 8 Jessie (x64)
 

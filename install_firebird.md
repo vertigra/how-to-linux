@@ -1,6 +1,6 @@
 # Как установить Firebird 1.5.6 \(x32\) на Debian 8 \(x64\)
 
-[Копия](https://nesterof.com/2017/04/21/install_firebird_on_debian/)
+[Основная статья](https://nesterof.com/2017/04/21/install_firebird_on_debian/)
 
 > OC: Debian 8 Jessie
 

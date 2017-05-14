@@ -1,5 +1,7 @@
 # Как управлять iptables
 
+[Основная статья](https://nesterof.com/2017/05/15/how-to-manage-iptables/)
+
 > OC: Debian 8 Jessie
 
 ## Сбросить правила iptables (IPv4 или IPv6)
